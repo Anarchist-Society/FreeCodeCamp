@@ -1,29 +1,29 @@
 body {
-    background-color: #0000A6;
-    font-family: Arial, sans-serif;
+  background-color: #0000A6;
+  font-family: Arial, sans-serif;
 }
 
 .business-card {
-    width: 300px;
-    background-color: #56FFFF;
-    padding: 20px;
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 16px;
-    border: 5px solid #FFD600;
+  width: 300px;
+  background-color: #56FFFF;
+  padding: 20px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 16px;
+  border: 5px solid #FFD600;
 }
 
 .profile-image {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

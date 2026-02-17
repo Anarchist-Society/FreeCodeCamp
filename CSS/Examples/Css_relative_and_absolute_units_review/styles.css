@@ -1,100 +1,100 @@
 .units {
-    margin-bottom: 30px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    align-items: flex-end;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .unit {
-    background-color: steelblue;
-    color: white;
-    text-align: center;
-    padding: 4px;
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+  padding: 4px;
 }
 
 .px {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .inch {
-    width: 0.5in;
-    height: 0.5in;
+  width: 0.5in;
+  height: 0.5in;
 }
 
 .cm {
-    width: 1cm;
-    height: 1cm;
+  width: 1cm;
+  height: 1cm;
 }
 
 .mm {
-    width: 10mm;
-    height: 10mm;
+  width: 10mm;
+  height: 10mm;
 }
 
 .q {
-    width: 40q;
-    height: 40q;
+  width: 40q;
+  height: 40q;
 }
 
 .pc {
-    width: 6pc;
-    height: 6pc;
+  width: 6pc;
+  height: 6pc;
 }
 
 .pt {
-    width: 36pt;
-    height: 36pt;
+  width: 36pt;
+  height: 36pt;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .parent {
-    margin-bottom: 30px;
-    width: 200px;
-    font-size: 20px;
-    border: 2px dashed #555;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  margin-bottom: 30px;
+  width: 200px;
+  font-size: 20px;
+  border: 2px dashed #555;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .box{
-    background-color: seagreen;
-    color: white;
-    text-align: center;
-    padding: 6px;
+  background-color: seagreen;
+  color: white;
+  text-align: center;
+  padding: 6px;
 }
 
 .percent {
-    width: 50%;
+  width: 50%;
 }
 
 .em {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .rem {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .vh {
-    height: 10vh;
+  height: 10vh;
 }
 
 .vw {
-    width: 10vw;
+  width: 10vw;
 }
 
 .calc-box {
-    width: calc(100% - 40px);
-    padding: 10px;
-    background-color: steelblue;
-    color: white;
-    text-align: center;
-    border: 2px solid black;
+  width: calc(100% - 40px);
+  padding: 10px;
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+  border: 2px solid black;
 }
