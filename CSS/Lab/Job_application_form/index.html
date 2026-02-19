@@ -3,42 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Form</title>
+    <title>Registration form</title>
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div class="container">
-      <h1>Job Application Form</h1>
+    <main>
+      <div class="container">
+        <h1>Galaxy Panthers registration form</h1>
+        <p>Complete this form to access the entrance exams</p>
 
-      <form id="job-application">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <form id="futsal-team-form">
+          <!-- Player name -->
+          <label for="player-name">Player Name:</label>
+          <input type="text" id="player-name" name="player-name" placeholder="Enter player name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <!-- Age -->
+          <label for="age">Age: </label>
+          <input type="number" id="age" name="age" placeholder="Enter age" min="18" max="50" required>
 
-        <label for="position">Position</label>
-        <select id="position" name="position" required>
-          <option value>Select a position</option>
-          <option value="developer">Developer</option>
-          <option value="designer">Designer</option>
-          <option value="manager">Manager</option>
-        </select>
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <fieldset class="radio-group">
-          <legend>Availability</legend>
-          <input type="radio" id="fullTime" name="availability" value="fullTime" checked>
-          <label for="fullTime">Full-Time</label>
-          <input type="radio" id="partTime" name="availability" value="partTime">
-          <label for="partTime">Part-Time</label>
-        </fieldset>
+          <!-- Position -->
+          <label for="position">Position</label>
+          <select id="position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="goalkeeper">Goalkeeper</option>
+            <option value="fixo">Fixo (Defender)</option>
+            <option value="ala-left">Left Wing</option>
+            <option value="ala-right">Right Wing</option>
+            <option value="pivot">Pivot (Forward)</option>
+          </select>
 
-        <label for="message">Why do you want this job?</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write yout motivation" required></textarea>
+          <!-- Availability -->
+          <fieldset class="radio-group">
+            <legend>Availability</legend>
+            <input type="radio" id="fullTime" name="availability" value="fullTime" checked>
+            <label for="fullTime">Full-Time</label>
 
-        <button type="submit">Submit Application</button>
-      </form>
-    </div>
+            <input type="radio" id="partTime" name="availability" value="partTime">
+            <label for="partTime">Part-Time</label>
+          </fieldset>
+
+          <!-- Motivation/Comments -->
+          <label for="comments">Why do you want to join the team?</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Write your motivation" required></textarea>
+
+          <button type="submit">Submit Application</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
