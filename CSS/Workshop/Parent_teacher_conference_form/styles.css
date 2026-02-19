@@ -58,7 +58,6 @@ textarea {
   color: whitesmoke;
 }
 
-
 .contact-method-radio-btn {
   appearance: none;
   width: 20px;
@@ -70,7 +69,7 @@ textarea {
 
 .contact-method-radio-btn::before {
   display: block;
-  content: " ";
+  content: "";
   width: 10px;
   height: 10px;
   border-radius: 50%;
