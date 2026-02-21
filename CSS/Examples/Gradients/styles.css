@@ -1,0 +1,33 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding: 10px;
+}
+
+div {
+  margin-bottom: 10px;
+  height: 18vh;
+}
+
+.linear-gradient {
+  background: linear-gradient(to right, red, blue);
+}
+
+.multi-color-gradient {
+  background: linear-gradient(to right, red, yellow, blue);
+}
+
+.radial-gradient {
+  background: radial-gradient(circle, red, blue);
+}
+
+.custom-radial-gradient {
+  background: radial-gradient(ellipse at top left, red, blue);
+}
+
+.precise-gradient {
+  background: linear-gradient(to right, red 20%, yellow 40%, blue 80%);
+}
