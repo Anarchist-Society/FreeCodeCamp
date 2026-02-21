@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Text Inputs </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <main>
+      <form class="accessible-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        <button type="submit">Submit</button>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" aria-describedby="email-error">
+        <p id="email-error" class="error-message">Please enter a valid email address.</p>
+        <button type="submit">Submit</button>
+
+        <label for="message">You message</label>
+        <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </main>
+</html>
