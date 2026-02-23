@@ -28,7 +28,7 @@ input[type='checkbox'] {
   height: 20px;
   cursor: pointer;
   appearance: none;
-  border: 2px solid #f1be32;
+  border: 2px solid #F1BE32;
   border-radius: 4px;
   background-color: white;
   transition: all 0.3s;
@@ -37,8 +37,8 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-  background-color: #f1be32;
-  border-color: #e2a60d;
+  background-color: #F1BE32;
+  border-color: #E2A60D;
 }
 
 input[type="checkbox"]:checked::after {
