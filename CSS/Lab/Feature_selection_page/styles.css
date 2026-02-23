@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* IMPORTANTE: Hace que el padding y el border no sumen ancho extra a la caja */
+  /* Si pides 200px, la caja medirá 200px pase lo que pase */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  padding: 50px; /* Separa el contenido de los bordes de la ventana del navegador 50px*/
+}
+
+h1 {
+  text-align: center;
+  color: #00FF41;
+  margin-bottom: 30px;
+}
+
+.feature-card-container {
+  width: 600px; /* Ancho fijo para el área de las tarjetas */
+  margin: 0 auto; /* Centramos el contenedor */
+  padding: 10px; /* Espacio entre el borde del contenedor y las tarjetas de dentro */
+  border: 3px solid #00FF41;
+  border-radius: 20px;
+  font-size: 0; /* TRUCO: Elimina el espacio en blanco invisible entre elementos inline-block */
+  background-color: #0A0D0A;
+}
+
+.feature-card-container:hover {
+  box-shadow: 0 0 20px #00FF41;
+}
+
+.feature-card {
+  display: inline-block; /* Alinea las tarjetas por su parte superior */
+
+  /* Permite que las tarjetas se coloquen una al lado de la otra como si fueran letras */
+  /* Evita que una tarjeta "salte" hacia abajo si la de al lado tiene más texto */
+  vertical-align: top;
+
+  /* Cada tarjeta ocupa el 50% del ancho del padre, menos los 20px totales de margen (10px izquierda + 10px derecha) */
+  width: calc(50% - 20px);
+  margin: 10px; /* Margen de 10px alrededor de cada tarjeta */
+  padding: 20px;
+  border: 2px solid #133913;
+  border-radius: 12px;
+  transition: 0.3 ease;
+
+  /* Devuelve el tamaño de fuente a 16px, ya que el contenedor padre lo tiene en 0 para quitar espacios */
+  font-size: 16px;
+
+  /* Altura mínima: asegura que todas las tarjetas midan lo mismo de alto, incluso si una tiene menos texto que la otra */
+  min-height: 150px;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  border-color: #00DD88;
+  box-shadow: 0 0 8px #00DD88;
+  transform: scale(1.05);
+}
+
+.feature-card .heading {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #7C3AED;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #FFB000;
+  font-size: 0.9rem;
+}
+
+.feature-card-container input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #00FF41;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.feature-card-container input[type="checkbox"]:checked {
+  background-color: #0D1B2A;
+  border-color: #00FF88;
+  box-shadow: 0 0 8px #00FF88;
+}
+
+.feature-card-container input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  line-height: 20px;
+}
