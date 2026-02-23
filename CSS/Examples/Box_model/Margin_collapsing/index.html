@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Collpasing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .box1 {
+        margin-bottom: 20px;
+        background-color: lightblue;
+      }
+
+      .box2 {
+        margin-top: 30px;
+        background-color: lightgreen;
+        margin-bottom: 10px;
+      }
+
+      .parent {
+        margin-bottom: 40px;
+        background-color: lightyellow;
+      }
+
+      .child {
+        margin-top: 30px;
+        background-color: lightpink;
+      }
+
+      .empty-block {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        height: 0;
+      }
+
+      .next-block {
+        background-color: lightgray;
+      }
+
+      .parent2 {
+        margin-top: 40px;
+        padding-top: 1px;
+        background-color: lightyellow;
+      }
+
+      .child2 {
+        margin-top: 30px;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- El margen entre estos dos elementos será el del mayor, en este caso será de 30px -->
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+
+    <div class="parent">
+      <div class="child">Child element</div>
+    </div>
+
+    <!-- Si un elemento no tiene contenido, padding o border, sus márgenes superior e inferior pueden colapsar en un solo margen -->
+    <!-- En este ejemplo, los márgenes superior e inferior del bloque vacío se colapsan en un único margen de 20px, el mayor de los dos -->
+    <div class="empty-block"></div>
+    <div class="next-block">Next block</div>
+
+    <!-- Ejemplo de como prevenir el colapso usando el padding -->
+    <!-- En este caso, el padding de 1 px en el contenido principal evita que el margen se colapse, lo que da como resultado un espacio total de 71 px desde la parte superior del contenido principal hasta la parte superior del contenido secundario -->
+    <div class="parent2">
+      <div class="child2">Child element</div>
+    </div>
+  </body>
+</html>
