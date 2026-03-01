@@ -1,25 +1,28 @@
 :root {
   /* --- COLORES BASE (FONDO Y ESTRUCTURA) --- */
-  --bg-deep-black: #050505;       /* Fondo principal de la página */
-  --bg-panel: #0D0D0D;            /* Fondo del contenedor del formulario */
-  --ui-border: #222222;           /* Bordes sutiles de los inputs */
+  --bg-deep-black: #050505; /* Fondo principal de la página */
+  --bg-panel: #0d0d0d; /* Fondo del contenedor del formulario */
+  --ui-border: #222222; /* Bordes sutiles de los inputs */
 
   /* --- COLORES DE ENERGÍA (ACENTOS PÚRPURA) --- */
-  --vibranium-glow: #BF00FF;      /* El púrpura neón principal (Focus, Botones) */
-  --vibranium-dark: #4B0082;      /* Violeta oscuro para degradados y sombras */
-  --vibranium-light: #E0B0FF;     /* Lavanda pálido para los puntos de máximo brillo */
+  --vibranium-glow: #bf00ff; /* El púrpura neón principal (Focus, Botones) */
+  --vibranium-dark: #4b0082; /* Violeta oscuro para degradados y sombras */
+  --vibranium-light: #e0b0ff; /* Lavanda pálido para los puntos de máximo brillo */
 
   /* --- COLORES DE TEXTO Y DETALLE --- */
-  --text-primary: #F2F2F2;        /* Blanco casi puro para lectura clara */
-  --text-secondary: #8A8A8A;      /* Gris medio para etiquetas (Labels) */
-  --iron-grey: #2F2F2F;           /* El color de la textura metálica del traje */
+  --text-primary: #f2f2f2; /* Blanco casi puro para lectura clara */
+  --text-secondary: #8a8a8a; /* Gris medio para etiquetas (Labels) */
+  --iron-grey: #2f2f2f; /* El color de la textura metálica del traje */
 
   /* --- EFECTOS ESPECIALES (SOMBRAS Y GRADIENTES) --- */
-  --vibranium-gradient: linear-gradient(135deg, #4B0082 0%, #BF00FF 100%);
+  --vibranium-gradient: linear-gradient(135deg, #4b0082 0%, #bf00ff 100%);
   --glow-shadow: 0 0 15px rgba(191, 0, 255, 0.4);
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: var(--bg-deep-black);
@@ -28,7 +31,6 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 10px auto;
   padding: 30px;
   border: 3px solid var(--vibranium-dark);
   background-color: var(--bg-panel);
@@ -61,7 +63,9 @@ label {
   color: var(--vibranium-light);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   background-color: var(--bg-deep-black);
   color: var(--text-primary);
   width: 100%;
@@ -99,7 +103,7 @@ legend {
   font-size: 1.1rem;
 }
 
-.radio-group input[type=radio] {
+.radio-group input[type="radio"] {
   appearance: none;
   width: 20px;
   height: 20px;
@@ -110,11 +114,11 @@ legend {
   transition: border-color 0.3s ease;
 }
 
-.radio-group input[type=radio]:hover {
+.radio-group input[type="radio"]:hover {
   border-color: var(--vibranium-light);
 }
 
-.radio-group input[type=radio]::before {
+.radio-group input[type="radio"]::before {
   display: block;
   content: "";
   width: 10px;
@@ -128,11 +132,11 @@ legend {
   transition: transform 0.3s ease-in;
 }
 
-.radio-group input[type=radio]:checked::before {
+.radio-group input[type="radio"]:checked::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.radio-group input[type=radio]:checked {
+.radio-group input[type="radio"]:checked {
   border-color: var(--vibranium-light);
 }
 
@@ -142,11 +146,11 @@ legend {
   transition: color 0.3s ease;
 }
 
-.radio-group input[type=radio]:checked + label {
+.radio-group input[type="radio"]:checked + label {
   color: var(--vibranium-light);
 }
 
-.radio-group input[type=radio]:focus {
+.radio-group input[type="radio"]:focus {
   outline: 2px solid var(--vibranium-light);
   outline-offset: 2px;
 }
@@ -164,7 +168,9 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
 }
 
 button:hover {

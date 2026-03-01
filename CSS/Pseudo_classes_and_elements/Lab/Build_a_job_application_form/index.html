@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -16,15 +16,35 @@
         <form id="futsal-team-form">
           <!-- Player name -->
           <label for="player-name">Player Name:</label>
-          <input type="text" id="player-name" name="player-name" placeholder="Enter player name" required>
+          <input
+            type="text"
+            id="player-name"
+            name="player-name"
+            placeholder="Enter player name"
+            required
+          />
 
           <!-- Age -->
           <label for="age">Age: </label>
-          <input type="number" id="age" name="age" placeholder="Enter age" min="18" max="50" required>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter age"
+            min="18"
+            max="50"
+            required
+          />
 
           <!-- Email -->
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
 
           <!-- Position -->
           <label for="position">Position</label>
@@ -40,16 +60,33 @@
           <!-- Availability -->
           <fieldset class="radio-group">
             <legend>Availability</legend>
-            <input type="radio" id="fullTime" name="availability" value="fullTime" checked>
+            <input
+              type="radio"
+              id="fullTime"
+              name="availability"
+              value="fullTime"
+              checked
+            />
             <label for="fullTime">Full-Time</label>
 
-            <input type="radio" id="partTime" name="availability" value="partTime">
+            <input
+              type="radio"
+              id="partTime"
+              name="availability"
+              value="partTime"
+            />
             <label for="partTime">Part-Time</label>
           </fieldset>
 
           <!-- Motivation/Comments -->
           <label for="comments">Why do you want to join the team?</label>
-          <textarea id="comments" name="comments" rows="4" placeholder="Write your motivation" required></textarea>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            placeholder="Write your motivation"
+            required
+          ></textarea>
 
           <button type="submit">Submit Application</button>
         </form>
