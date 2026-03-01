@@ -1,7 +1,7 @@
 .shopping-cart {
   margin: 20px auto;
   font-family: sans-serif;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   padding: 15px;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,7 @@
   margin-top: 0;
   font-weight: 600;
   font-size: 1.4rem;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 8px;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 
 .item-name {
@@ -45,7 +45,7 @@
 }
 
 .remove-btn {
-  background: #E74C3C;
+  background: #e74c3c;
   border: none;
   color: white;
   padding: 6px 12px;
@@ -57,6 +57,6 @@
 
 .remove-btn:hover,
 .remove-btn:focus {
-  background: #C0392B;
+  background: #c0392b;
   outline: none;
 }

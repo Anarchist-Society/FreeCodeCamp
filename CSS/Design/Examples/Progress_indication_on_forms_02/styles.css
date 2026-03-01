@@ -18,7 +18,7 @@
   border-radius: 8px;
   height: 30px;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .progress-bar {
@@ -118,7 +118,8 @@ button:disabled {
 }
 
 @media (max-width: 600px) {
-  .form-progress, form {
+  .form-progress,
+  form {
     max-width: 90%;
     margin: 20px auto;
   }

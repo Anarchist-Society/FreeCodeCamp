@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 40px;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 h1 {
@@ -24,7 +24,7 @@ h1 {
 .box {
   width: 100px;
   height: 100px;
-  background: #3498DB;
+  background: #3498db;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +36,10 @@ h1 {
 
 .asymmetrical .box:nth-child(2) {
   transform: scale(1.5);
-  background: #e74C3C;
+  background: #e74c3c;
 }
 
-.description  {
+.description {
   text-align: center;
   margin-top: 50px;
   font-style: italic;
