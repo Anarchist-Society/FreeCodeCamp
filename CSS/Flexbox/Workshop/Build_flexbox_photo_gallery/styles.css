@@ -5,16 +5,16 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
 }
 
 .header {
   text-align: center;
   text-transform: uppercase;
   padding: 32px;
-  background-color: #0A0A23;
-  color: #FFF;
-  border-bottom: 4px solid #FDB347;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
 }
 
 .gallery {
