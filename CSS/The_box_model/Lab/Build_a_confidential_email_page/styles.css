@@ -1,0 +1,46 @@
+body {
+  display: grid;
+  place-items: center;
+  background-color: #0d1117;
+}
+
+#email {
+  width: 500px;
+  margin: 50px auto;
+  padding: 50px;
+  box-sizing: border-box;
+
+  background-color: #161b22;
+  color: #c9d1d9;
+
+  border: 2px solid #30363d;
+  box-shadow: 0 0 15px rgba(248, 81, 73, 0.15);
+}
+
+#confidential,
+#top-secret {
+  display: inline-block;
+  padding: 10px;
+
+  text-align: center;
+  font-weight: bold;
+
+  color: #f85149;
+  border: 5px solid #f85149;
+}
+
+#confidential {
+  margin-left: 100px;
+  font-size: 30px;
+  transform: rotate(-20deg);
+}
+
+#top-secret {
+  margin-left: 200px;
+  font-size: 20px;
+  transform: rotate(15deg);
+}
+
+.blurred {
+  filter: blur(3px);
+}
