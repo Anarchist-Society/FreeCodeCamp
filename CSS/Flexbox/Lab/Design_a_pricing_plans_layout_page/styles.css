@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0b1210;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  text-align: center;
+  color: #22c55e;
+}
+
+h2 {
+  color: #22c55e;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 900px;
+  height: 70vh;
+  padding: 0 20px;
+
+  background-color: #111c17;
+  border: 2px solid #163d2e;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+  border-radius: 10px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* 
+   flex-grow -> El elemento no crecerá aunque haya espacio extra en el contenedor flex
+   flex-shrink -> El elemento no se encongerá aunque el contenedor sea más pequeño que la suma de los hijos
+   flex-basis -> Es el tamaño base incial del elemento en el eje principal
+   */
+  flex: 0 0 200px; /* Cada .pricing-card tiene siempre 200px de width */
+  padding: 20px;
+  text-align: center;
+
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: 2px solid #163d2e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px;
+  border-bottom: 1px solid #433d28;
+  color: #22c55e;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.features li {
+  padding: 5px 0;
+  font-size: 0.95rem;
+}
+
+.check {
+  color: #21c55e;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.cross {
+  color: #f85149;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+
+  background-color: #22c55e;
+  color: #0b1210;
+  border: 3px solid #16a34a;
+  border-radius: 6px;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+a:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+
+.basic-plan {
+  order: 0;
+}
+
+.pro-plan {
+  order: 1;
+  flex-grow: 2;
+}
+
+.premium-plan {
+  order: 2;
+}
+
+@media screen and (max-width: 1000px) {
+  .pricing-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .pricing-card {
+    flex: 0 0 175px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pricing-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .pricing-card {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
