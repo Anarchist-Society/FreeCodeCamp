@@ -34,8 +34,8 @@
 }
 
 .q {
-  width: 40q;
-  height: 40q;
+  width: 40Q;
+  height: 40Q;
 }
 
 .pc {
@@ -63,7 +63,7 @@ html {
   gap: 12px;
 }
 
-.box{
+.box {
   background-color: seagreen;
   color: white;
   text-align: center;
