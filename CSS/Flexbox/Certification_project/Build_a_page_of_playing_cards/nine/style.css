@@ -95,15 +95,55 @@ body {
   height: 100%;
 }
 
-.eight div {
+.eight div:nth-child(3) {
   display: flex;
   justify-content: center;
-  line-height: 1;
+  width: 100%;
+  position: relative;
+  top: -48px;
 }
 
-.eight div:nth-child(3),
 .eight div:nth-child(6) {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  position: relative;
+  top: -135px;
+}
+
+.eight div:nth-child(4),
+.eight div:nth-child(5) {
+  position: relative;
+  top: -92px;
+}
+
+.eight div:nth-child(7),
+.eight div:nth-child(8) {
+  position: relative;
+  top: -184px;
+}
+
+.nine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nine div:nth-child(5) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -90px;
+}
+
+.nine div:nth-child(6),
+.nine div:nth-child(7),
+.nine div:nth-child(8),
+.nine div:nth-child(9) {
+  position: relative;
+  top: -183px;
 }
 
 .right {
