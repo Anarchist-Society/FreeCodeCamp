@@ -95,33 +95,32 @@ body {
   height: 100%;
 }
 
-.eight div {
+.eight div:nth-child(3) {
   display: flex;
   justify-content: center;
-}
-
-.eight div:nth-child(3) {
   width: 100%;
   position: relative;
-  top: -60px;
+  top: -48px;
 }
 
 .eight div:nth-child(6) {
+  display: flex;
+  justify-content: center;
   width: 100%;
   position: relative;
-  top: -160px;
+  top: -135px;
 }
 
 .eight div:nth-child(4),
 .eight div:nth-child(5) {
   position: relative;
-  top: -90px;
+  top: -92px;
 }
 
 .eight div:nth-child(7),
 .eight div:nth-child(8) {
   position: relative;
-  top: -200px;
+  top: -184px;
 }
 
 .right {
