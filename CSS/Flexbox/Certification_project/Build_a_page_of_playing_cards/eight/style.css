@@ -98,12 +98,30 @@ body {
 .eight div {
   display: flex;
   justify-content: center;
-  line-height: 1;
 }
 
-.eight div:nth-child(3),
+.eight div:nth-child(3) {
+  width: 100%;
+  position: relative;
+  top: -60px;
+}
+
 .eight div:nth-child(6) {
   width: 100%;
+  position: relative;
+  top: -160px;
+}
+
+.eight div:nth-child(4),
+.eight div:nth-child(5) {
+  position: relative;
+  top: -90px;
+}
+
+.eight div:nth-child(7),
+.eight div:nth-child(8) {
+  position: relative;
+  top: -200px;
 }
 
 .right {
