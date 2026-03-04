@@ -21,6 +21,8 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 250px);
   grid-template-areas: repeat(4, 350px);
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
@@ -37,7 +39,7 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 2px gray;
 
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
 }
@@ -47,17 +49,15 @@ body {
 }
 
 .middle {
+  font-size: 4rem;
   align-self: center;
-  display: flex;
-  font-size: 80px;
-  flex-direction: column;
 }
 
 .card .right {
   align-self: flex-end;
 }
 
-.middle.two {
+.two {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,10 +65,182 @@ body {
 }
 
 .four {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-between;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.four > div {
+  width: 50%;
+  height: 50%;
+}
+
+.five {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.five div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.six {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.six > div {
+  width: 50%;
+}
+
+.six div:nth-child(3),
+.six div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seven {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.seven > div {
+  width: 50%;
+}
+
+.seven div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+}
+
+.seven div:nth-child(4),
+.seven div:nth-child(5) {
+  position: relative;
+  top: -40px;
+}
+
+.eight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.eight > div {
+  width: 50%;
+}
+
+.eight div:nth-child(3) {
+  position: relative;
+  top: -12px;
+}
+
+.eight div:nth-child(3),
+.eight div:nth-child(6) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eight div:nth-child(4),
+.eight div:nth-child(5) {
+  position: relative;
+  top: -30px;
+}
+
+.eight div:nth-child(6) {
+  position: relative;
+  top: -13%;
+}
+
+.eight div:nth-child(7),
+.eight div:nth-child(8) {
+  position: relative;
+  top: -13%;
+}
+
+.nine {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.nine div:nth-child(5) {
+  width: 100%;
+  position: relative;
+  top: -5%;
+}
+
+.nine > div {
+  width: 50%;
+}
+
+.nine div:nth-child(6),
+.nine div:nth-child(7) {
+  position: relative;
+  top: -13%;
+}
+
+.nine div:nth-child(8),
+.nine div:nth-child(9) {
+  position: relative;
+  top: -13%;
+}
+
+.ten {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.ten div {
+  width: 50%;
+}
+
+.ten div:nth-child(3) {
+  width: 100%;
+  position: relative;
+  top: -12%;
+}
+
+.ten div:nth-child(4),
+.ten div:nth-child(5) {
+  position: relative;
+  top: -22%;
+}
+
+.ten div:nth-child(6),
+.ten div:nth-child(7) {
+  position: relative;
+  top: -13%;
+}
+
+.ten div:nth-child(8) {
+  width: 100%;
+  position: relative;
+  top: -25%;
+}
+
+.ten div:nth-child(9),
+.ten div:nth-child(10) {
+  position: relative;
+  top: -36%;
 }
