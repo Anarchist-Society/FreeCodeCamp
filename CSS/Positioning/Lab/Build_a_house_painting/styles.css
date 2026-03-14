@@ -1,0 +1,136 @@
+:root {
+  /* Sky */
+  --color-sky-light: #87ceeb;
+
+  /* House */
+  --color-house-body: #1e1e2e;
+  --color-house-border: #1793d1;
+
+  /* Roof */
+  --color-roof-tile: #2a2a3a;
+  --color-roof-fill: #242433;
+  --color-roof-solid: #0f172a;
+
+  /* Chimney */
+  --color-chimney-light: #6b7280;
+  --color-chimney-dark: #374151;
+
+  /* Window */
+  --color-window-frame: #1793d1;
+  --color-window-dark: #0d1117;
+
+  /* Door */
+  --color-door: #111827;
+  --color-door-knob: #facc15;
+
+  /* Welcome sign */
+  --color-welcome-sign: #1793d1;
+  --color-welcome-text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--color-sky-light) 60%, green 60%);
+}
+
+#house {
+  flex: 0 0 auto;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  background-color: var(--color-house-body);
+  border: 6px solid var(--color-house-border);
+}
+
+#chimney {
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 65%;
+  z-index: -1;
+  background: repeating-linear-gradient(
+    var(--color-chimney-dark),
+    var(--color-chimney-dark) 10%,
+    var(--color-chimney-light) 10%,
+    var(--color-chimney-light) 12%
+  );
+  border: 2px solid var(--color-chimney-light);
+}
+
+#roof {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  top: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--color-roof-tile),
+      var(--color-roof-solid) 2%,
+      transparent 2%,
+      transparent 5%
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      var(--color-roof-solid),
+      var(--color-roof-solid) 2%,
+      transparent 2%,
+      transparent 5%
+    );
+}
+
+#window-1,
+#window-2 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    to right,
+    var(--color-window-dark) 48%,
+    var(--color-window-frame) 48%,
+    var(--color-window-frame) 52%,
+    var(--color-window-dark) 52%
+  );
+  top: 40%;
+  border: 6px solid var(--color-window-frame);
+}
+
+#window-1 {
+  position: absolute;
+  left: 7.5%;
+}
+
+#window-2 {
+  position: absolute;
+  right: 7.5%;
+}
+
+#door {
+  width: 130px;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 185px;
+  background-color: var(--color-door);
+  border: 6px solid var(--color-door-knob);
+  transform: translateY(6px);
+}
+
+#door-knob {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  border-radius: 50%;
+  background-color: var(--color-door-knob);
+}
