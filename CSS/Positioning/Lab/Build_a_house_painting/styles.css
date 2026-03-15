@@ -1,6 +1,4 @@
-/* ==========================
-   VARIABLES
-========================== */
+/* VARIABLES */
 :root {
   /* Sky */
   --color-sky-light: #87ceeb;
@@ -31,9 +29,7 @@
   --color-welcome-text: #ffffff;
 }
 
-/* ==========================
-   GLOBAL STYLES
-========================== */
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -48,9 +44,35 @@ body {
   background: linear-gradient(var(--color-sky-light) 60%, green 60%);
 }
 
-/* ==========================
-   HOUSE
-========================== */
+img {
+  object-fit: contain;
+}
+
+#fsociety {
+  width: 40%;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  opacity: 0.5;
+}
+
+#tux-and-gnu {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#beastie {
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 30px;
+  z-index: -1;
+}
+
+/* HOUSE */
 #house {
   flex: 0 0 auto;
   width: 500px;
@@ -60,9 +82,77 @@ body {
   border: 6px solid var(--color-house-border);
 }
 
-/* ==========================
-   ROOF
-========================== */
+.smoke {
+  width: 30px;
+  height: 30px;
+}
+
+#smoke-1 {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#smoke-2 {
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  transform: rotate(20deg);
+}
+
+#smoke-3 {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  transform: rotate(-20deg);
+}
+
+#smoke-4 {
+  position: absolute;
+  top: -80px;
+  left: -1px;
+  transform: rotate(40deg);
+}
+
+#smoke-5 {
+  position: absolute;
+  top: -80px;
+  right: -10px;
+  transform: rotate(-40deg);
+}
+
+#smoke-6 {
+  position: absolute;
+  top: -120px;
+  left: 30px;
+}
+
+#smoke-7 {
+  position: absolute;
+  top: -80px;
+  left: 30px;
+  transform: rotate(170deg);
+}
+
+/* CHIMNEY */
+#chimney {
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 65%;
+  z-index: -1;
+  background: repeating-linear-gradient(
+    var(--color-chimney-dark),
+    var(--color-chimney-dark) 10%,
+    var(--color-chimney-light) 10%,
+    var(--color-chimney-light) 12%
+  );
+  border: 2px solid var(--color-chimney-light);
+}
+
+/* ROOF */
 #roof {
   width: 100%;
   height: 110px;
@@ -83,57 +173,71 @@ body {
       transparent 2%,
       transparent 5%
     );
+  border: 2px;
 }
 
-/* ==========================
-   CHIMNEY
-========================== */
-#chimney {
-  width: 90px;
-  height: 100px;
-  position: absolute;
-  top: -100px;
-  left: 65%;
-  z-index: -1;
-  background: repeating-linear-gradient(
-    var(--color-chimney-dark),
-    var(--color-chimney-dark) 10%,
-    var(--color-chimney-light) 10%,
-    var(--color-chimney-light) 12%
-  );
-  border: 2px solid var(--color-chimney-light);
-}
-
-/* ==========================
-   WINDOWS
-========================== */
+/* WINDOWS */
 #window-1,
 #window-2 {
   width: 100px;
   height: 100px;
-  top: 40%;
-  border: 6px solid var(--color-window-frame);
-  background: linear-gradient(
-    to right,
-    var(--color-window-dark) 48%,
-    var(--color-window-frame) 48%,
-    var(--color-window-frame) 52%,
-    var(--color-window-dark) 52%
-  );
   position: absolute;
+  top: 40%;
+  overflow: hidden;
+  border: 6px solid var(--color-window-frame);
+}
+
+#window-1::after,
+#window-2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: var(--color-window-frame);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#window-1::before,
+#window-2::before {
+  content: "";
+  width: 2px;
+  height: 100px;
+  background-color: var(--color-window-frame);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #window-1 {
   left: 7.5%;
 }
 
+#tux {
+  position: absolute;
+  top: 20px;
+  left: 27px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
 #window-2 {
   right: 7.5%;
 }
 
-/* ==========================
-   DOOR
-========================== */
+#terry {
+  position: absolute;
+  top: 13px;
+  left: 38px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* DOOR */
 #door {
   width: 130px;
   height: 180px;
