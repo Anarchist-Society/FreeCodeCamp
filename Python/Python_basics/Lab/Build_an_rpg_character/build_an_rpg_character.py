@@ -38,3 +38,4 @@ def create_character(name, strength, intelligence, charisma):
     return name + "\nSTR " + full_dot * strength + empty_dot * (10 - strength) + "\nINT " + full_dot * intelligence + empty_dot * (10 - intelligence) + "\nCHA " + full_dot * charisma + empty_dot * (10 - charisma)
 
 create_character('ren', 4, 2, 1)
+create_character('robert', 1, 5, 1)
