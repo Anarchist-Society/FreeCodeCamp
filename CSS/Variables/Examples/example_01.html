@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Are CSS Custom Properties, and How Do They Work?</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --card-width: 90%;
+        --card-bg: #f0f0f0;
+        --card-padding: 1rem;
+        --text-color: #333;
+      }
+
+      /* Tablet screens and up */
+      @media (min-width: 600px) {
+        :root {
+          --card-width: 70%;
+          --card-bg: #e8f5e9;
+          --card-padding: 1.5rem;
+        }
+      }
+
+      /* Desktop screens and up */
+      @media (min-width: 1024px) {
+        :root {
+          --card-width: 50%;
+          --card-bg: #d0f0ff;
+          --card-padding: 2rem;
+        }
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #fafafa;
+      }
+
+      .card {
+        border: 1px solid black;
+        width: var(--card-width);
+        background-color: var(--card-bg);
+        padding: var(--card-padding);
+        color: var(--text-color);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2>Responsive Design</h2>
+      <p>Resize the window to see the card adapt!</p>
+    </div>
+  </body>
+</html>
