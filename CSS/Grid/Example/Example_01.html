@@ -3,8 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>Grid</style>
+    <title>Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .item {
+        background-color: lightgray;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+    </style>
   </head>
 
   <body>
