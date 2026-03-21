@@ -1,1 +1,50 @@
-h
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Example 4 Repeat Track Listings in a Grid Layout</title>
+    <style>
+      .grid-container-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+      }
+
+      .grid-container-1 .box {
+        width: 100px;
+        height: 100px;
+        background-color: darkblue;
+      }
+
+      .grid-container-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 20px 1fr);
+        column-gap: 10px;
+      }
+
+      .grid-container-2 .box {
+        height: 100px;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Ejemplo 1</p>
+    <div class="grid-container-1">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <p>Ejemplo 2</p>
+    <div class="grid-container-2">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
