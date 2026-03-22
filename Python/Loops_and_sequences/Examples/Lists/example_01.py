@@ -1,8 +1,10 @@
+print('Ejemplo 1:')
+
 cities = ['Los Angeles', 'London', 'Tokyo']
-
 print('El primer valor:', cities[0]) # 'Los Angeles'
-
 print('El último valor:', cities[-1]) # 'Tokyo'
+
+print('\nEjemplo 2:')
 
 developer = 'Jessica'
 print('Casting a list:', list(developer)) # ['J', 'e', 's', 's', 'i', 'c', 'a']
