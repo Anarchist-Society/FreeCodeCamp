@@ -5,3 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Baskervville, serif;
+  color: linen;
+  background-color: rgb(20, 30, 40);
+}
