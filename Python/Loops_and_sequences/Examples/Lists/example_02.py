@@ -1,9 +1,8 @@
-print('append():\n')
-
+print('Ejemplo: append():\n')
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
 
-numbers.append(6)
+numbers.append(6) # append() sirve para añadir un elemento al final de una lista
 print('Lista después:', numbers, '\n')
 
 numbers = [1, 2, 3, 4, 5]
@@ -12,69 +11,70 @@ even_numbers = [6, 8, 10]
 # numbers.append(even_numbers)
 # print(numbers) # [1, 2, 3, 4, 5, [6, 8, 10]]
 
+print('Ejemplo: extend():')
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
 
 even_numbers = [6, 8, 10]
-numbers.extend(even_numbers)
+numbers.extend(even_numbers) # Sive para añadir varios elementos
 print('Lista después:', numbers, '\n') # [1, 2, 3, 4, 5, 6, 8, 10]
 
-print('insert():\n')
+print('Ejemplo: insert():\n')
 
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
 
-numbers.insert(2, 4)
-print('Lista después:', numbers, '\n') # [1, 2, 2.5, 3, 4, 5]
+numbers.insert(2, 4) # Sirve para añadir un elemento en una posición específica de una lista y desplaza los demás elementos
+print('Lista después:', numbers, '\n') # [1, 2, 4, 3, 4, 5]
 
-print('remove():\n')
+print('Ejemplo: remove():\n')
 
 numbers = [10, 20, 30, 40,50, 50]
 print('Lista inicial:', numbers)
 
-numbers.remove(50)
+numbers.remove(50) # Elimina por valor y no devuelve nada
 print('Lista después:', numbers, '\n')
 
-print('pop():\n')
+print('Ejemplo: pop():\n')
 
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
 
-numbers.pop(1) # The number 2 is returned
+numbers.pop(1) # The number 2 is returned Elimina por índice y devuelve valor
 print('Lista después:', numbers, '\n')
 
-print('clear():\n')
+print('Ejemplo: clear():\n')
 
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
 
-numbers.clear()
+numbers.clear() # Vaciar completamenta la lista
 print('Lista después:', numbers, '\n')# []
 
-print('sort():\n')
+print('Ejemplo: sort():\n')
 numbers = [19, 2, 35, 1, 67, 41]
 print(f'Lista inicial: {numbers}')
 
-numbers.sort()
+numbers.sort() # Ordenar la lista original y no devuelve nada
 print(f'Lista después: {numbers} \n') # [1, 2, 19, 35, 41, 67]
 
-print('sorted():\n')
+print('Ejemplo: sorted():\n')
 
 numbers = [19, 2, 35, 1, 67, 41]
-sorted_numbers = sorted(numbers)
+sorted_numbers = sorted(numbers) # Ordenar la lista y devuelve una nueva lista, no ordena la lista original
 
 print('Lista con valores desordenados:', numbers) # [19, 2, 35, 1, 67, 41]
 print('Lista con valores ordenados:', sorted_numbers, '\n') # [1, 2, 19, 35, 41, 67]
 
-print('reverse():\n')
+print('Ejemplo: reverse():\n')
 
 numbers = [6, 5, 4, 3, 2, 1]
 print(f'Lista inicial: {numbers}')
 
-numbers.reverse()
+numbers.reverse() # Invierte el orden de los elementos en una lista y no devuelve nada
 print(f'Lista después: {numbers} \n') # [1, 2, 3, 4, 5, 6]
 
-print('index():\n')
+print('Ejemplo: index():\n')
 
 programming_languages = ['Rust', 'Java', 'Python', 'C++']
 print(f'Lista inicial: {programming_languages}')
