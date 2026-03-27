@@ -1,3 +1,5 @@
+print('What Is String Slicing and How Does It Work?\n')
+
 my_str = "Hello world"
 
 print(my_str[0]) # H
