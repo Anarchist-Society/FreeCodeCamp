@@ -1,3 +1,5 @@
+print('Build a Travel Weather Planner:\n')
+
 distance_mi = 6.213712
 is_raining = False
 has_bike = True
