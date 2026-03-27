@@ -1,3 +1,5 @@
+print('Build an RPG Character:\n')
+
 full_dot = '●'
 empty_dot = '○'
 
