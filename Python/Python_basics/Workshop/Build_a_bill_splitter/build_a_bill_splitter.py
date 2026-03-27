@@ -1,3 +1,5 @@
+print('Build a Bill Splitter:\n')
+
 running_total = 0
 
 num_of_friends = 4
