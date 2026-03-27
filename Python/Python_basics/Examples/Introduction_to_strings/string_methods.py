@@ -1,3 +1,5 @@
+print('What Are Some Common String Methods?\n')
+
 # upper(): Returns a new string with all characters converted to uppercase.
 my_str = 'hello world'
 
