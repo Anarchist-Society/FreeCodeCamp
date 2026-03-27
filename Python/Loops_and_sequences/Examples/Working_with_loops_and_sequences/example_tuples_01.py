@@ -1,3 +1,5 @@
+print('What Are Tuples and How Do They Work?\n')
+
 print('Ejemplo 1:') # Las tuplas es un tipo de dato para crear un sequencia de valores ordenados
 developer = ('Alice', 34, 'Rust Developer')
 print(f'Tupla inicial: {developer}')
