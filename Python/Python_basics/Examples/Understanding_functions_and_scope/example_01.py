@@ -1,3 +1,5 @@
+print('How Do Functions Work in Python?\n')
+
 name = input('What is your name?: ') # User types "Kolade" and presses Enter
 print('Hello',name) # Output: Hello Kolade
 

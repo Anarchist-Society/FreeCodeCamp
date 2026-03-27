@@ -1,3 +1,5 @@
+print('What Is Scope in Python and How Does It Work?\n')
+
 # What Is Scope in Python and How Does It Work?
 
 # Local scope means that a variable declared inside a function or class can only be accessed within that function or class.
