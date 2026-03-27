@@ -1,3 +1,5 @@
+print('Build a Movie Ticket Booking Calculator:\nw')
+
 base_price = 15
 age = 21
 seat_type = 'Gold'
