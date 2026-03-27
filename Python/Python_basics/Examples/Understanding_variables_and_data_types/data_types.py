@@ -1,3 +1,7 @@
+print('How Do You Declare Variables and What Are Naming Conventions to Name Variables?')
+print('How Does the Print Function Work?')
+print('What Are Common Data Types in Python and How Do You Get the Type of a Variable?\n')
+
 my_integer_var = 10
 print('Integer:',my_integer_var) # Integer: 10
 
