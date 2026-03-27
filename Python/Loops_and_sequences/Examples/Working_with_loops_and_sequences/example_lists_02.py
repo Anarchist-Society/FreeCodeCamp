@@ -1,3 +1,5 @@
+print('What Are Some Common Methods Used for Lists?\n')
+
 print('Ejemplo: append():\n')
 numbers = [1, 2, 3, 4, 5]
 print('Lista inicial:', numbers)
