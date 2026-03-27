@@ -1,3 +1,5 @@
+print('What Are Lists and How Do They Work?\n')
+
 print('Ejemplo 1:')
 cities = ['Los Angeles', 'London', 'Tokyo']
 print(f'Lista de valores: {cities}')
