@@ -1,8 +1,8 @@
 *,
-*::before,
-*::after {
-  margin: 0;
+::before,
+::after {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  font-family: Baskervville, serif;
+  font-family: "Baskervville", serif;
   color: linen;
   background-color: rgb(20, 30, 40);
 }
 
 h1 {
-  font-family: Anton, sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 h2,
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -45,6 +45,11 @@ main {
 img {
   width: 100%;
   object-fit: cover;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
 }
 
 .heading {
@@ -81,7 +86,7 @@ img {
 
 .author {
   font-size: 2rem;
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .author-name a:hover {
@@ -108,16 +113,11 @@ img {
   margin-right: 1rem;
 }
 
-hr {
-  margin: 1.5rem 0;
-  border: 1px solid rgba(120, 120, 120, 0.6);
-}
-
 .quote {
   color: #00beef;
   font-size: 2.4rem;
   text-align: center;
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .quote::before {
@@ -155,4 +155,48 @@ hr {
   grid-template-rows: repeat(3, min-content);
   gap: 2rem;
   place-items: center;
+}
+
+.image-1,
+.image-3 {
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .hero-subtitle,
+  .author,
+  .quote,
+  .list-title {
+    font-size: 1.8rem;
+  }
+
+  .social-icons {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
 }
