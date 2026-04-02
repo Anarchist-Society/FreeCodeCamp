@@ -58,6 +58,8 @@ img {
   grid-column: 2 / 3;
   font-size: 1.8rem;
   letter-spacing: 0.6px;
+  column-width: 25rem;
+  text-align: justify;
 }
 
 .hero {
