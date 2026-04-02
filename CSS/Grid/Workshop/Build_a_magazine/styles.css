@@ -68,3 +68,14 @@ img {
   color: orangered;
   font-size: 8rem;
 }
+
+.hero-subtitle {
+  font-size: 2.4rem;
+  color: orangered;
+  text-align: center;
+}
+
+.author {
+  font-size: 2rem;
+  font-family: Raleway, sans-serif;
+}
