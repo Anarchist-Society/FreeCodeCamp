@@ -103,5 +103,19 @@ img {
 
 .first-paragraph::first-letter {
   font-size: 6rem;
-  color: orangered
+  color: orangered;
+  float: left;
+  margin-right: 1rem;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.quote {
+  color: #00beef;
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: Raleway, sans-serif;
 }
