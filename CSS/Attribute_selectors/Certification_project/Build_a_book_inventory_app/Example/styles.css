@@ -2,3 +2,18 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+.table-container {
+}
+
+table {
+  border-collapse: collapse;
+  width: 100vw;
+}
+
+thead {
+  background-image: linear-gradient(
+    hsl(197, 92%, 77%, 0.6),
+    hsl(197, 92%, 50%, 0.6)
+  );
+}
