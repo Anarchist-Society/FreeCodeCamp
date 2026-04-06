@@ -85,27 +85,34 @@ def validate(data):
 
     # Itera sobre cada elemento de la colección junto con su índice
     for index, dictionary in enumerate(data):
+
+        # Verifica que el elemento actual sea un diccionario
         if not isinstance(dictionary, dict):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
             continue
 
+        # Verifica que el diccionario tenga exactamente las claves requeridas
         if set(dictionary.keys()) != key_set:
-            print(
-                f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.'
-            )
+            print(f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.')
             is_invalid = True
             continue
 
+        # Llama a find_invalid_records con los valores del registro actual para obtener la lista de campos con formato incorrecto
         invalid_records = find_invalid_records(**dictionary)
 
-        for key in invalid_records:
-            print(f"Unexpected format '{key}: {dictionary[key]}' at position {index}.")
+        # Imprime un mensaje por cada campo inválido encontrado
+        for invalid_record in invalid_records:
+            print(f"Unexpected format '{invalid_record}: {dictionary[invalid_record]}' at position {index}.")
             is_invalid = True
 
+    # Si se detectó algún error, retorna False; de lo contrario, confirma que todo es válido
     if is_invalid:
         return False
+
     print('Valid format.')
+
     return True
 
+# Comprobamos con los valores que tenemos actualmente
 validate(medical_records)
