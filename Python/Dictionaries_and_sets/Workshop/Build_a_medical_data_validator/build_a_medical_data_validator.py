@@ -1,5 +1,7 @@
 import re
 
+print('Build a Medical Data Validator\n')
+
 # Lista de registros médicos de pacientes
 # Cada registro es un diccionario con los campos
 # patient_id, age, gender, diagnosis, medications y last_visit_id
