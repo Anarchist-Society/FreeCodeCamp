@@ -53,13 +53,17 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
         # gender debe ser un string y su valor (ignorando mayúsculas) debe ser 'male' or 'female'
         'gender': isinstance(gender, str) and gender.lower() in ('male', 'female'),
 
+        # diagnosis puede ser un string o None
         'diagnosis': isinstance(diagnosis, str) or diagnosis is None,
 
+        # medications debe ser una lista y cada elemento de esta lista debe ser un string
         'medications': isinstance(medications, list) and all([isinstance(i, str) for i in medications]),
 
+        # last_visit_id debe ser un string que empiece con 'v' (mayúscula o minúscula) y que tenga uno o más dígitos
         'last_visit_id': isinstance(last_visit_id, str) and re.fullmatch(r'v\d+', last_visit_id, re.IGNORECASE)
     }
 
+    # Retorna solo los campos cuya validación es False
     return [key for key, value in constraints.items() if not value]
 
 # 
