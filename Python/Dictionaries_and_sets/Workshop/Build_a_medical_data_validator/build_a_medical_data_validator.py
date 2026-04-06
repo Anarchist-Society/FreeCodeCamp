@@ -66,20 +66,24 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
     # Retorna solo los campos cuya validación es False
     return [key for key, value in constraints.items() if not value]
 
-# 
+# Valida una lista de registros médicos
 def validate(data):
+
+    # Verifica que el parámetro data recibido es una lista o tupla
     is_sequence = isinstance(data, (list, tuple))
 
     if not is_sequence:
         print('Invalid format: expected a list or tuple.')
         return False
         
+
+    # Bandera para rastrear si se encontró algún error durante la validación
     is_invalid = False
 
-    key_set = set(
-        ['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id']
-    )
+    # Conjunto de claves que debe tener cada registro médico
+    key_set = set(['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id'])
 
+    # Itera sobre cada elemento de la colección junto con su índice
     for index, dictionary in enumerate(data):
         if not isinstance(dictionary, dict):
             print(f'Invalid format: expected a dictionary at position {index}.')
