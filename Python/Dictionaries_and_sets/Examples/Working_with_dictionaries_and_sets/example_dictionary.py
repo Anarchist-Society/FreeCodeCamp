@@ -64,4 +64,3 @@ pizza = {
 print(f'Diccionario pizza antes: {pizza}')
 print(f'Este método actualiza los valores en función de sus claves: {pizza.update({'price': 15, 'total_time': 25})}')
 print(f'Diccionario pizza después: {pizza}')
-
