@@ -1,4 +1,7 @@
+import re
+
 def validate_isbn(isbn, length):
+
     if len(isbn) != length:
         print(f'ISBN-{length} code should be {length} digits long.')
         return
@@ -22,6 +25,7 @@ def validate_isbn(isbn, length):
         print('Invalid ISBN Code.')
 
 def calculate_check_digit_10(main_digits_list):
+
     # Note: You don't have to fully understand the logic in this function.
 
     digits_sum = 0
@@ -47,47 +51,64 @@ def calculate_check_digit_10(main_digits_list):
 
     return expected_check_digit
 
-# def calculate_check_digit_13(main_digits_list):
-# 
-#     # Note: You don't have to fully understand the logic in this function.
-# 
-#     digits_sum = 0
-# 
-#     # Multiply each of the first 12 digits by 1 and 3 alternately (starting with 1), and sum up the results
-# 
-#     for index, digit in enumerate(main_digits_list):
-#         if index % 2 == 0:
-#             digits_sum += digit * 1
-#         else:
-#             digits_sum += digit * 3
-# 
-#     # Find the remainder of dividing the sum by 10, then subtract it from 10
-# 
-#     result = 10 - digits_sum % 10
-# 
-#     # The calculation result can range from 1 to 10.
-#     # If the result is 10, use 0.
-#     # Use the value as it is for other numbers.
-# 
-#     if result == 10:
-#         expected_check_digit = '0'
-#     else:
-#         expected_check_digit = str(result)
-# 
-#     return expected_check_digit
+def calculate_check_digit_13(main_digits_list):
 
-# def main():
-#     user_input = input('Enter ISBN and length: ')
-# 
-#     values = user_input.split(',')
-# 
-#     isbn = values[0]
-# 
-#     length = int(values[1])
-# 
-#     if length == 10 or length == 13:
-#         validate_isbn(isbn, length)
-#     else:
-#         print('Length should be 10 or 13.')
-# 
-# main()
+    # Note: You don't have to fully understand the logic in this function.
+
+    digits_sum = 0
+
+    # Multiply each of the first 12 digits by 1 and 3 alternately (starting with 1), and sum up the results
+
+    for index, digit in enumerate(main_digits_list):
+        if index % 2 == 0:
+            digits_sum += digit * 1
+        else:
+            digits_sum += digit * 3
+
+    # Find the remainder of dividing the sum by 10, then subtract it from 10
+
+    result = 10 - digits_sum % 10
+
+    # The calculation result can range from 1 to 10.
+    # If the result is 10, use 0.
+    # Use the value as it is for other numbers.
+
+    if result == 10:
+        expected_check_digit = '0'
+    else:
+        expected_check_digit = str(result)
+
+    return expected_check_digit
+
+def main():
+    try:
+        user_input = input('Enter ISBN and length: ')
+        values = user_input.split(',')
+
+        if len(values) != 2:
+            print('Enter comma-separated values.')
+            return
+
+        isbn = values[0]
+        length = int(values[1])
+
+        if length == 10:
+            if not re.fullmatch(r'\d{9}[\dX]', isbn.upper()):
+                print('Invalid character was found.')
+                return
+        elif length == 13:
+            if not re.fullmatch(r'\d{13}', isbn):
+                print('Invalid character was found.')
+        else:
+            print('Length should be 10 or 13.')
+            return
+
+        validate_isbn(isbn, length)
+
+    except ValueError:
+        print('Length must be a number.')
+        return
+    except IndexError:
+        print('Enter comma-separated values.')
+
+main()
