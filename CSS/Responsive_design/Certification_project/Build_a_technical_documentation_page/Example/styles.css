@@ -22,7 +22,6 @@ header {
   margin: 10px;
   text-align: center;
   font-size: 1.8em;
-  font-weight: thin;
 }
 
 #main-doc header {
@@ -81,7 +80,34 @@ code {
   background-color: #f7f7f7;
   padding: 15px;
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin: 0px;
+    margin-top: 270px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
