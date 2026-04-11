@@ -6,6 +6,62 @@
   </head>
 
   <body>
+    <nav id="navbar">
+      <header>JS Documentation</header>
+
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+
+        <li>
+          <a href="#What_you_should_already_know" class="nav-link"
+            >What you should already know</a
+          >
+        </li>
+
+        <li>
+          <a href="#Javascript_and_java" class="nav-link"
+            >JavaScript and Java</a
+          >
+        </li>
+
+        <li><a href="#Hello_world" class="nav-link">Hello World</a></li>
+
+        <li><a href="#Variables" class="nav-link">Variables</a></li>
+
+        <li>
+          <a href="#Declaring_variables" class="nav-link"
+            >Declaring Variables</a
+          >
+        </li>
+
+        <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+
+        <li>
+          <a href="#Global_variables" class="nav-link">Global variables</a>
+        </li>
+
+        <li><a href="#Constants" class="nav-link">Constants</a></li>
+
+        <li><a href="#Data_types" class="nav-link">Data Types</a></li>
+
+        <li>
+          <a href="#if...else_statement" class="nav-link"
+            >if...else statement</a
+          >
+        </li>
+
+        <li><a href="#while_statement" class="nav-link">while statement</a></li>
+
+        <li>
+          <a href="#Function_declarations" class="nav-link"
+            >Function declarations</a
+          >
+        </li>
+
+        <li><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+
     <main id="main-doc">
       <section class="main-section" id="Introduction">
         <header>Introduction</header>
@@ -228,10 +284,6 @@
 
       <section class="main-section" id="Constants">
         <header>Constants</header>
-      </section>
-
-      <section class="main-section" id="Data_types">
-        <header>Data types</header>
 
         <article>
           <p>
@@ -264,11 +316,108 @@
             WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
             //statements }</code
           >
+
+          However, object attributes are not protected, so the following
+          statement is executed without problems.
+
+          <code
+            >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";</code
+          >
+        </article>
+      </section>
+
+      <section class="main-section" id="Data_types">
+        <header>Data types</header>
+
+        <article>
+          <p>The latest ECMAScript standard defines seven data types:</p>
+
+          <ul>
+            <li>
+              <p>Six data types that are primitives:</p>
+
+              <ul>
+                <li>Boolean. true and false.</li>
+
+                <li>
+                  null. A special keyword denoting a null value. Because
+                  JavaScript is case-sensitive, null is not the same as Null,
+                  NULL, or any other variant.
+                </li>
+
+                <li>
+                  undefined. A top-level property whose value is undefined.
+                </li>
+
+                <li>Number. 42 or 3.14159.</li>
+
+                <li>String. "Howdy"</li>
+
+                <li>
+                  Symbol (new in ECMAScript 2015). A data type whose instances
+                  are unique and immutable.
+                </li>
+              </ul>
+            </li>
+
+            <li>and Object</li>
+          </ul>
+
+          Although these data types are a relatively small amount, they enable
+          you to perform useful functions with your applications. Objects and
+          functions are the other fundamental elements in the language. You can
+          think of objects as named containers for values, and functions as
+          procedures that your application can perform.
         </article>
       </section>
 
       <section class="main-section" id="if...else_statement">
         <header>if...else statement</header>
+
+        <article>
+          Use the if statement to execute a statement if a logical condition is
+          true. Use the optional else clause to execute a statement if the
+          condition is false. An if statement looks as follows:
+
+          <code>if (condition) { statement_1; } else { statement_2; }</code>
+
+          <p>
+            You may also compound the statements using else if to have multiple
+            conditions tested in sequence, as follows:
+          </p>
+
+          <code
+            >if (condition_1) { statement_1; } else if (condition_2) {
+            statement_2; } else if (condition_n) { statement_n; } else {
+            statement_last; }</code
+          >
+
+          In the case of multiple conditions only the first logical condition
+          which evaluates to true will be executed. To execute multiple
+          statements, group them within a block statement ({ ... }) . In
+          general, it's good practice to always use block statements, especially
+          when nesting if statements:
+
+          <code
+            >if (condition) { statement_1_runs_if_condition_is_true;
+            statement_2_runs_if_condition_is_true; } else {
+            statement_3_runs_if_condition_is_false;
+            statement_4_runs_if_condition_is_false; }</code
+          >
+
+          It is advisable to not use simple assignments in a conditional
+          expression, because the assignment can be confused with equality when
+          glancing over the code. For example, do not use the following code:
+
+          <code>if (x = y) { /* statements here */ }</code>
+
+          If you need to use an assignment in a conditional expression, a common
+          practice is to put additional parentheses around the assignment. For
+          example:
+
+          <code>if ((x = y)) { /* statements here */ } </code>
+        </article>
       </section>
 
       <section class="main-section" id="while_statement">
@@ -277,9 +426,108 @@
 
       <section class="main-section" id="Function_declarations">
         <header>Function declarations</header>
+
+        <article>
+          A while statement executes its statements as long as a specified
+          condition evaluates to true. A while statement looks as follows:
+
+          <code>while (condition) statement</code>
+
+          If the condition becomes false, statement within the loop stops
+          executing and control passes to the statement following the loop.
+
+          <p>
+            The condition test occurs before statement in the loop is executed.
+            If the condition returns true, statement is executed and the
+            condition is tested again. If the condition returns false, execution
+            stops and control is passed to the statement following while.
+          </p>
+
+          <p>
+            To execute multiple statements, use a block statement ({ ... }) to
+            group those statements.
+          </p>
+
+          Example:
+
+          <p>
+            The following while loop iterates as long as n is less than three:
+          </p>
+
+          <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
+
+          <p>
+            With each iteration, the loop increments n and adds that value to x.
+            Therefore, x and n take on the following values:
+          </p>
+
+          <ul>
+            <li>After the first pass: n = 1 and x = 1</li>
+            <li>After the second pass: n = 2 and x = 3</li>
+            <li>After the third pass: n = 3 and x = 6</li>
+          </ul>
+        </article>
       </section>
+
+      <section class="main-section" id="Function_declarations">
+        <header>Function declarations</header>
+
+        <article>
+          A function definition (also called a function declaration, or function
+          statement) consists of the function keyword, followed by:
+
+          <ul>
+            <li>The name of the function.</li>
+
+            <li>
+              A list of arguments to the function, enclosed in parentheses and
+              separated by commas.
+            </li>
+
+            <li>
+              The JavaScript statements that define the function, enclosed in
+              curly brackets, { }.
+            </li>
+          </ul>
+
+          <p>
+            For example, the following code defines a simple function named
+            square:
+          </p>
+
+          <code>function square(number) { return number * number; }</code>
+
+          <p>
+            The function square takes one argument, called number. The function
+            consists of one statement that says to return the argument of the
+            function (that is, number) multiplied by itself. The return
+            statement specifies the value returned by the function.
+          </p>
+
+          <code>return number * number;</code>
+
+          <p>
+            Primitive parameters (such as a number) are passed to functions by
+            value; the value is passed to the function, but if the function
+            changes the value of the parameter, this change is not reflected
+            globally or in the calling function.
+          </p>
+        </article>
+      </section>
+
       <section class="main-section" id="Reference">
         <header>Reference</header>
+
+        <article>
+          <ul>
+            <li>All the documentation in this page is taken from</li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+              target="_blank"
+              >MDN</a
+            >
+          </ul>
+        </article>
       </section>
     </main>
   </body>
