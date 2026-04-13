@@ -87,28 +87,18 @@ def main():
 
         if len(values) != 2:
             print('Enter comma-separated values.')
-            return
 
         isbn = values[0]
         length = int(values[1])
 
-        if length == 10:
-            if not re.fullmatch(r'\d{9}[\dX]', isbn.upper()):
-                print('Invalid character was found.')
-                return
-        elif length == 13:
-            if not re.fullmatch(r'\d{13}', isbn):
-                print('Invalid character was found.')
+        if not re.fullmatch(r'\d+', isbn):
+            print('Invalid character was found.')
+
+        if length == 10 or length == 13:
+            validate_isbn(isbn, length)
         else:
             print('Length should be 10 or 13.')
-            return
-
-        validate_isbn(isbn, length)
-
     except ValueError:
         print('Length must be a number.')
-        return
-    except IndexError:
-        print('Enter comma-separated values.')
 
-main()
+# main()
