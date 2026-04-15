@@ -43,7 +43,7 @@ tr {
   height: 1.1rem;
 }
 
-tr:first-child {
+tr :first-child {
   width: 4rem;
 }
 
