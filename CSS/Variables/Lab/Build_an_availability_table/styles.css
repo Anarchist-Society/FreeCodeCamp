@@ -44,9 +44,17 @@ tr {
   height: 1rem;
 }
 
+tr :first-child {
+  width: 4rem;
+}
+
 td {
   border-left: var(--solid-border);
   border-right: var(--solid-border);
+}
+
+.sharp th:not([class*="time"]) {
+  border-bottom: var(--solid-border);
 }
 
 .sharp td {
@@ -55,6 +63,15 @@ td {
 
 .half td {
   border-bottom: var(--dashed-border);
+}
+
+tbody :last-child td {
+  border: none;
+}
+
+.time {
+  text-align: right;
+  padding: 0.4rem;
 }
 
 .available-0 {
