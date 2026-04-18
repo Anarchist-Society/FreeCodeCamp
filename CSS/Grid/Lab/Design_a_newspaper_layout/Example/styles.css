@@ -1,0 +1,100 @@
+:root {
+  --bg-color: #f0f0f0;
+  --bg-color-title: #1b1b32;
+  --main-color: black;
+  --secondary-color: white;
+  --third-color: #f9f9f9;
+  --spacing: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  background-color: var(--bg-color);
+}
+
+.newspaper-layout {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "feature-article feature-article cover-image"
+    "secondary-article secondary-article cover-image"
+    "small-article1 small-article2 small-article3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: var(--spacing);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+.title {
+  grid-area: title;
+  background-color: var(--bg-color-title);
+  color: var(--secondary-color);
+  padding: var(--spacing);
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.feature-article,
+.secondary-article {
+  background-color: var(--third-color);
+  padding: var(--spacing);
+  font-size: 1rem;
+}
+
+.feature-article {
+  grid-area: feature-article;
+}
+
+.secondary-article {
+  grid-area: secondary-article;
+}
+
+.small-article1,
+.small-article2,
+.small-article3 {
+  background-color: var(--third-color);
+  padding: var(--spacing);
+  font-size: 0.9rem;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
+
+.small-article3 {
+  grid-area: small-article3;
+}
+
+.cover-image {
+  grid-area: cover-image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  padding: var(--spacing);
+  margin: 0;
+}
+
+.cover-image img {
+  max-width: 100%;
+  height: 350px;
+  width: 350px;
+  border-radius: 5px;
+}
