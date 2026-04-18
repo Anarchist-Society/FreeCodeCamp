@@ -1,3 +1,5 @@
+print('Build a Musical Instrument Inventory:\n')
+
 class MusicalInstrument:
     def __init__(self, name, instrument_type):
         self.name = name
