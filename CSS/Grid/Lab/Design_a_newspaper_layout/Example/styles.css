@@ -27,7 +27,7 @@ body {
     "secondary-article secondary-article cover-image"
     "small-article1 small-article2 small-article3";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
   gap: var(--spacing);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
