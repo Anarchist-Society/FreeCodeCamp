@@ -2,10 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
   background-color: #f0f0f0;
+}
+
+main {
+  height: 100vh;
 }
 
 .newspaper-layout {
@@ -16,13 +21,31 @@ body {
     "secondary-article secondary-article cover-image"
     "small-article1 small-article2 small-article3";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
   gap: 15px;
-  border: 1px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .title {
   grid-area: title;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.feature-article,
+.secondary-article {
+  background-color: #f9f9f9;
+  padding: 15px;
+  font-size: 1rem;
 }
 
 .feature-article {
@@ -31,6 +54,14 @@ body {
 
 .secondary-article {
   grid-area: secondary-article;
+}
+
+.small-article1,
+.small-article2,
+.small-article3 {
+  background-color: #f9f9f9;
+  padding: 15px;
+  font-size: 0.9rem;
 }
 
 .small-article1 {
@@ -50,10 +81,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ddd;
+  padding: 15px;
 }
 
-.cover-image {
+.cover-image img {
   max-width: 100%;
   width: 350px;
   height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
 }
