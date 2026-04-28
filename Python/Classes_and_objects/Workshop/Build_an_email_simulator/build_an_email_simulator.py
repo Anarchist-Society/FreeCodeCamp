@@ -11,10 +11,22 @@ class Email:
     def mark_as_read(self):
         self.read = True
 
+    def display_full_email(self):
+        self.mark_as_read()
+
+
 class User:
     def __init__(self, name):
         self.name = name
-        self.inbox = []
+        self.inbox = Inbox()
 
     def send_email(self, receiver, subject, body):
         email = Email(sender=self, receiver=receiver, subject=subject, body=body)
+        receiver.inbox.receive_email(email)
+
+class Inbox:
+    def __init__(self):
+        self.emails = []
+
+    def receive_email(self, email):
+        self.emails.append(email)
