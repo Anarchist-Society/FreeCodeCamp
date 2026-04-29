@@ -1,4 +1,5 @@
 print('Build an Email Simulator:\n')
+
 import datetime
 
 class Email:
@@ -26,6 +27,7 @@ class Email:
     def __str__(self):
         status = 'Read' if self.read else 'Unread'
         return f"[{status}] From: {self.sender.name} | Subject: {self.subject} | Time: {self.timestamp.strftime('%Y-%m-%d %H:%M')}"
+
 class Inbox:
     def __init__(self):
         self.emails = []
@@ -37,6 +39,7 @@ class Inbox:
         if not self.emails:
             print('Your inbox is empty.\n')
             return
+
         print('\nYour Emails:')
         for i, email in enumerate(self.emails, start=1):
             print(f'{i}. {email}')
@@ -46,21 +49,28 @@ class Inbox:
         if not self.emails:
             print('Inbox is empty.\n')
             return
+
         actual_index = index - 1
+
         if actual_index < 0 or actual_index >= len(self.emails):
             print('Invalid email number.\n')
             return
+
         self.emails[actual_index].display_full_email()
 
     def delete_email(self, index):
         if not self.emails:
             print('Inbox is empty.\n')
             return
+
         actual_index = index - 1
+
         if actual_index < 0 or actual_index >= len(self.emails):
             print('Invalid email number.\n')
             return
+
         del self.emails[actual_index]
+
         print('Email deleted.\n')
 
 class User:
@@ -89,10 +99,11 @@ def main():
 
     tory.send_email(ramy, 'Hello', 'Hi Ramy, just saying hello!')
     ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.')
-    
+
     ramy.check_inbox()
     ramy.read_email(1)
     ramy.delete_email(1)
     ramy.check_inbox()
+
 if __name__ == '__main__':
     main()
