@@ -3,9 +3,14 @@ class Category:
         self.name = name
         self.ledger = []
 
-    def deposit(self, amount, description):
+    def deposit(self, amount, description=""):
         if not description:
             description = ''
+
+        self.ledger.append(f'amount: {amount}, description: {description}')
+
+    def withdraw(self, amount, description):
+        pass
 
 def create_spend_chart(categories):
     pass
