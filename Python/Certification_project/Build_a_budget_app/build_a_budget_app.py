@@ -13,7 +13,19 @@ class Category:
         self.ledger.append({'amount': amount, 'description': description})
 
         ingresos = 0
+        retiros = 0
 
+        for i in self.ledger:
+            if i['amount'] > 0:
+                ingresos += i['amount']
+            else:
+                retiros += abs(i['amount'])
+
+        if ingresos >= retiros:
+            return True
+
+    def get_balance(self):
+        ingresos = 0
         retiros = 0
 
         for i in self.ledger:
@@ -30,8 +42,8 @@ def create_spend_chart(categories):
 def main():
     food = Category('food')
     food.deposit(900, 'deposit')
-    valor = food.withdraw(45.67, 'milk, cereal, eggs, bacon, bread')
-    print(valor)
+    food.withdraw(45.67, 'milk, cereal, eggs, bacon, bread')
+    print(food.get_balance())
 
 if __name__ == '__main__':
     main()
