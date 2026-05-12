@@ -71,3 +71,6 @@ def view_settings(settings):
         result += f"{key.title()}: {value}\n"
 
     return result
+
+result = view_settings(test_settings)
+print(result)
