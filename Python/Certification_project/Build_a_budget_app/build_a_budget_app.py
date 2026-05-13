@@ -10,21 +10,7 @@ class Category:
         self.ledger.append({'amount': amount, 'description': description}) # Lo agregamos el depósito en formato de diccionario a la lista
 
     def withdraw(self, amount, description = ''):
-        amount = amount - amount * 2
-
-        self.ledger.append({'amount': amount, 'description': description})
-
-        ingresos = 0
-        retiros = 0
-
-        for i in self.ledger:
-            if i['amount'] > 0:
-                ingresos += i['amount']
-            else:
-                retiros += abs(i['amount'])
-
-        if ingresos >= retiros:
-            return True
+        self.ledger.append({'amount': -amount, 'description': description})
 
     def get_balance(self):
         ingresos = 0
