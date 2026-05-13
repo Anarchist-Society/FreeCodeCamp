@@ -13,16 +13,14 @@ class Category:
         self.ledger.append({'amount': -amount, 'description': description})
 
     def get_balance(self):
-        ingresos = 0
-        retiros = 0
-
+        balance = 0
+        
         for i in self.ledger:
-            if i['amount'] > 0:
-                ingresos += i['amount']
-            else:
-                retiros += abs(i['amount'])
+            balance += i['amount']
 
-        return ingresos - retiros
+        balance = sum()
+
+        return balance
 
     def transfer(self, amount, category):
         category.withdraw(amount, f'Transfer to {category.name}')
@@ -43,6 +41,7 @@ def main():
     food.deposit(900, 'deposit')
     food.withdraw(45.67, 'milk, cereal, eggs, bacon, bread')
     print(food.get_balance())
+    print(food.check_funds(853.33))
 
 if __name__ == '__main__':
     main()
