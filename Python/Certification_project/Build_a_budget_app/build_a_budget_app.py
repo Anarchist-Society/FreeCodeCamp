@@ -39,6 +39,14 @@ class Category:
     def transfer(self, amount, category):
         category.withdraw(amount, f'Transfer to {category.name}')
 
+    def check_funds(self, amount):
+        balance = self.get_balance()
+
+        if balance < amount:
+            return False
+
+        return True
+
 def create_spend_chart(categories):
     pass
 
