@@ -12,6 +12,11 @@ class Category:
     def withdraw(self, amount, description = ''):
         self.ledger.append({'amount': -amount, 'description': description})
 
+        if not self.check_funds(amount):
+            return False
+
+        return True
+
     def get_balance(self):
         # balance = 0
         
