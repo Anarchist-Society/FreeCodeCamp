@@ -1,11 +1,13 @@
+# Clase Category que acepta un nombre como argumento
 class Category:
+    # Constructor
     def __init__(self, name):
         self.name = name
-        self.ledger = []
+        self.ledger = [] # Inicializamos la lista que tendrá los ingresos y los retiros
 
+    # Método deposit, que acepta una cantidad y una descripción, si no hay descripción por defecto es un string vacío
     def deposit(self, amount, description = ''):
-        self.ledger.append({'amount': amount, 'description': description})
-        print(self.ledger)
+        self.ledger.append({'amount': amount, 'description': description}) # Lo agregamos el depósito en formato de diccionario a la lista
 
     def withdraw(self, amount, description = ''):
         amount = amount - amount * 2
