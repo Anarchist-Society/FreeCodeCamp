@@ -36,9 +36,6 @@ class Category:
 
         return balance
 
-    def transfer(self, amount, category):
-        category.withdraw(amount, f'Transfer to {category.name}')
-
     def check_funds(self, amount):
         balance = self.get_balance()
 
@@ -51,11 +48,13 @@ def create_spend_chart(categories):
     pass
 
 def main():
-    food = Category('food')
-    food.deposit(900, 'deposit')
-    food.withdraw(45.67, 'milk, cereal, eggs, bacon, bread')
-    print(food.get_balance())
-    print(food.check_funds(853.33))
+    food = Category('Food')
+    food.deposit(1000, 'initial deposit')
+    food.withdraw(10.15, 'groceries')
+    food.withdraw(15.89, 'restaurant and more food for dessert')
+    clothing = Category('Clothing')
+    food.transfer(50, clothing)
+    # print(food)
 
 if __name__ == '__main__':
     main()
