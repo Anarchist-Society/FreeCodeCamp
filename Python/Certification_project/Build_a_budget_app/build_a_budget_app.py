@@ -13,12 +13,12 @@ class Category:
         self.ledger.append({'amount': -amount, 'description': description})
 
     def get_balance(self):
-        balance = 0
+        # balance = 0
         
-        for i in self.ledger:
-            balance += i['amount']
+        # for i in self.ledger:
+            # balance += i['amount']
 
-        balance = sum()
+        balance = sum(i['amount'] for i in self.ledger)
 
         return balance
 
