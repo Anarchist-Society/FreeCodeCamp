@@ -1,13 +1,9 @@
-# Clase Category que acepta un nombre como argumento
 class Category:
-    # Constructor
     def __init__(self, name):
         self.name = name
-        self.ledger = [] # Inicializamos la lista que tendrá los ingresos y los retiros
-
-    # Método deposit, que acepta una cantidad y una descripción, si no hay descripción por defecto es un string vacío
+        self.ledger = []
     def deposit(self, amount, description = ''):
-        self.ledger.append({'amount': amount, 'description': description}) # Lo agregamos el depósito en formato de diccionario a la lista
+        self.ledger.append({'amount': amount, 'description': description})
 
     def withdraw(self, amount, description = ''):
         self.ledger.append({'amount': -amount, 'description': description})
@@ -45,21 +41,18 @@ class Category:
         return True
 
     def __str__(self):
-        len_name = len(self.name)
+        title = self.name.center(30, '*')
 
-        if len_name % 2 == 0:
-            asteriscos = (30 - len_name) // 2
-            print(asteriscos)
-            print(f'{'*' * asteriscos}{self.name}{'*' * asteriscos}')
-            for i in self.ledger:
-                description = i['description']
-                amount = i['amount']
-                len_description = len(description)
-                print(f'{description}{' ' * (23 - len_description)}{amount:.2f}')
-        else:
-            pass
+        items = []
 
-        return 'hola'
+        for i in self.ledger:
+            description = i['description'][:23]
+            amount = i['amount']
+            items.append(f"{description:<23}{amount:>7.2f}")
+
+        total = f'Total: {self.get_balance():.2f}'
+
+        return title + '\n' + '\n'.join(items) + '\n' + total
 
 def create_spend_chart(categories):
     pass
