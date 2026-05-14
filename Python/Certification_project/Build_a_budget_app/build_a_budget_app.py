@@ -44,6 +44,23 @@ class Category:
 
         return True
 
+    def __str__(self):
+        len_name = len(self.name)
+
+        if len_name % 2 == 0:
+            asteriscos = (30 - len_name) // 2
+            print(asteriscos)
+            print(f'{'*' * asteriscos}{self.name}{'*' * asteriscos}')
+            for i in self.ledger:
+                description = i['description']
+                amount = i['amount']
+                len_description = len(description)
+                print(f'{description}{' ' * (23 - len_description)}{amount:.2f}')
+        else:
+            pass
+
+        return 'hola'
+
 def create_spend_chart(categories):
     pass
 
@@ -54,7 +71,7 @@ def main():
     food.withdraw(15.89, 'restaurant and more food for dessert')
     clothing = Category('Clothing')
     food.transfer(50, clothing)
-    # print(food)
+    print(food)
 
 if __name__ == '__main__':
     main()
