@@ -6,15 +6,45 @@
   </head>
 
   <body>
+    <!--
+      Proyecto de certificación: Formulario de encuesta (survey).
+      
+      Estructura general:
+      - div.container: Contenedor principal para centrar el contenido.
+      - header: Título y descripción de la encuesta.
+      - form: Todos los campos de entrada.
+        - div.form-group: Agrupa cada campo (label + input).
+      
+      Elementos HTML usados:
+      - input type="text": Texto normal.
+      - input type="email": Validación de email.
+      - input type="number": Solo números.
+      - input type="radio": Opciones múltiples (solo una).
+      - input type="checkbox": Casillas (varias seleccionables).
+      - select + option: Lista desplegable.
+      - textarea: Texto de múltiples líneas.
+      - button type="submit": Botón para enviar.
+    -->
     <div class="container">
       <header class="header">
+        <!--
+          id="title": Identificador para JavaScript/CSS.
+          class="text-center": Clase CSS para centrar el texto.
+          
+          Patrón: id para funcionalidad, class para estilos.
+        -->
         <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
         <p id="description" class="description text-center">
           Thank you for taking the time to help us improve the platform
         </p>
       </header>
 
+      <!--
+        <form id="survey-form">: Formulario completo.
+        El id permite manipular el form con JavaScript.
+      -->
       <form id="survey-form">
+        <!-- Campo de nombre -->
         <div class="form-group">
           <label id="name-label" for="name">Name</label>
           <input
@@ -26,6 +56,7 @@
           />
         </div>
 
+        <!-- Campo de email -->
         <div class="form-group">
           <label id="email-label" for="email">Email</label>
           <input
@@ -37,6 +68,7 @@
           />
         </div>
 
+        <!-- Campo de edad -->
         <div class="form-group">
           <label id="number-label" for="number"
             >Age<span class="clue">(optional)</span></label
@@ -52,6 +84,14 @@
           />
         </div>
 
+        <!--
+          Radio buttons: Opciones múltiples (solo una seleccionable).
+          Estructura: <label> envuelve <input> + texto.
+          Esto permite hacer clic en el texto para seleccionar.
+          
+          name="user-recommend": Todos los radios del mismo grupo.
+          Solo UNO puede estar seleccionado a la vez.
+        -->
         <div class="form-group">
           <p>Would you recommend freeCodeCamp to a friend?</p>
           <label
@@ -83,6 +123,13 @@
           >
         </div>
 
+        <!--
+          Select dropdown: Lista desplegable.
+          <option disabled selected value>: Primera opción como placeholder.
+          - disabled: No se puede seleccionar.
+          - selected: Aparece por defecto.
+          - value="": Valor vacío (no se envía al servidor).
+        -->
         <div class="form-group">
           <p>What is your favorite feature of freeCodeCamp?</p>
           <select name="mostLike" id="most-like" class="form-control" required>
@@ -94,6 +141,11 @@
           </select>
         </div>
 
+        <!--
+          Checkboxes: Casillas de verificación (varias seleccionables).
+          name="prefer": Todos comparten el mismo nombre.
+          Esto permite enviar múltiples valores seleccionados.
+        -->
         <div class="form-group">
           <p>
             What would you like to see improved?
@@ -189,6 +241,7 @@
           >
         </div>
 
+        <!-- Textarea para comentarios -->
         <div class="form-group">
           <p>Any comments or suggestions?</p>
           <textarea
@@ -199,6 +252,7 @@
           ></textarea>
         </div>
 
+        <!-- Botón de envío -->
         <div class="form-group">
           <button type="submit" id="submit" class="submit-button">
             Submit

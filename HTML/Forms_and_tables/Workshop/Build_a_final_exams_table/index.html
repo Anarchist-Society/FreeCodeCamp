@@ -6,7 +6,8 @@
   </head>
 
   <body>
-    <!--
+    <main>
+      <!--
       <table>: Tabla de datos.
       NO debe usarse para diseño/maquetación (usa CSS Grid o Flexbox para eso).
       
@@ -20,85 +21,86 @@
       - <tr>: Table Row (fila).
       - <th>: Table Header (celda de encabezado). Negrita y centrada por defecto.
       - <td>: Table Data (celda de datos normal).
-    -->
-    <table>
-      <!--
+      -->
+      <table>
+        <!--
         <caption>: Título descriptivo de la tabla.
         Aparece arriba o abajo de la tabla.
         Obligatorio para accesibilidad (lectores de pantalla lo leen).
-      -->
-      <caption>
-        Calculus Final Exam Grades
-      </caption>
+        -->
+        <caption>
+          Calculus Final Exam Grades
+        </caption>
 
-      <!--
+        <!--
         <thead>: Grupo de filas de encabezado.
         Contiene las columnas (th).
         Los navegadores lo renderizan diferente (negrita, centrado).
-      -->
-      <thead>
-        <tr>
-          <th>Last Name</th>
-          <th>First Name</th>
-          <th>Grade</th>
-        </tr>
-      </thead>
+        -->
+        <thead>
+          <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
 
-      <!--
+        <!--
         <tbody>: Grupo de filas con datos.
         Contiene la información principal de la tabla.
         Puede tener múltiples filas (tr).
-      -->
-      <tbody>
-        <tr>
-          <td>Davis</td>
-          <td>Alex</td>
-          <td>54</td>
-        </tr>
+        -->
+        <tbody>
+          <tr>
+            <td>Davis</td>
+            <td>Alex</td>
+            <td>54</td>
+          </tr>
 
-        <tr>
-          <td>Doe</td>
-          <td>Samantha</td>
-          <td>92</td>
-        </tr>
+          <tr>
+            <td>Doe</td>
+            <td>Samantha</td>
+            <td>92</td>
+          </tr>
 
-        <tr>
-          <td>Rodriguez</td>
-          <td>Marcus</td>
-          <td>88</td>
-        </tr>
+          <tr>
+            <td>Rodriguez</td>
+            <td>Marcus</td>
+            <td>88</td>
+          </tr>
 
-        <tr>
-          <td>Thompson</td>
-          <td>Jane</td>
-          <td>77</td>
-        </tr>
+          <tr>
+            <td>Thompson</td>
+            <td>Jane</td>
+            <td>77</td>
+          </tr>
 
-        <tr>
-          <td>Williams</td>
-          <td>Natalie</td>
-          <td>83</td>
-        </tr>
-      </tbody>
+          <tr>
+            <td>Williams</td>
+            <td>Natalie</td>
+            <td>83</td>
+          </tr>
+        </tbody>
 
-      <!--
+        <!--
         <tfoot>: Grupo de filas de pie de tabla.
         Se usa para totales, promedios, resúmenes.
         Aparece al final (aunque lo pongas al principio del código).
-      -->
-      <tfoot>
-        <tr>
-          <!--
+        -->
+        <tfoot>
+          <tr>
+            <!--
             colspan="2": Une 2 columnas en una sola celda.
             La celda "Average Grade" ocupa el espacio de Last Name + First Name.
             
             Otros atributos de fusión:
             - rowspan="2": Une 2 filas en vertical.
-          -->
-          <td colspan="2">Average Grade</td>
-          <td>78.8</td>
-        </tr>
-      </tfoot>
-    </table>
+            -->
+            <td colspan="2">Average Grade</td>
+            <td>78.8</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
   </body>
 </html>
