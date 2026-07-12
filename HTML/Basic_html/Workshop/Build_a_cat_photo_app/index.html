@@ -7,13 +7,28 @@
   </head>
 
   <body>
+    <!--
+      <main>: Contiene el contenido principal de la página.
+      Solo debe haber uno por página.
+      Ayuda a los lectores de pantalla y buscadores a identificar el contenido importante.
+    -->
     <main>
       <h1>CatPhotoApp</h1>
 
+      <!--
+        <section>: Divide el contenido en secciones temáticas.
+        Cada sección debería tener un encabezado (h2, h3, etc.).
+        Es mejor que usar divs porque semánticamente tiene más sentido.
+      -->
       <section>
         <h2>Cat Photos</h2>
         <p>
           Everyone loves
+          <!--
+            <a>: Enlace (anchor).
+            href: URL de destino.
+            target="_blank": Abre el enlace en una nueva pestaña/ventana.
+          -->
           <a
             href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg"
             target="_blank"
@@ -26,6 +41,14 @@
           <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
           in our gallery
         </p>
+        <!--
+          <img>: Inserta una imagen.
+          src: Ruta o URL de la imagen.
+          alt: Texto alternativo (obligatorio). Describe la imagen para:
+               - Personas con discapacidad visual (lectores de pantalla).
+               - Si la imagen no carga.
+               - SEO (los buscadores lo leen).
+        -->
         <a href="https://freecatphotoapp.com"
           ><img
             src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
@@ -36,19 +59,36 @@
       <section>
         <h2>Cat Lists</h2>
         <h3>Things cats love:</h3>
+        <!--
+          <ul>: Lista desordenada (sin orden específico).
+          Los elementos aparecen con viñetas (puntos).
+          Úsalo cuando el orden NO importa.
+        -->
         <ul>
+          <!-- <li>: Elemento de lista (list item). Siempre va dentro de ul u ol. -->
           <li>catnip</li>
           <li>laser pointers</li>
           <li>lasagna</li>
         </ul>
+        
+        <!--
+          <figure>: Contenedor para contenido ilustrativo (imágenes, gráficos, código).
+          Se usa junto con <figcaption> para dar una leyenda.
+        -->
         <figure>
           <img
             src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
             alt="A slice of lasagna on a plate."
           />
+          <!-- <figcaption>: Leyenda o descripción del contenido de <figure>. -->
           <figcaption>Cats <em>love</em> lasagna</figcaption>
 
           <h3>Top 3 things cats hate:</h3>
+          <!--
+            <ol>: Lista ordenada (con número o jerarquía).
+            Los elementos aparecen numerados (1, 2, 3...).
+            Úsalo cuando el orden SÍ importa (pasos, ranking, etc.).
+          -->
           <ol>
             <li>flea treatment</li>
             <li>thunder</li>
@@ -66,6 +106,11 @@
       </section>
     </main>
 
+    <!--
+      <footer>: Pie de página del documento.
+      Contiene información como copyright, enlaces de contacto, etc.
+      Solo debe haber uno por página.
+    -->
     <footer>
       <p>
         No Copyright -
