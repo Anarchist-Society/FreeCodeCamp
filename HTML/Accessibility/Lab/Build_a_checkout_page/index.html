@@ -2,67 +2,109 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Checkout Page</title>
   </head>
 
   <body>
-    <h1>Checkout</h1>
+    <main>
+      <h1>Checkout</h1>
 
-    <section>
-      <h2>Your Cart</h2>
-      <img
-        src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"
-        alt="An imagen of rubik cube"
-      />
-      <p>Rubik's 3x3 Cube</p>
-      <p>9.49€</p>
-    </section>
-
-    <section>
-      <h2>Payment Information</h2>
-      <form>
-        <label for="card-name"
-          >Cardholder name <span aria-hidden="true">*</span></label
-        >
-        <input type="text" id="card-name" name="card-name" required />
-
-        <label for="card-number"
-          >Card Number <span aria-hidden="true">*</span></label
-        >
-        <input
-          type="text"
-          id="card-number"
-          name="card-number"
-          aria-describedby="card-number-help"
-          required
+      <!-- Sección del carrito de compras -->
+      <section>
+        <h2>Your Cart</h2>
+        <img
+          src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"
+          alt="An imagen of rubik cube"
         />
+        <p>Rubik's 3x3 Cube</p>
+        <p>9.49€</p>
+      </section>
 
-        <p id="card-number-help">
-          Please enter your 16-digit card number without spaces or dashes.
-        </p>
+      <!-- Sección de información de pago -->
+      <section>
+        <h2>Payment Information</h2>
+        <form>
+          <!--
+            <span aria-hidden="true">*: asterisco decorativo.
+            aria-hidden="true": Oculta el elemento de los lectores de pantalla.
+            
+            ¿Por qué?
+            - El asterisco * es decorativo (indica campo obligatorio).
+            - Los lectores de pantalla no deberían leer "*".
+            - El atributo "required" ya indica que es obligatorio.
+            
+            Accesibilidad:
+            - El label + required ya informa al usuario.
+            - aria-hidden evita redundancia.
+          -->
+          <label for="card-name"
+            >Cardholder name <span aria-hidden="true">*</span></label
+          >
+          <input type="text" id="card-name" name="card-name" required />
 
-        <label for="expiry-date"
-          >Expire Date <span aria-hidden="true">*</span></label
-        >
-        <input
-          type="text"
-          id="expiry-date"
-          name="expiry-date"
-          placeholder="MM/YY"
-          required
-        />
+          <label for="card-number"
+            >Card Number <span aria-hidden="true">*</span></label
+          >
+          <!--
+            aria-describedby: Asocia el input con una descripción adicional.
+            - "card-number-help": Id del elemento p con la descripción.
+            - El lector de pantalla lee el label + la descripción.
+            
+            Ejemplo de lectura:
+            "Card Number, required, textbox. Please enter your 16-digit card number..."
+          -->
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            aria-describedby="card-number-help"
+            required
+          />
 
-        <label for="cvv">CVV <span aria-hidden="true">*</span></label>
-        <input
-          type="text"
-          id="cvv"
-          name="cvv"
-          required
-          aria-label="Card Verification Value"
-        />
+          <!--
+            <p id="card-number-help">: Descripción asocada con aria-describedby.
+            Proporciona instrucciones adicionales sobre cómo llenar el campo.
+          -->
+          <p id="card-number-help">
+            Please enter your 16-digit card number without spaces or dashes.
+          </p>
 
-        <input type="submit" value="Place Order" />
-      </form>
-    </section>
+          <label for="expiry-date"
+            >Expire Date <span aria-hidden="true">*</span></label
+          >
+          <!--
+            placeholder="MM/YY": Texto de ejemplo que desaparece al escribir.
+            No sustituye al label (el label siempre debe estar).
+            Ayuda al usuario a entender el formato esperado.
+          -->
+          <input
+            type="text"
+            id="expiry-date"
+            name="expiry-date"
+            placeholder="MM/YY"
+            required
+          />
+
+          <label for="cvv">CVV <span aria-hidden="true">*</span></label>
+          <!--
+            aria-label: Proporciona un nombre accesible alternativo.
+            - "Card Verification Value": Nombre completo y descriptivo.
+            - Útil cuando el texto del label es corto ("CVV").
+            - El lector de pantalla lee "Card Verification Value" en lugar de "CVV".
+          -->
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            required
+            aria-label="Card Verification Value"
+          />
+
+          <input type="submit" value="Place Order" />
+        </form>
+      </section>
+    </main>
   </body>
 </html>
