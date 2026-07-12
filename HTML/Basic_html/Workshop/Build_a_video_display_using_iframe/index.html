@@ -5,18 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display Videos in an iframe</title>
   </head>
+
   <body>
-    <h1>iframe Video Display</h1>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/I0_951_MPE0"
-      allow="
-        accelerometer autoplay clipboard-write encrypted-media gyroscope web-share;
-      "
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    >
-    </iframe>
+    <main>
+      <h1>iframe Video Display</h1>
+      <!--
+        <iframe>: Marco en línea (Inline Frame).
+        Permite incrustar contenido de otro sitio web dentro de tu página.
+        
+        Usos comunes:
+        - Videos de YouTube/Vimeo
+        - Mapas de Google Maps
+        - Contenido externo
+        
+        Atributos:
+        - width="560": Ancho del iframe en píxeles.
+        - height="315": Alto del iframe en píxeles.
+        - src: URL del contenido a incrustar.
+        
+        Atributos de permisos:
+        - allow: Lista de funcionalidades permitidas dentro del iframe.
+          Ejemplos: accelerometer (giroscopio), autoplay (reproducción automática),
+          clipboard-write (copiar al portapapeles), encrypted-media (DRM),
+          gyroscope (orientación), web-share (compartir).
+          
+        - referrerpolicy: Controla qué información de referencia se envía.
+          "strict-origin-when-cross-origin": Solo envía la origen cuando
+          es una petición cross-origin, nunca envía la ruta completa.
+          
+        - allowfullscreen: Permite que el iframe se muestre en pantalla completa.
+          (obsoleto, ahora se usa allow="fullscreen")
+          
+        IMPORTANTE: Los iframes son un riesgo de seguridad.
+        Nunca uses srcdoc o allow-scripts con fuentes no confiables.
+      -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/I0_951_MPE0"
+        allow="
+          accelerometer autoplay clipboard-write encrypted-media gyroscope web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+    </main>
   </body>
 </html>
