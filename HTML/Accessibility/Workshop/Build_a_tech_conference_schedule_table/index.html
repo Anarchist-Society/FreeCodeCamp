@@ -2,65 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Tech Conference 2025 Schedule</title>
   </head>
 
   <body>
-    <h1>Tech Conference 2025 Schedule</h1>
+    <main>
+      <h1>Tech Conference 2025 Schedule</h1>
 
-    <table>
-      <caption>
-        Schedule by Track and Time
-      </caption>
+      <!--
+      Tabla de horarios con enfoque en accesibilidad.
+      
+      Características de accesibilidad en tablas:
+      - <caption>: Describe el propósito de la tabla.
+      - scope="col": Indica que el th es una columna.
+      - scope="row": Indica que el th es una fila.
+      - <th> en tbody: Encabezados de fila (horarios).
+      
+      Estos atributos ayudan a los lectores de pantalla a:
+      - Entender la estructura de la tabla.
+      - Asociar celdas con sus encabezados.
+      - Navegar por filas y columnas.
+      -->
+      <table>
+        <caption>
+          Schedule by Track and Time
+        </caption>
 
-      <thead>
-        <tr>
-          <th scope="col">Time</th>
-          <th scope="col">Track A</th>
-          <th scope="col">Track B</th>
-          <th scope="col">Track C</th>
-        </tr>
-      </thead>
+        <!--
+        Encabezados de columna con scope="col":
+        scope="col" indica que estos th son encabezados de COLUMNA.
+        Los lectores de pantalla lo usan para identificar la columna actual.
+        -->
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Track A</th>
+            <th scope="col">Track B</th>
+            <th scope="col">Track C</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr>
-          <th scope="row">9:00 AM</th>
-          <td>Keynote: Tech Future</td>
-          <td>Intro to Web Dev</td>
-          <td>UX for All</td>
-        </tr>
+        <tbody>
+          <!--
+          Encabezados de fila con scope="row":
+          scope="row" indica que este th es encabezado de FILA.
+          Los lectores de pantalla anuncian "9:00 AM" al estar en esta fila.
+          
+          Nota: <th> puede usarse en tbody (no solo en thead).
+          Es correcto usar th para la primera celda de cada fila.
+          -->
+          <tr>
+            <th scope="row">9:00 AM</th>
+            <td>Keynote: Tech Future</td>
+            <td>Intro to Web Dev</td>
+            <td>UX for All</td>
+          </tr>
 
-        <tr>
-          <th scope="row">10:00 AM</th>
-          <td>Accessibility Deep Dive</td>
-          <td>CSS for Beginners</td>
-          <td>Inclusive Design Principles</td>
-        </tr>
+          <tr>
+            <th scope="row">10:00 AM</th>
+            <td>Accessibility Deep Dive</td>
+            <td>CSS for Beginners</td>
+            <td>Inclusive Design Principles</td>
+          </tr>
 
-        <tr>
-          <th scope="row">11:00 AM</th>
-          <td colspan="3">Break</td>
-        </tr>
+          <!--
+          colspan="3": Une las 3 columnas para "Break".
+          Útil para filas que ocupan todo el ancho de la tabla.
+          -->
+          <tr>
+            <th scope="row">11:00 AM</th>
+            <td colspan="3">Break</td>
+          </tr>
 
-        <tr>
-          <th scope="row">11:30 AM</th>
-          <td>AR/VR in Education</td>
-          <td>JavaScript Fundamentals</td>
-          <td>Design Systems at Scale</td>
-        </tr>
+          <tr>
+            <th scope="row">11:30 AM</th>
+            <td>AR/VR in Education</td>
+            <td>JavaScript Fundamentals</td>
+            <td>Design Systems at Scale</td>
+          </tr>
 
-        <tr>
-          <th scope="row">12:30 PM</th>
-          <td colspan="3">Lunch Break</td>
-        </tr>
+          <tr>
+            <th scope="row">12:30 PM</th>
+            <td colspan="3">Lunch Break</td>
+          </tr>
 
-        <tr>
-          <th scope="row">2:00 PM</th>
-          <td>Voice UI Workshop</td>
-          <td>Git & GitHub Essentials</td>
-          <td>Color & Contrast in UI</td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <th scope="row">2:00 PM</th>
+            <td>Voice UI Workshop</td>
+            <td>Git & GitHub Essentials</td>
+            <td>Color & Contrast in UI</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </body>
 </html>
