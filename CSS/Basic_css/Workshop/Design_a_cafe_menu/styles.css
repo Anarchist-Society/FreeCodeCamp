@@ -1,104 +1,262 @@
-body {
-  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-  font-family: sans-serif;
-  padding: 20px;
+/* ===============================================
+   RESET: Eliminar márgenes y rellenos por defecto
+   =============================================== */
+/*
+  * Selecciona todos los elementos.
+  margin: 0 → Elimina márgenes externos (body, h1, p, etc.)
+  padding: 0 → Elimina rellenos internos.
+  
+  Sin esto, cada navegador aplica sus propios márgenes/paddings
+  y el diseño queda desalineado.
+*/
+* {
+  margin: 0;
+  padding: 0;
 }
 
+/* =================================================
+   BODY: Centrado vertical y horizontal con CSS Grid
+   ================================================= */
+body {
+  /* background-image: Imagen de fondo que se repite (tile) automáticamente */
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+
+  /* font-family: Tipografía general de la página */
+  font-family: sans-serif;
+
+  /*
+    min-height: 92vh → Altura mínima del 92% del viewport.
+    Se usa min-height (no height) para que el body pueda crecer
+    si el contenido es más largo que la pantalla.
+    
+    Se usa 92vh en lugar de 100vh para evitar scroll en móviles,
+    donde la barra de direcciones del navegador reduce el espacio visible.
+    
+    display: grid → Convierte el body en un contenedor Grid.
+    place-items: center → Centra el contenido tanto horizontal como verticalmente.
+    
+    NOTA: Antes se usaba margin: auto en .menu para centrar,
+    pero grid + place-items es más simple y potente.
+  */
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+}
+
+/* =======
+   TÍTULOS
+   ======= */
+
+/* h1: Título principal "CAMPER CAFE" */
 h1 {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
+/* h2: Subtítulos "Coffee" y "Desserts" */
 h2 {
   font-size: 30px;
 }
 
+/* =====================
+   SUBTÍTULO "Est. 2020"
+   ===================== */
+/*
+  font-style: italic → Texto en cursiva.
+  margin-bottom: 5% → Espacio inferior relativo al ancho del contenedor.
+*/
 .established {
   font-style: italic;
+  margin-bottom: 5%;
 }
 
+/* ========================================
+   ALINEACIÓN CENTRAL DE TÍTULOS Y PÁRRAFOS
+   ======================================== */
+/*
+  text-align: center → Centra el texto horizontalmente.
+  Se aplica a h1, h2 y todos los párrafos (p).
+*/
 h1,
 h2,
 p {
   text-align: center;
 }
 
+/* =============================
+   CONTENEDOR PRINCIPAL DEL MENÚ
+   ============================= */
+/*
+  El div.menu envuelve todo el contenido visible.
+  
+  - width: 80% → Ocupa el 80% del ancho del viewport.
+  - background-color: burlywood → Color marrón claro de fondo.
+  - padding: 20px → Espacio interno entre el borde y el contenido.
+  - max-width: 500px → En pantallas grandes, no crece más de 500px.
+  
+  NOTA: Antes tenía margin-left: auto y margin-right: auto para
+  centrarlo, pero ahora el padre (body) usa grid + place-items: center
+  que lo centra automáticamente.
+*/
 .menu {
   width: 80%;
   background-color: burlywood;
-  margin-left: auto;
-  margin-right: auto;
   padding: 20px;
   max-width: 500px;
 }
 
+/* ========================
+   IMÁGENES (café y postre)
+   ======================== */
+/*
+  display: block → Las imágenes por defecto son inline,
+  lo que puede agregar espacio extra debajo.
+  Al hacerlas block, se eliminan esos espacios fantasma.
+  
+  margin-left/right: auto → Centra horizontalmente la imagen.
+*/
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -25px;
 }
 
+/* ========================
+   LÍNEAS HORIZONTALES (hr)
+   ======================== */
+/*
+  <hr> → Línea horizontal semántica que separa secciones.
+  Se personaliza para que sea marrón y delgada.
+*/
 hr {
   height: 2px;
   background-color: brown;
   border-color: brown;
 }
 
+/*
+  .bottom-line → hr específico antes del footer.
+  margin-top: 25px → Espacio arriba (separa del menú).
+  margin-bottom: 25px → Espacio abajo (separa del footer).
+*/
 .bottom-line {
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
+/* =================
+   FUENTE DE TÍTULOS
+   ================= */
+/*
+  Impact → Fuente gruesa y condensada, típica de carteles.
+  serif → Fuente de respaldo si Impact no está disponible.
+*/
 h1,
 h2 {
   font-family: Impact, serif;
 }
 
+/* h2 adicional: margen superior relativo */
+h2 {
+  margin-top: 2%;
+}
+
+/* =====================================
+   DISEÑO DEL MENÚ: PRECIOS A LA DERECHA
+   ===================================== */
+
+/*
+  Estructura HTML:
+  <article class="item">
+    <p class="flavor">French Vanilla</p>
+    <p class="price">3.00</p>
+  </article>
+
+  Estrategia:
+  1. display: inline-block → Los párrafos van en la misma línea
+  2. .flavor/.dessert tiene width: 70% → Ocupa 7/10 del ancho
+  3. .price tiene width: 20% → Ocupa 2/10 del ancho
+  4. text-align: right → Alinea el precio a la derecha
+  
+  NOTA: Se usa 70%+20% (en lugar de 75%+25%) porque
+  inline-block tiene un pequeño espacio de ~4px entre elementos,
+  y 75%+25% = 100% + ese espacio = overflow y salto de línea.
+  Con 70%+20% = 90%, queda un 10% de margen de seguridad.
+*/
+
+/* Todos los párrafos dentro de .item son inline-block */
 .item p {
-  display: inline-block;
+  display: inline-block; /* Permite widths y quedan en la misma línea */
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 18px;
 }
 
+/* Nombre del plato: 70% del ancho, alineado a la izquierda */
 .flavor,
 .dessert {
   text-align: left;
-  width: 75%;
+  width: 70%;
 }
 
+/* Precio: 20% del ancho, alineado a la derecha */
 .price {
   text-align: right;
-  width: 25%;
+  width: 20%;
 }
 
-/* FOOTER */
+/* =============
+   PIE DE PÁGINA
+   ============= */
 
+/* Footer: texto más pequeño que el resto */
 footer {
   font-size: 14px;
 }
 
+/* Dirección: sin cursiva (por defecto <address> tiene italic) */
 address {
   font-style: normal;
 }
 
+/*
+  address p:first-child → El primer <p> dentro de <address>
+  (el que contiene el enlace "Visit our website").
+  margin-bottom: 15px → Espacio entre el enlace y la dirección.
+*/
+address p:first-child {
+  margin-bottom: 15px;
+}
+
+/*
+  .address → Clase del <p> con la dirección física.
+  margin-bottom: 5px → Espacio antes del cierre del footer.
+*/
 .address {
   margin-bottom: 5px;
 }
 
+/* ==================
+   ESTILOS DE ENLACES
+   ================== */
+
+/* Color normal del enlace */
 a {
   color: black;
 }
 
+/* Color después de visitado */
 a:visited {
   color: black;
 }
 
+/* Color al pasar el mouse */
 a:hover {
   color: brown;
 }
 
+/* Color al hacer clic */
 a:active {
   color: brown;
 }
