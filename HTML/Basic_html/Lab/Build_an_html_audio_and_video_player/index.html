@@ -7,24 +7,62 @@
   </head>
 
   <body>
-    <h1>HTML Audio and Video Lab</h1>
-    <section>
-      <h2>What is the map method and how does it work?</h2>
-      <video controls width="640">
-        <source
-          src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </section>
+    <!--
+      Lab que combina audio y video en la misma página.
+      Estructura: main > section > (h2 + media).
+      Cada <section> agrupa un tipo de contenido multimedia.
+      
+      Diferencias clave entre <audio> y <video>:
+      - <audio>: Solo reproduce sonido (sin área de visualización).
+      - <video>: Muestra contenido visual + audio.
+      
+      Atributos compartidos:
+      - controls: Muestra controles de reproducción.
+      - loop: Reproduce en bucle infinito.
+      - src: URL del archivo multimedia.
+      
+      Atributos solo de <video>:
+      - width: Ancho del área de visualización.
+      - poster: Imagen antes de reproducir.
+      - muted: Silenciar audio.
+    -->
+    <main>
+      <h1>HTML Audio and Video Lab</h1>
+      
+      <!-- Sección de video -->
+      <section>
+        <h2>What is the map method and how does it work?</h2>
+        <!--
+          <video> con <source>: Patrón para compatibilidad con múltiples formatos.
+          Aunque aquí solo hay un source, el patrón permite agregar más.
+          
+          Nota: No tiene loop ni muted como el video anterior.
+          Cada proyecto puede necesitar atributos diferentes.
+        -->
+        <video controls width="640">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
 
-    <section>
-      <h2>Sailing Away</h2>
-      <audio
-        src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
-        controls
-        loop
-      ></audio>
-    </section>
+      <!-- Sección de audio -->
+      <section>
+        <h2>Sailing Away</h2>
+        <!--
+          <audio>: Más simple que <video> porque no tiene área visual.
+          Solo necesita src (o <source>) y atributos de control.
+          
+          Patrón típico: <audio> con controls y loop para música.
+          El usuario puede pausar y el audio se repite automáticamente.
+        -->
+        <audio
+          src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+          controls
+          loop
+        ></audio>
+      </section>
+    </main>
   </body>
 </html>
