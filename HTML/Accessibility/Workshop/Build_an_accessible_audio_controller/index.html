@@ -2,26 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Accessible Controls</title>
   </head>
 
   <body>
-    <h1>Audio Controls</h1>
+    <main>
+      <h1>Audio Controls</h1>
 
-    <button type="button">Play</button>
+      <!--
+        type="button": Botón que NO envía formularios.
+        Sin type, el botón se comporta como type="submit" por defecto.
+        Siempre especifica el type para evitar comportamientos inesperados.
+        
+        Accesibilidad:
+        - Los lectores de pantalla leen "Play" como contenido del botón.
+        - Los usuarios de teclado pueden activarlo con Enter o Espacio.
+      -->
+      <button type="button">Play</button>
 
-    <div>
-      <span id="volume-label">Volume</span>
-      <span id="volume-description">Adjust the sound level</span>
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value="50"
-        aria-labelledby="volume-label volume-description"
-      />
-    </div>
+      <div>
+        <!--
+          <span> con ids: Etiquetas descriptivas para el slider.
+          No son visibles visualmente, pero los lectores de pantalla las leen.
+          
+          aria-labelledby: Atributo ARIA que asocia el input con múltiples labels.
+          - "volume-label": Título del control (Volume).
+          - "volume-description": Descripción adicional (Adjust the sound level).
+          
+          El lector de pantalla anuncia:
+          "Volume, Adjust the sound level, slider, 50%"
+        -->
+        <span id="volume-label">Volume</span>
+        <span id="volume-description">Adjust the sound level</span>
+        <!--
+          type="range": Control deslizante (slider).
+          El usuario selecciona un valor dentro de un rango.
+          
+          Atributos:
+          - min="0": Valor mínimo.
+          - max="100": Valor máximo.
+          - value="50": Valor inicial (50%).
+          
+          Accesibilidad:
+          - Los lectores de pantalla anuncian el valor actual.
+          - Se puede ajustar con las flechas del teclado.
+          - aria-labelledby asocia las etiquetas descriptivas.
+        -->
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-labelledby="volume-label volume-description"
+        />
+      </div>
 
-    <button type="button">Mute</button>
+      <button type="button">Mute</button>
+    </main>
   </body>
 </html>
