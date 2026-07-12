@@ -3,53 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Multimedia Player</title>
   </head>
 
   <body>
-    <h1>Multimedia Player</h1>
+    <main>
+      <h1>Multimedia Player</h1>
 
-    <section>
-      <h2>Now Playing: Sailing Away</h2>
-      <audio controls aria-label="Audio Player for Sailing Away">
-        <source
-          src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
-          type="audio/mpeg"
-        />
-      </audio>
-    </section>
+      <section>
+        <h2>Now Playing: Sailing Away</h2>
+        <!--
+        <audio> con aria-label:
+        aria-label="Audio Player for Sailing Away": Nombre accesible del reproductor.
+        Los lectores de pantalla leen esto en lugar de "audio element".
+        
+        Accesibilidad en audio:
+        - aria-label describe la función del reproductor.
+        - controls permite al usuario pausar/reproducir.
+        - type="audio/mpeg": Formato MP3 (compatible con todos los navegadores).
+        -->
+        <audio controls aria-label="Audio Player for Sailing Away">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+      </section>
 
-    <section>
-      <h2>What is a map method and how does it work?</h2>
-      <video
-        controls
-        width="600"
-        aria-label="What is a map method and how does it work?"
-      >
-        <source
-          src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
-          type="video/mp4"
-        />
-        <track
-          src="what-is-a-map-method.vtt"
-          kind="captions"
-          srclang="en"
-          label="English"
-          default
-        />
-      </video>
-    </section>
+      <section>
+        <h2>What is a map method and how does it work?</h2>
+        <!--
+        <video> con <track>:
+        aria-label describe el contenido del video.
+        
+        <track>: Subtítulos o leyendas para el video.
+        Atributos:
+        - src="what-is-a-map-method.vtt": Archivo de subtítulos (formato WebVTT).
+        - kind="captions": Tipo de pista (captions = subtítulos con sonidos).
+        - srclang="en": Idioma de los subtítulos.
+        - label="English": Nombre que aparece en los controles del video.
+        - default: Pista activada por defecto.
+        
+        Tipos de kind:
+        - captions: Subtítulos (incluye sonidos ambientales).
+        - subtitles: Solo diálogo (sin sonidos).
+        - descriptions: Descripciones de video para ciegos.
+        - chapters: Capítulos de navegación.
+        
+        Formato WebVTT (.vtt):
+        1
+        00:00:01.000
+        00:00:04.000 Hello, welcome to the video. -->
+        <video
+          controls
+          width="600"
+          aria-label="What is a map method and how does it work?"
+        >
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4"
+          />
+          <track
+            src="what-is-a-map-method.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+            default
+          />
+        </video>
+      </section>
 
-    <section>
-      <h2>Transcript</h2>
-      <p>
-        What is a map method and how does it work? The map method is a powerful
-        and widely used function in JavaScript that operates on arrays. It's
-        designed to create a new array by applying a given function to each
-        element of the original array. This method does not modify the original
-        array, but instead returns the new array containing the results of the
-        function applied to each element.
-      </p>
-    </section>
+      <!--
+      Transcripción: Texto completo del audio/video.
+      Beneficios de accesibilidad:
+      - Usuarios sordos pueden leer el contenido.
+      - Usuarios con problemas de atención pueden leer a su ritmo.
+      - Mejora el SEO (los buscadores indexan el texto).
+      - Útil cuando no hay conexión a internet.
+      
+      Patrón común: <video> + <transcript> debajo.
+      -->
+      <section>
+        <h2>Transcript</h2>
+        <p>
+          What is a map method and how does it work? The map method is a
+          powerful and widely used function in JavaScript that operates on
+          arrays. It's designed to create a new array by applying a given
+          function to each element of the original array. This method does not
+          modify the original array, but instead returns the new array
+          containing the results of the function applied to each element.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
