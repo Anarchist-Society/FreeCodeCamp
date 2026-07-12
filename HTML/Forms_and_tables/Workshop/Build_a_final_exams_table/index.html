@@ -6,11 +6,36 @@
   </head>
 
   <body>
+    <!--
+      <table>: Tabla de datos.
+      NO debe usarse para diseño/maquetación (usa CSS Grid o Flexbox para eso).
+      
+      Estructura semántica de una tabla:
+      - <caption>: Título de la tabla (accesibilidad).
+      - <thead>: Encabezado de la tabla (columnas).
+      - <tbody>: Cuerpo con los datos.
+      - <tfoot>: Pie de tabla (totales, promedios, etc.).
+      
+      Dentro de cada sección:
+      - <tr>: Table Row (fila).
+      - <th>: Table Header (celda de encabezado). Negrita y centrada por defecto.
+      - <td>: Table Data (celda de datos normal).
+    -->
     <table>
+      <!--
+        <caption>: Título descriptivo de la tabla.
+        Aparece arriba o abajo de la tabla.
+        Obligatorio para accesibilidad (lectores de pantalla lo leen).
+      -->
       <caption>
         Calculus Final Exam Grades
       </caption>
 
+      <!--
+        <thead>: Grupo de filas de encabezado.
+        Contiene las columnas (th).
+        Los navegadores lo renderizan diferente (negrita, centrado).
+      -->
       <thead>
         <tr>
           <th>Last Name</th>
@@ -19,6 +44,11 @@
         </tr>
       </thead>
 
+      <!--
+        <tbody>: Grupo de filas con datos.
+        Contiene la información principal de la tabla.
+        Puede tener múltiples filas (tr).
+      -->
       <tbody>
         <tr>
           <td>Davis</td>
@@ -51,8 +81,20 @@
         </tr>
       </tbody>
 
+      <!--
+        <tfoot>: Grupo de filas de pie de tabla.
+        Se usa para totales, promedios, resúmenes.
+        Aparece al final (aunque lo pongas al principio del código).
+      -->
       <tfoot>
         <tr>
+          <!--
+            colspan="2": Une 2 columnas en una sola celda.
+            La celda "Average Grade" ocupa el espacio de Last Name + First Name.
+            
+            Otros atributos de fusión:
+            - rowspan="2": Une 2 filas en vertical.
+          -->
           <td colspan="2">Average Grade</td>
           <td>78.8</td>
         </tr>
