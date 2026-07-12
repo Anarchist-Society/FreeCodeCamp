@@ -3,16 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Movie Review</title>
   </head>
 
   <body>
     <main>
       <h1>Movie Review: Rise Beyond</h1>
+      
+      <!--
+        <img> con alt descriptivo:
+        El alt es largo y detallado porque la imagen es importante.
+        Describe: quién, qué hace, dónde está, qué sostiene, qué ve.
+        
+        Regla general para alt:
+        - Imágenes decorativas: alt="" (vacío).
+        - Imágenes informativas: alt descriptivo.
+        - Si la imagen es el contenido principal: alt muy detallado.
+      -->
       <img
         src="https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png"
         alt="The Rise Beyond movie poster, starring Ethan Carter. A portrait of a young boy standing on a stage with his back toward the audience, holding a guitar at his side, staring at a backdrop of a cityscape with the sun rising behind its tall buildings."
       />
+      
       <p>
         Rise Beyond is an uplifting drama that tells the story of Ethan Carter,
         a young man from a small town who dreams of becoming a world-class
@@ -22,18 +36,40 @@
         of triumph, Rise Beyond reminds us that our greatest potential lies
         beyond our fears.
       </p>
+      
       <p>
         <strong>Movie Rating:</strong
-        ><span aria-hidden="true">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>(9.2/10)
+        ><!--
+          <span aria-hidden="true">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>
+          aria-hidden="true": Oculta las estrellas de los lectores de pantalla.
+          
+          ¿Por qué?
+          - Las estrellas son decorativas/visuales.
+          - El lector de pantalla leería "estrella estrella estrella..." (innecesario).
+          - El texto "(9.2/10)" ya comunica la calificación.
+          - Mejor experiencia para usuarios de lectores de pantalla.
+        -->
+        <span aria-hidden="true">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>(9.2/10)
       </p>
 
       <h2>Cast Members</h2>
+      <!--
+        Lista de actores:
+        - <ul>: Lista desordenada (el orden no importa).
+        - <li>: Cada actor es un elemento de lista.
+        - <strong>: Nombre del actor (énfasis fuerte).
+        
+        Accesibilidad:
+        - <strong> indica importancia, no solo estilo visual.
+        - Los lectores de pantalla pueden poner énfasis en el texto.
+        - La estructura de lista es fácil de navegar.
+      -->
       <ul>
         <li><strong>James Holloway </strong>as Ethan Carter</li>
         <li><strong>Olivia Sterling </strong>as Lena Mitchell</li>
         <li><strong>William Lancaster </strong>as Professor Adams</li>
         <li>
-          <strong>Maria Collins </strong>as Evelyn Carter (Ethan’s Mother)
+          <strong>Maria Collins </strong>as Evelyn Carter (Ethan's Mother)
         </li>
       </ul>
     </main>
