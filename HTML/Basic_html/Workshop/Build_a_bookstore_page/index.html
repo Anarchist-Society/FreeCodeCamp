@@ -6,33 +6,60 @@
   </head>
 
   <body>
-    <h1>XYZ Bookstore</h1>
-    <p>Browse our collection of amazing books!</p>
+    <main>
+      <h1>XYZ Bookstore</h1>
+      <p>Browse our collection of amazing books!</p>
 
-    <div class="card-container">
-      <div class="card" id="sally-adventure-book">
-        <h2>Sally's SciFi Adventure</h2>
-        <p>
-          This is an epic story of Sally and her dog Rex as they navigate
-          through other worlds.
-        </p>
-        <button class="btn">Buy Now</button>
+      <!--
+      <div>: Elemento contenedor genérico (no tiene significado semántico).
+      Se usa para agrupar elementos y aplicar estilos/JavaScript.
+      
+      class="card-container": Atributo class.
+      - Define una clase CSS para estilizar múltiples elementos.
+      - Puede contener varios valores separados por espacios.
+      - Un elemento puede tener varias clases.
+    -->
+      <div class="card-container">
+        <!--
+        id="sally-adventure-book": Atributo id.
+        - Identificador único para UN solo elemento en toda la página.
+        - Se usa para JavaScript y CSS (con #).
+        - Diferencia con class: class es para múltiples elementos, id es para uno.
+      -->
+        <div class="card" id="sally-adventure-book">
+          <h2>Sally's SciFi Adventure</h2>
+          <p>
+            This is an epic story of Sally and her dog Rex as they navigate
+            through other worlds.
+          </p>
+          <!--
+          <button>: Botón interactivo.
+          Se usa para acciones (comprar, enviar, etc.).
+          No confundir con <a> que es para navegación.
+        -->
+          <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="card" id="dave-cooking-book">
+          <h2>Dave's Cooking Adventure</h2>
+          <p>
+            This is the story of Dave as he learns to cook everything from
+            pancakes to pasta, one recipe at a time.
+          </p>
+          <button class="btn">Buy Now</button>
+        </div>
       </div>
 
-      <div class="card" id="dave-cooking-book">
-        <h2>Dave's Cooking Adventure</h2>
-        <p>
-          This is the story of Dave as he learns to cook everything from
-          pancakes to pasta, one recipe at a time.
-        </p>
-        <button class="btn">Buy Now</button>
-      </div>
-    </div>
+      <p>Review your selections and continue to checkout.</p>
 
-    <p>Review your selections and continue to checkout.</p>
-    <div class="btn-container">
-      <button id="view-cart-btn" class="btn">View Cart</button>
-      <button id="checkout-btn" class="btn">Checkout</button>
-    </div>
+      <!--
+      Otro contenedor para agrupar botones relacionados.
+      Nota: Ambos botones comparten la clase "btn" pero tienen ids diferentes.
+    -->
+      <div class="btn-container">
+        <button id="view-cart-btn" class="btn">View Cart</button>
+        <button id="checkout-btn" class="btn">Checkout</button>
+      </div>
+    </main>
   </body>
 </html>
