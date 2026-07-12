@@ -7,46 +7,81 @@
   </head>
 
   <body>
-    <h1>Chocolate Chip Cookies</h1>
-    <p>
-      Welcome to the ultimate guide for making mini chocolate chip cookies!
-      These bite-sized treats are perfect for satisfying your sweet tooth
-      without overindulging. Follow this simple recipe to create delicious,
-      crispy-on-the-outside, chewy-on-the-inside mini chocolate chip cookies
-      that everyone will love.
-    </p>
-    <img
-      src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg"
-      alt="Ingredients for baking: three eggs, a bowl of flour, a glass of milk, and a whisk arranged on a wooden table."
-    />
+    <!--
+      Página de receta.
+      Estructura típica de una receta:
+      1. Título (h1)
+      2. Descripción (p)
+      3. Imagen del plato (img)
+      4. Ingredientes (h2 + ul) - Lista desordenada porque el orden no importa
+      5. Instrucciones (h2 + ol) - Lista ordenada porque el orden SÍ importa
+      
+      Diferencia clave:
+      - ul (unordered list): Para ingredientes, características, etc.
+      - ol (ordered list): Para pasos, instrucciones, rankings, etc.
+    -->
+    <main>
+      <h1>Chocolate Chip Cookies</h1>
+      <p>
+        Welcome to the ultimate guide for making mini chocolate chip cookies!
+        These bite-sized treats are perfect for satisfying your sweet tooth
+        without overindulging. Follow this simple recipe to create delicious,
+        crispy-on-the-outside, chewy-on-the-inside mini chocolate chip cookies
+        that everyone will love.
+      </p>
+      
+      <!--
+        <img>: Imagen del plato terminado.
+        alt descriptivo: Describe qué hay en la imagen (no solo "cookies").
+        Un buen alt ayuda a:
+        - Personas ciegas (lectores de pantalla).
+        - Si la imagen no carga.
+        - SEO (los buscadores "leen" el alt).
+      -->
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg"
+        alt="Ingredients for baking: three eggs, a bowl of flour, a glass of milk, and a whisk arranged on a wooden table."
+      />
 
-    <h2>Ingredients</h2>
-    <ul>
-      <li>1 cup all-purpose flour</li>
-      <li>1/2 teaspoon baking soda</li>
-      <li>1/4 cup unsalted butter, softened</li>
-      <li>1/4 cup granulated sugar</li>
-      <li>1/2 teaspoon vanilla extract</li>
-      <li>1/2 cup mini chocolate chips</li>
-    </ul>
+      <h2>Ingredients</h2>
+      <!--
+        <ul>: Lista desordenada (viñetas).
+        Se usa aquí porque el orden de los ingredientes NO importa.
+        Podrías agregarlos en cualquier orden y la receta funcionaría igual.
+      -->
+      <ul>
+        <li>1 cup all-purpose flour</li>
+        <li>1/2 teaspoon baking soda</li>
+        <li>1/4 cup unsalted butter, softened</li>
+        <li>1/4 cup granulated sugar</li>
+        <li>1/2 teaspoon vanilla extract</li>
+        <li>1/2 cup mini chocolate chips</li>
+      </ul>
 
-    <h2>Instructions</h2>
-    <ol>
-      <li>
-        Preheat your oven to 350°F (175°C) and line a baking sheet with
-        parchment paper.
-      </li>
-      <li>In a bowl, whisk together the flour and baking soda.</li>
-      <li>
-        In another bowl, beat the butter, sugar, and vanilla extract until
-        creamy.
-      </li>
-      <li>
-        Gradually add the dry ingredients to the wet mixture, then fold in the
-        mini chocolate chips.
-      </li>
-      <li>Drop small spoonfuls of dough onto the baking sheet.</li>
-      <li>Bake for 8-10 minutes, then let cool before enjoying!</li>
-    </ol>
+      <h2>Instructions</h2>
+      <!--
+        <ol>: Lista ordenada (numerada).
+        Se usa aquí porque el orden SÍ importa.
+        El paso 1 debe ir antes que el paso 2, etc.
+        El navegador numera automáticamente (1, 2, 3...).
+      -->
+      <ol>
+        <li>
+          Preheat your oven to 350°F (175°C) and line a baking sheet with
+          parchment paper.
+        </li>
+        <li>In a bowl, whisk together the flour and baking soda.</li>
+        <li>
+          In another bowl, beat the butter, sugar, and vanilla extract until
+          creamy.
+        </li>
+        <li>
+          Gradually add the dry ingredients to the wet mixture, then fold in the
+          mini chocolate chips.
+        </li>
+        <li>Drop small spoonfuls of dough onto the baking sheet.</li>
+        <li>Bake for 8-10 minutes, then let cool before enjoying!</li>
+      </ol>
+    </main>
   </body>
 </html>
