@@ -15,10 +15,56 @@
     </header>
 
     <main>
+      <!--
+        <form>: Contenedor para formularios interactivos.
+        
+        Atributos importantes:
+        - method="POST": Método HTTP para enviar datos.
+          - GET: Datos en la URL (?name=John&email=a@b.com). No usar para datos sensibles.
+          - POST: Datos en el cuerpo de la petición. Más seguro y recomendado.
+          
+        - action="URL": Dirección del servidor que procesará los datos.
+          Cuando el usuario hace submit, los datos se envían a esta URL.
+          
+        Los datos se envían como pares clave-valor:
+        - name="John Doe" (del input name="name")
+        - email="a@b.com" (del input name="email")
+      -->
       <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+        
+        <!--
+          <fieldset>: Agrupa elementos relacionados del formulario.
+          Dibuja un borde alrededor del grupo.
+          
+          <legend>: Título del <fieldset>.
+          Aparece DENTRO del borde del fieldset.
+          Proporciona contexto semántico al grupo de campos.
+        -->
         <fieldset>
           <legend>Personal Information</legend>
+          
+          <!--
+            <label>: Etiqueta descriptiva para un campo.
+            
+            for="full-name": Conecta el label con el input.
+            El valor de "for" debe ser igual al "id" del input.
+            
+            ¿Por qué es importante?
+            1. Accesibilidad: Lectores de pantalla leen el label.
+            2. Usabilidad: Al hacer clic en el label, se selecciona el input.
+          -->
           <label for="full-name">Name (required):</label>
+          <!--
+            <input>: Campo de entrada de datos.
+            
+            Atributos:
+            - type="text": Campo de texto normal (una línea).
+            - id="full-name": Identificador único (para conectar con label).
+            - name="name": Nombre del campo (clave en los datos enviados).
+            - placeholder="...": Texto de ejemplo que desaparece al escribir.
+            - required: Campo obligatorio (no se puede enviar sin él).
+            - size="20": Ancho visual del campo en caracteres.
+          -->
           <input
             type="text"
             id="full-name"
@@ -29,6 +75,11 @@
           />
 
           <label for="email">Email address (required):</label>
+          <!--
+            type="email": Valida que el texto tenga formato de email.
+            El navegador verifica: usuario@dominio.com
+            Si no es válido, muestra error al intentar enviar.
+          -->
           <input
             placeholder="example@email.com"
             required
@@ -38,11 +89,28 @@
             size="20"
           />
           <label for="age">Age (optional):</label>
+          <!--
+            type="number": Solo acepta números.
+            min="3": Valor mínimo permitido.
+            max="100": Valor máximo permitido.
+            No tiene "required", así que es opcional.
+          -->
           <input type="number" name="age" id="age" min="3" max="100" />
         </fieldset>
 
         <fieldset>
           <legend>Was this your first time at our hotel?</legend>
+          <!--
+            type="radio": Botón de opción (solo uno seleccionable).
+            
+            name="hotel-stay": Todos los radio del mismo grupo comparten el name.
+            Esto permite que solo UNO esté seleccionado a la vez.
+            
+            value="yes": Valor que se envía si se selecciona esta opción.
+            
+            <label> después del input: Alternativa de estructura.
+            También funciona (pero es mejor poner label antes).
+          -->
           <input id="yes-option" type="radio" name="hotel-stay" value="yes" />
           <label for="yes-option">Yes</label>
           <input id="no-option" type="radio" name="hotel-stay" value="no" />
@@ -54,6 +122,16 @@
             Why did you choose to stay at our hotel? (Check all that apply)
           </legend>
 
+          <!--
+            type="checkbox": Casilla de verificación (varias seleccionables).
+            
+            Diferencia con radio:
+            - Radio: Solo uno del grupo (name="hotel-stay").
+            - Checkbox: Varios pueden estar marcados (name="choice").
+            
+            checked: Marca esta opción por defecto.
+            Solo se usa cuando hay una opción "más común".
+          -->
           <input type="checkbox" id="ads" name="choice" value="ads" />
           <label for="ads">Social Media Ads</label>
 
@@ -86,6 +164,16 @@
 
           <label for="service">How was the service?</label>
 
+          <!--
+            <select>: Lista desplegable (dropdown).
+            El usuario selecciona UNA opción de la lista.
+            
+            <option>: Cada elemento de la lista.
+            - value: Valor que se envía al servidor.
+            - selected: Opción seleccionada por defecto.
+            
+            Ventaja sobre radio: Ahorra espacio visual.
+          -->
           <select name="service" id="service">
             <option value="poor">Poor</option>
             <option value="satisfactory">Satisfactory</option>
@@ -106,8 +194,27 @@
         </fieldset>
 
         <label for="comments">Other Comments?</label>
+        <!--
+          <textarea>: Campo de texto de múltiples líneas.
+          Diferente a <input type="text">:
+          - text: Una sola línea.
+          - textarea: Varias líneas (para comentarios, descripciones, etc.).
+          
+          cols="30": Ancho en caracteres.
+          rows="10": Alto en líneas.
+          El usuario puede escribir texto largo y hacer saltos de línea.
+        -->
         <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
 
+        <!--
+          <button>: Botón para enviar el formulario.
+          type="submit": Envía los datos del form al action URL.
+          
+          Diferencia entre botones:
+          - type="submit": Envía el form (acción por defecto).
+          - type="button": No hace nada (necesita JavaScript).
+          - type="reset": Limpia todos los campos del form.
+        -->
         <button type="submit">Submit</button>
       </form>
     </main>
