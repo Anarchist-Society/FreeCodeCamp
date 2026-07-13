@@ -1,86 +1,105 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 40px;
-  text-align: center;
-  background-color: brown;
+  font-family: Arial, sans-serif; /* Tipografía */
+  padding: 40px; /* Espacio alrededor */
+  text-align: center; /* Texto centrado */
+  background-color: brown; /* Fondo marrón */
 }
 
+/* Tarjeta de cumpleaños */
 .card {
-  border: 1px solid black;
-  background-color: white;
-  max-width: 400px;
-  padding: 40px;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px gray;
+  border: 1px solid black; /* Borde negro */
+  background-color: white; /* Fondo blanco */
+  max-width: 400px; /* Ancho máximo */
+  padding: 40px; /* Espacio interno generoso */
+  margin: 0 auto; /* Centra horizontalmente */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px gray; /* Sombra gris */
+  /* Animación de hover: transición suave */
   transition:
-    transform 0.3s,
-    background-color 0.3s ease;
+    transform 0.3s, /* Animación de escala */
+    background-color 0.3s ease; /* Animación de color */
 }
 
+/* Hover: la tarjeta crece y cambia de color */
 .card:hover {
-  background-color: khaki;
-  transform: scale(1.1);
+  background-color: khaki; /* Fondo khaki */
+  transform: scale(1.1); /* Aumenta 10% el tamaño */
 }
 
+/* Pseudo-elemento ::before: agrega emoji antes del título */
 h1::before {
-  content: "🥳 ";
+  content: "🥳 "; /* Emoji de fiesta */
 }
 
+/* Pseudo-elemento ::after: agrega emoji después del título */
 h1::after {
-  content: " 🥳";
+  content: " 🥳"; /* Emoji de fiesta */
 }
 
+/* Mensaje de la tarjeta */
 .message {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1.2em; /* Tamaño mediano-grande */
+  margin-bottom: 20px; /* Espacio debajo */
 }
 
+/* Contenedor de enlaces */
 .card-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
+  margin-top: 20px; /* Espacio arriba */
+  display: flex; /* Layout flexbox */
+  justify-content: space-around; /* Enlaces distribuidos equitativamente */
 }
 
+/* Enlaces de la tarjeta */
 .card-links a {
-  text-decoration: none;
-  font-size: 1em;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-  background-color: midnightblue;
-  transition: background-color 0.3s ease;
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1em; /* Tamaño normal */
+  padding: 10px 20px; /* Espacio interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  color: white; /* Texto blanco */
+  background-color: midnightblue; /* Azul oscuro */
+  transition: background-color 0.3s ease; /* Animación */
 }
 
+/* Hover: cambia a naranja */
 .card-links a:hover {
-  background-color: orangered;
+  background-color: orangered; /* Naranja rojizo */
 }
 
+/* Active: vuelve a azul al hacer clic */
 .card-links a:active {
-  background-color: midnightblue;
+  background-color: midnightblue; /* Azul oscuro */
 }
 
+/* Focus: outline amarillo para accesibilidad */
 .card-links a:focus {
-  outline: 2px solid yellow;
+  outline: 2px solid yellow; /* Borde amarillo */
 }
 
+/* Visited: color carmesí después de visitar */
 .card-links a:visited {
-  color: crimson;
+  color: crimson; /* Rojo carmesí */
 }
 
+/* Secciones ocultas por defecto */
 section {
-  margin: 20px auto;
-  max-width: 600px;
-  background-color: whitesmoke;
-  padding: 20px;
-  border-radius: 10px;
-  display: none;
+  margin: 20px auto; /* Centra horizontalmente */
+  max-width: 600px; /* Ancho máximo */
+  background-color: whitesmoke; /* Gris muy claro */
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Esquinas redondeadas */
+  display: none; /* Oculta por defecto */
 }
 
+/* Hover: efecto de inclinación */
 section:hover {
-  transform: skewX(10deg);
+  transform: skewX(10deg); /* Inclina 10 grados horizontalmente */
 }
 
+/* :target: se muestra cuando el id está en la URL */
+/*
+  Ejemplo: href="#send" → URL termina en #send
+  → section#send tiene display: block
+*/
 section:target {
-  display: block;
+  display: block; /* Se muestra */
 }

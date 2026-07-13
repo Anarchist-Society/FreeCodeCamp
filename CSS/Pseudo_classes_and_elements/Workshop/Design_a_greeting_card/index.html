@@ -2,29 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Design a Greeting Card</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!-- Tarjeta de cumpleaños -->
     <div id="greeting-card" class="card">
+      <!-- Título: CSS agrega emojis con ::before y ::after -->
       <h1>Happy Birthday!</h1>
+      <!-- Mensaje de la tarjeta -->
       <p class="message">
         Wishing you all the happiness and joy on your special day!
       </p>
 
+      <!-- Enlaces de acción -->
       <div class="card-links">
+        <!-- Enlace a #send: muestra la sección con id="send" -->
         <a class="send-link" href="#send">Send Card</a>
+        <!-- Enlace a #share: muestra la sección con id="share" -->
         <a class="share-link" href="#share">Share on Social Media</a>
       </div>
     </div>
 
+    <!-- Sección de envío: oculta por defecto, se muestra con :target -->
     <section id="send">
       <h2>Sending your card...</h2>
       <p>Card successfully sent to your recipient!</p>
     </section>
 
+    <!-- Sección de compartir: oculta por defecto, se muestra con :target -->
     <section id="share">
       <h2>Sharing your card...</h2>
       <p>Your card was shared on social media!</p>
