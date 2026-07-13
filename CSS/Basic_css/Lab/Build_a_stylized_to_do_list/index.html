@@ -2,22 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- viewport: Permite que la página se adapte al tamaño de pantalla en móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Styled To-Do List</title>
+    <!-- <link>: Vincula el archivo CSS externo -->
     <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
+    <!--
+      <main>: Contenedor principal semántico.
+      CSS le da: width: 80%, max-width: 540px, margin: 0 auto para centrarlo horizontalmente.
+    -->
     <main>
-      <img src="Arch.jpg" alt="Logo de archlinux" />
-
+      <!--
+        <div class="container">: Tarjeta que envuelve toda la lista.
+        CSS le da: padding, border-radius, box-shadow (sombra negra).
+      -->
       <div class="container">
+        <!--
+          <h1>: Título principal.
+          <span>To-Do</span>: Solo la palabra "To-Do" se estiliza en azul con CSS.
+        -->
         <h1>My <span>To-Do</span> List</h1>
+
+        <!--
+          <ul class="todo-list">: Lista de tareas.
+          CSS le quita los puntos (list-style-type: none) y el padding.
+        -->
         <ul class="todo-list">
+          <!--
+            Cada <li> es una tarea.
+            CSS le da: fondo azul oscuro, bordes redondeados, padding, color de texto claro.
+          -->
           <li>
+            <!--
+              <input type="checkbox">: Casilla de verificación.
+              El atributo id permite vincularla con el <label> usando "for".
+            -->
             <input type="checkbox" id="task1" />
+            <!--
+              <label for="task1">: Texto de la tarea.
+              "for" vincula el label con el checkbox por su id.
+              Al hacer clic en el texto, se marca/desmarca la casilla.
+            -->
             <label for="task1">Explore split and ergonomic keyboards</label>
+
+            <!--
+              <ul class="sub-item">: Sublista con enlaces relacionados.
+              CSS le da: list-style: square (cuadros en lugar de puntos).
+            -->
             <ul class="sub-item">
               <li>
+                <!--
+                  <a class="sub-item-link">: Enlace a recurso externo.
+                  target="_blank": Abre en nueva pestaña.
+                  CSS le da: color azul claro, sin subrayado, efecto hover/focus.
+                -->
                 <a
                   class="sub-item-link"
                   href="https://www.zsa.io/voyager"
