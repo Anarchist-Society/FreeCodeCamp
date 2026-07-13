@@ -1,47 +1,53 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 40px;
-  background: #f4f4f4;
+  font-family: Arial, sans-serif; /* Tipografía general */
+  margin: 0; /* Sin márgenes externos */
+  padding: 40px; /* Espacio alrededor del body */
+  background: #f4f4f4; /* Gris claro */
 }
 
+/* Título principal */
 h1 {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: center; /* Centra el título */
+  margin-bottom: 40px; /* Espacio debajo */
 }
 
+/* Sección de balance */
 .section {
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* Espacio entre secciones */
 }
 
+/* Contenedor de cajas: flex centrado */
 .box-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  display: flex; /* Layout flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 20px; /* Espacio entre cajas */
 }
 
+/* Caja individual */
 .box {
-  width: 100px;
-  height: 100px;
-  background: #3498db;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 8px;
+  width: 100px; /* Ancho fijo */
+  height: 100px; /* Alto fijo */
+  background: #3498db; /* Azul */
+  display: flex; /* Flex para centrar texto */
+  justify-content: center; /* Texto centrado horizontal */
+  align-items: center; /* Texto centrado vertical */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 18px; /* Tamaño de fuente */
+  border-radius: 8px; /* Esquinas redondeadas */
 }
 
+/* Caja central del balance asimétrico: más grande y roja */
 .asymmetrical .box:nth-child(2) {
-  transform: scale(1.5);
-  background: #e74c3c;
+  transform: scale(1.5); /* Aumenta 50% el tamaño */
+  background: #e74c3c; /* Rojo */
 }
 
+/* Descripción de cada sección */
 .description {
-  text-align: center;
-  margin-top: 50px;
-  font-style: italic;
-  color: #333;
+  text-align: center; /* Texto centrado */
+  margin-top: 50px; /* Espacio arriba */
+  font-style: italic; /* Cursiva */
+  color: #333; /* Gris oscuro */
 }
