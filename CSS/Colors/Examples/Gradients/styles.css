@@ -1,33 +1,39 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0px; /* Sin márgenes externos */
+  padding: 0px; /* Sin rellenos internos */
 }
 
 body {
-  padding: 10px;
+  padding: 10px; /* Espacio alrededor */
 }
 
+/* Todos los div: misma altura y espacio debajo */
 div {
-  margin-bottom: 10px;
-  height: 18vh;
+  margin-bottom: 10px; /* Espacio entre gradientes */
+  height: 18vh; /* 18% del alto del viewport */
 }
 
+/* Gradiente lineal simple: izquierda (rojo) → derecha (azul) */
 .linear-gradient {
   background: linear-gradient(to right, red, blue);
 }
 
+/* Gradiente lineal multicolor: rojo → amarillo → azul */
 .multi-color-gradient {
   background: linear-gradient(to right, red, yellow, blue);
 }
 
+/* Gradiente radial: círculo desde el centro */
 .radial-gradient {
   background: radial-gradient(circle, red, blue);
 }
 
+/* Gradiente radial: elipse desde arriba a la izquierda */
 .custom-radial-gradient {
   background: radial-gradient(ellipse at top left, red, blue);
 }
 
+/* Gradiente con posiciones precisas: rojo al 20%, amarillo al 40%, azul al 80% */
 .precise-gradient {
   background: linear-gradient(to right, red 20%, yellow 40%, blue 80%);
 }
