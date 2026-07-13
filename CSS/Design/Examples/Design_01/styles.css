@@ -1,119 +1,130 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Width/height incluye padding y border */
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
 }
 
 body {
-  line-height: 1.6;
-  background: #F9F9F9;
-  color: #333;
+  line-height: 1.6; /* Interlineado para legibilidad */
+  background: #f9f9f9; /* Gris muy claro */
+  color: #333; /* Texto gris oscuro */
 }
 
+/* Contenedor responsive */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  width: 90%; /* 90% del viewport */
+  max-width: 1200px; /* No crece más de 1200px */
+  margin: auto; /* Centra horizontalmente */
 }
 
+/* Header: flex para logo a la izq y nav a la der */
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Layout flexbox */
+  justify-content: space-between; /* Logo izq, nav der */
+  align-items: center; /* Centra verticalmente */
 }
 
 header {
-  background: #FFF;
-  border-bottom: 1px solid #DDD;
-  padding: 1rem 0;
+  background: #fff; /* Fondo blanco */
+  border-bottom: 1px solid #ddd; /* Línea inferior sutil */
 }
 
 header h1 {
-  color: #2C3E50;
+  color: #2c3e50; /* Azul oscuro */
 }
 
+/* Nav: menú horizontal */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
+  list-style: none; /* Sin puntos */
+  display: flex; /* En línea horizontal */
+  gap: 1.5rem; /* Espacio entre enlaces */
+  justify-content: flex-end; /* Alinea a la derecha */
 }
 
 nav a {
-  list-style: none;
-  color: #2C3E50;
-  font-weight: 500;
+  color: #2c3e50; /* Azul oscuro */
+  font-weight: 500; /* Semi-bold */
 }
 
+/* Hero: banner centrado */
 .hero {
-  background-color: lightgrey;
-  text-align: center;
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
+  background-color: lightgrey; /* Fondo gris */
+  text-align: center; /* Texto centrado */
+  padding: 4rem 1rem; /* Espacio generoso arriba/abajo */
+  margin-bottom: 2rem; /* Separa de productos */
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem; /* Título grande */
+  margin-bottom: 0.5rem; /* Espacio debajo del título */
 }
 
+/* Botón CTA */
 .hero .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #2C3E50;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
+  display: inline-block; /* Permite padding en línea */
+  margin-top: 2rem; /* Espacio arriba */
+  padding: 0.75rem 1.5rem; /* Espacio interno */
+  background: #2c3e50; /* Mismo azul que header */
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 4px; /* Esquinas redondeadas */
 }
 
+/* Título de productos */
 .products h3 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #2C3E50;
+  margin-bottom: 1rem; /* Espacio debajo */
+  font-size: 1.8rem; /* Tamaño mediano */
+  color: #2c3e50; /* Azul oscuro */
 }
 
+/* Grid responsive */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  display: grid; /* Layout grid */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Columnas responsive: mín 240px */
+  gap: 2rem; /* Espacio entre tarjetas */
 }
 
+/* Tarjeta de producto */
 .product-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white; /* Fondo blanco */
+  padding: 1rem; /* Espacio interno */
+  border-radius: 8px; /* Esquinas redondeadas */
+  text-align: center; /* Contenido centrado */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+/* Imagen del producto */
 .product-card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  max-width: 100%; /* No desborda la tarjeta */
+  border-radius: 6px; /* Esquinas redondeadas */
+  margin-bottom: 1rem; /* Espacio debajo */
 }
 
+/* Título del producto */
 .product-card h4 {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0; /* Espacio arriba y abajo */
 }
 
+/* Botón "Add to Cart" */
 .product-card button {
-  background-color: #27AE60;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
+  background-color: #27ae60; /* Verde acción */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 0.5rem 1rem; /* Espacio interno */
+  cursor: pointer; /* Cursor de mano */
+  border-radius: 4px; /* Esquinas redondeadas */
 }
 
+/* Hover: verde más oscuro */
 .product-card button:hover {
-  background: #219150;
+  background: #219150; /* Verde oscuro */
 }
 
+/* Footer */
 footer {
-  background: #2C3E50;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  background: #2c3e50; /* Mismo azul que header */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 1rem 0; /* Espacio vertical */
+  margin-top: 2rem; /* Separa del contenido */
 }
