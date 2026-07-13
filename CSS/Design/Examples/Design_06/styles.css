@@ -1,54 +1,60 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #F0F0F0;
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  background-color: #F0F0F0; /* Gris claro */
 }
 
+/* Contenedor CON white space: padding generoso */
 .container {
-  max-width: 800px;
-  margin: 60px auto;
-  background-color: #FFFFFF;
-  padding: 60px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px; /* Ancho máximo */
+  margin: 60px auto; /* Centra horizontalmente con espacio arriba/abajo */
+  background-color: #FFFFFF; /* Fondo blanco */
+  padding: 60px; /* Mucho espacio interno (white space) */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
 }
 
+/* Título */
 h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #2C3E50;
+  font-size: 36px; /* Tamaño grande */
+  margin-bottom: 20px; /* Espacio debajo */
+  color: #2C3E50; /* Azul oscuro */
 }
 
+/* Párrafos */
 p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 30px;
+  font-size: 18px; /* Tamaño mediano */
+  line-height: 1.8; /* Interlineado amplio (legibilidad) */
+  color: #555; /* Gris medio */
+  margin-bottom: 30px; /* Espacio debajo */
 }
 
+/* Botón verde */
 .button {
-  display: inline-block;
-  padding: 14px 28px;
-  background-color: #27AE60;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  display: inline-block; /* Permite padding en línea */
+  padding: 14px 28px; /* Espacio interno generoso */
+  background-color: #27AE60; /* Verde */
+  color: white; /* Texto blanco */
+  font-size: 16px; /* Tamaño normal */
+  font-weight: bold; /* Negrita */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  text-decoration: none; /* Sin subrayado */
+  transition: background 0.3s ease; /* Animación suave */
 }
 
+/* Hover: verde más oscuro */
 .button:hover {
-  background-color: #219150;
+  background-color: #219150; /* Verde oscuro */
 }
 
+/* Contenedor SIN white space: poco padding, apretado */
 .no-whitespace {
-  background-color: #FFFFFF;
-  padding: 10px;
-  margin: 60px auto;
-  width: 800px;
-  box-shadow: 0 0 0 1px #CCC;
-  font-size: 16px;
-  color: #222;
+  background-color: #FFFFFF; /* Fondo blanco */
+  padding: 10px; /* Poco espacio interno (apretado) */
+  margin: 60px auto; /* Centra horizontalmente */
+  width: 800px; /* Ancho fijo (no responsive) */
+  box-shadow: 0 0 0 1px #CCC; /* Borde sutil con box-shadow */
+  font-size: 16px; /* Tamaño normal */
+  color: #222; /* Casi negro */
 }
