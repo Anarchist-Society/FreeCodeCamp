@@ -101,7 +101,6 @@ span {
    ENLACES DE SUBLISTAS
    ======================================== */
 a.sub-item-link {
-  margin-left: 10px;
   text-decoration: none; /* Sin subrayado */
 }
 
