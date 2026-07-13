@@ -1,62 +1,70 @@
+/* Contenedor del carrito */
 .shopping-cart {
-  margin: 20px auto;
-  font-family: sans-serif;
-  border: 1px solid #ccc;
-  padding: 15px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+  margin: 20px auto; /* Centra horizontalmente */
+  font-family: sans-serif; /* Tipografía */
+  border: 1px solid #ccc; /* Borde gris claro */
+  padding: 15px; /* Espacio interno */
+  background: white; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 6px; /* Esquinas redondeadas */
 }
 
+/* Título del carrito */
 .shopping-cart h2 {
-  margin-top: 0;
-  font-weight: 600;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
+  margin-top: 0; /* Sin margen arriba */
+  font-weight: 600; /* Semi-bold */
+  font-size: 1.4rem; /* Tamaño mediano-grande */
+  border-bottom: 1px solid #ddd; /* Línea separadora debajo */
+  padding-bottom: 8px; /* Espacio entre título y línea */
 }
 
+/* Lista de artículos */
 .cart-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Sin puntos */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
 }
 
+/* Cada artículo del carrito */
 .cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Nombre a la izq, cantidad y botón a la der */
+  padding: 10px 0; /* Espacio vertical */
+  border-bottom: 1px solid #eee; /* Línea separadora */
 }
 
+/* Nombre del producto */
 .item-name {
-  flex: 1;
-  font-size: 1rem;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  font-size: 1rem; /* Tamaño normal */
 }
 
+/* Input de cantidad */
 .quantity-input {
-  width: 50px;
-  padding: 4px 6px;
-  font-size: 1rem;
-  margin: 0 10px;
-  border-radius: 4px;
-  text-align: center;
+  width: 50px; /* Ancho fijo */
+  padding: 4px 6px; /* Espacio interno */
+  font-size: 1rem; /* Tamaño normal */
+  margin: 0 10px; /* Espacio a los lados */
+  border-radius: 4px; /* Esquinas redondeadas */
+  text-align: center; /* Número centrado */
 }
 
+/* Botón "Remove" */
 .remove-btn {
-  background: #e74c3c;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  background: #e74c3c; /* Rojo */
+  border: none; /* Sin borde */
+  color: white; /* Texto blanco */
+  padding: 6px 12px; /* Espacio interno */
+  border-radius: 4px; /* Esquinas redondeadas */
+  font-size: 0.9rem; /* Tamaño un poco menor */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.2s ease; /* Animación */
 }
 
+/* Hover y focus: rojo más oscuro */
 .remove-btn:hover,
 .remove-btn:focus {
-  background: #c0392b;
-  outline: none;
+  background: #c0392b; /* Rojo oscuro */
+  outline: none; /* Sin outline */
 }
