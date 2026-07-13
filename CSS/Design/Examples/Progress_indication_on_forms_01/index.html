@@ -2,36 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Anarchist-Society" />
     <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Progress Indication on Forms</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!-- Formulario multi-paso con id para manipularlo con JS -->
     <form id="multiStepForm">
+      <!-- Barra de progreso -->
       <div class="form-progress">
         <label class="progress-label">Form progress</label>
         <div class="progress-container">
+          <!-- Barra verde que crece con CSS transition -->
           <div class="progress-bar"></div>
+          <!-- Texto centrado encima de la barra -->
           <div class="progress-text">Step 1 of 3</div>
         </div>
       </div>
 
-      <!-- Step 1 -->
+      <!-- Paso 1: Información personal -->
       <fieldset class="form-step active">
         <legend>Personal Information</legend>
         <label for="name">Full Name:</label>
+        <!-- required: obligatorio para avanzar -->
         <input type="text" id="name" name="name" required />
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
 
+        <!-- type="button": no envía el formulario -->
         <button type="button" class="next-btn">Next</button>
       </fieldset>
 
-      <!-- Step 2 -->
+      <!-- Paso 2: Dirección -->
       <fieldset class="form-step">
         <legend>Address</legend>
         <label for="address">Street Address:</label>
@@ -44,16 +52,18 @@
         <button type="button" class="next-btn">Next</button>
       </fieldset>
 
-      <!-- Step 3 -->
+      <!-- Paso 3: Revisión y envío -->
       <fieldset class="form-step">
         <legend>Review & Submit</legend>
         <p>Please review your information before submiting.</p>
 
         <button type="button" class="prev-btn">Previous</button>
+        <!-- type="submit": envía el formulario -->
         <button type="submit">Submit</button>
       </fieldset>
     </form>
 
+    <!-- JS al final del body para que el DOM esté cargado -->
     <script src="index.js"></script>
   </body>
 </html>
