@@ -1,43 +1,47 @@
 body {
-  padding: 50px 10px;
-  margin: 0 auto;
-  width: 90vw;
-  min-height: calc(100vh - 100px);
-  background-color: white;
-  font-family: sans-serif;
-  text-align: center;
+  padding: 50px 10px; /* 50px arriba/abajo, 10px lados */
+  margin: 0 auto; /* Centra horizontalmente */
+  width: 90vw; /* 90% del ancho del viewport */
+  min-height: calc(100vh - 100px); /* Altura: viewport menos 100px de padding */
+  background-color: white; /* Fondo blanco */
+  font-family: sans-serif; /* Tipografía */
+  text-align: center; /* Texto centrado */
 }
 
+/* Imagen del evento */
 img {
-  border: 1px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 10);
-  padding: 20px;
-  text-align: center;
-  height: 50%;
-  width: 40%;
+  border: 1px solid black; /* Borde negro */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10); /* Sombra (alpha inválido, debería ser 0.1) */
+  padding: 20px; /* Espacio interno */
+  text-align: center; /* Centra la imagen */
+  height: 50%; /* 50% del padre */
+  width: 40%; /* 40% del padre */
 }
 
+/* Línea separadora */
 hr {
-  margin: 30px auto;
-  width: 80%;
-  background-color: black;
-  height: 2px;
+  margin: 30px auto; /* Centra horizontalmente */
+  width: 80%; /* 80% del ancho */
+  background-color: black; /* Negro */
+  height: 2px; /* Grosor */
 }
 
+/* Contenido principal */
 main {
-  margin: 0 auto;
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
+/* Cada sección: inline-block para estar en la misma línea */
 section {
-  text-align: center;
-  padding: 50px 5px;
-  vertical-align: top;
-  display: inline-block;
-  width: 30%;
+  text-align: center; /* Texto centrado */
+  vertical-align: top; /* Alinea arriba (con inline-block) */
+  display: inline-block; /* En línea pero con ancho/alto */
+  width: 30%; /* 30% del padre (3 secciones por línea) */
 }
 
+/* Listas de temas */
 ul {
-  text-align: left;
-  list-style: inside;
-  padding-left: 10px;
+  text-align: left; /* Texto alineado a la izquierda */
+  list-style: inside; /* Puntos dentro del contenido */
+  padding-left: 10px; /* Sangría izquierda */
 }
