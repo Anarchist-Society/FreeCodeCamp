@@ -2,23 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Anarchist-Society" />
     <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Progress Indication on Forms</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <link rel="stylesheet" href="styles.css" />
-
+    <!-- Formulario de 4 pasos con barra de progreso -->
     <form id="progressForm">
+      <!-- Barra de progreso con accesibilidad ARIA -->
       <div class="form-progress" aria-label="Form progress">
+        <!-- Texto dinámico: "Step X of Y (Z%)" -->
         <label class="progress-label"
           >Step <span id="currentStep">1</span> of
           <span id="totalSteps">4</span> (<span id="percentage">25%</span
           >)</label
         >
+        <!--
+          role="progressbar": Indica a lectores de pantalla que es una barra de progreso.
+          aria-valuemin/max/now: Valores para accesibilidad.
+        -->
         <div
           class="progress-container"
           role="progressbar"
@@ -26,11 +33,12 @@
           aria-valuemax="100"
           aria-valuenow="25"
         >
+          <!-- Barra verde que crece con CSS transition -->
           <div class="progress-bar"></div>
         </div>
       </div>
 
-      <!-- Step 1 -->
+      <!-- Paso 1: Información básica -->
       <fieldset class="form-step active">
         <legend>Basic Information</legend>
         <p>Please enter your basic information.</p>
@@ -40,7 +48,7 @@
         <button type="button" class="next-btn">Next</button>
       </fieldset>
 
-      <!-- Step 2 -->
+      <!-- Paso 2: Datos de contacto -->
       <fieldset class="form-step">
         <legend>Contact Details</legend>
         <p>How can we reach you?</p>
@@ -51,7 +59,7 @@
         <button type="button" class="next-btn">Next</button>
       </fieldset>
 
-      <!-- Step 3 -->
+      <!-- Paso 3: Dirección -->
       <fieldset class="form-step">
         <legend>Address</legend>
         <p>Where do you live?</p>
@@ -62,7 +70,7 @@
         <button type="button" class="next-btn">Next</button>
       </fieldset>
 
-      <!-- Step 4 -->
+      <!-- Paso 4: Revisión y envío -->
       <fieldset class="form-step">
         <legend>Review</legend>
         <p>Review your answers before submitting.</p>
@@ -71,6 +79,7 @@
         <button type="submit">Submit</button>
       </fieldset>
     </form>
+    <!-- JS al final del body para que el DOM esté cargado -->
     <script src="index.js"></script>
   </body>
 </html>
