@@ -1,3 +1,4 @@
+/* Variables CSS: Colores del tema púrpura neón */
 :root {
   /* --- COLORES BASE (FONDO Y ESTRUCTURA) --- */
   --bg-deep-black: #050505; /* Fondo principal de la página */
@@ -5,188 +6,211 @@
   --ui-border: #222222; /* Bordes sutiles de los inputs */
 
   /* --- COLORES DE ENERGÍA (ACENTOS PÚRPURA) --- */
-  --vibranium-glow: #bf00ff; /* El púrpura neón principal (Focus, Botones) */
-  --vibranium-dark: #4b0082; /* Violeta oscuro para degradados y sombras */
-  --vibranium-light: #e0b0ff; /* Lavanda pálido para los puntos de máximo brillo */
+  --vibranium-glow: #bf00ff; /* Púrpura neón principal */
+  --vibranium-dark: #4b0082; /* Violeta oscuro para bordes */
+  --vibranium-light: #e0b0ff; /* Lavanda para texto y puntos */
 
   /* --- COLORES DE TEXTO Y DETALLE --- */
-  --text-primary: #f2f2f2; /* Blanco casi puro para lectura clara */
-  --text-secondary: #8a8a8a; /* Gris medio para etiquetas (Labels) */
-  --iron-grey: #2f2f2f; /* El color de la textura metálica del traje */
+  --text-primary: #f2f2f2; /* Blanco casi puro */
+  --text-secondary: #8a8a8a; /* Gris medio para labels */
+  --iron-grey: #2f2f2f; /* Gris metálico */
 
-  /* --- EFECTOS ESPECIALES (SOMBRAS Y GRADIENTES) --- */
-  --vibranium-gradient: linear-gradient(135deg, #4b0082 0%, #bf00ff 100%);
-  --glow-shadow: 0 0 15px rgba(191, 0, 255, 0.4);
+  /* --- EFECTOS ESPECIALES --- */
+  --vibranium-gradient: linear-gradient(135deg, #4b0082 0%, #bf00ff 100%); /* Degradado púrpura */
+  --glow-shadow: 0 0 15px rgba(191, 0, 255, 0.4); /* Sombra neón */
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-deep-black);
-  color: var(--text-primary);
+  display: flex; /* Layout flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  padding: 20px; /* Espacio alrededor */
+  font-family: Arial, sans-serif; /* Tipografía */
+  background-color: var(--bg-deep-black); /* Fondo negro */
+  color: var(--text-primary); /* Texto claro */
 }
 
+/* Contenedor del formulario */
 .container {
-  max-width: 600px;
-  padding: 30px;
-  border: 3px solid var(--vibranium-dark);
-  background-color: var(--bg-panel);
-  border-radius: 12px;
+  max-width: 600px; /* Ancho máximo */
+  padding: 30px; /* Espacio interno */
+  border: 3px solid var(--vibranium-dark); /* Borde púrpura oscuro */
+  background-color: var(--bg-panel); /* Fondo negro */
+  border-radius: 12px; /* Esquinas redondeadas */
 }
 
+/* Hover: borde cambia a púrpura neón */
 .container:hover {
   border-color: var(--vibranium-glow);
 }
 
+/* Título principal */
 h1 {
-  margin-top: 0;
-  text-align: center;
-  font-size: 2.2rem;
-  color: var(--vibranium-light);
+  margin-top: 0; /* Sin margen arriba */
+  text-align: center; /* Centra el texto */
+  font-size: 2.2rem; /* Tamaño grande */
+  color: var(--vibranium-light); /* Lavanda */
 }
 
+/* Párrafos */
 p {
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--text-secondary);
+  margin-bottom: 20px; /* Espacio debajo */
+  text-align: center; /* Centra el texto */
+  color: var(--text-secondary); /* Gris medio */
 }
 
-/* --- FORMULARIO --- */
+/* Labels */
 label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--vibranium-light);
+  display: block; /* Ocupa toda la línea */
+  margin-bottom: 10px; /* Espacio debajo */
+  font-weight: bold; /* Negrita */
+  font-size: 1.1rem; /* Tamaño mediano */
+  color: var(--vibranium-light); /* Lavanda */
 }
 
+/* Inputs, select y textarea */
 input,
 select,
 textarea {
-  background-color: var(--bg-deep-black);
-  color: var(--text-primary);
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 2px solid var(--ui-border);
-  border-radius: 10px;
-  box-sizing: border-box;
+  background-color: var(--bg-deep-black); /* Fondo negro */
+  color: var(--text-primary); /* Texto claro */
+  width: 100%; /* Todo el ancho */
+  padding: 10px; /* Espacio interno */
+  margin-bottom: 10px; /* Espacio debajo */
+  border: 2px solid var(--ui-border); /* Borde gris oscuro */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Padding incluido en el width */
 }
 
+/* Focus: borde púrpura neón y sombra */
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--vibranium-glow);
-  box-shadow: var(--glow-shadow);
-  outline: none;
+  border-color: var(--vibranium-glow); /* Borde púrpura */
+  box-shadow: var(--glow-shadow); /* Sombra neón */
+  outline: none; /* Sin outline por defecto */
 }
 
-/* Estilos para los Radio Buttons */
+/* Radio buttons: contenedor */
 .radio-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid var(--iron-grey);
-  border-radius: 8px;
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre elementos */
+  margin-top: 10px; /* Espacio arriba */
+  margin-bottom: 20px; /* Espacio abajo */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid var(--iron-grey); /* Borde gris */
+  border-radius: 8px; /* Esquinas redondeadas */
 }
 
+/* Legend del fieldset */
 legend {
-  color: var(--vibranium-light);
-  padding: 0 10px;
-  font-weight: bold;
-  font-size: 1.1rem;
+  color: var(--vibranium-light); /* Lavanda */
+  padding: 0 10px; /* Espacio horizontal */
+  font-weight: bold; /* Negrita */
+  font-size: 1.1rem; /* Tamaño mediano */
 }
 
+/* Radio buttons personalizados */
 .radio-group input[type="radio"] {
-  appearance: none;
-  width: 20px;
+  appearance: none; /* Quita el estilo por defecto */
+  width: 20px; /* Tamaño del círculo */
   height: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--vibranium-dark);
-  position: relative;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
+  border-radius: 50%; /* Círculo perfecto */
+  border: 2px solid var(--vibranium-dark); /* Borde púrpura oscuro */
+  position: relative; /* Para posicionar ::before */
+  cursor: pointer; /* Cursor de mano */
+  transition: border-color 0.3s ease; /* Animación */
 }
 
+/* Hover: borde más claro */
 .radio-group input[type="radio"]:hover {
   border-color: var(--vibranium-light);
 }
 
+/* Punto interior del radio button */
 .radio-group input[type="radio"]::before {
   display: block;
-  content: "";
-  width: 10px;
+  content: ""; /* Necesario para que exista */
+  width: 10px; /* Tamaño del punto */
   height: 10px;
-  border-radius: 50%;
-  background-color: var(--vibranium-light);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.3s ease-in;
+  border-radius: 50%; /* Círculo */
+  background-color: var(--vibranium-light); /* Lavanda */
+  position: absolute; /* Se posiciona dentro del radio */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%) scale(0); /* Oculto */
+  transition: transform 0.3s ease-in; /* Animación */
 }
 
+/* Radio seleccionado: punto visible */
 .radio-group input[type="radio"]:checked::before {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1); /* Visible */
 }
 
+/* Radio seleccionado: borde claro */
 .radio-group input[type="radio"]:checked {
   border-color: var(--vibranium-light);
 }
 
+/* Labels de radio buttons */
 .radio-group label {
-  margin: 0;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  margin: 0; /* Sin margen */
+  cursor: pointer; /* Cursor de mano */
+  transition: color 0.3s ease; /* Animación */
 }
 
+/* Label del radio seleccionado: texto lavanda */
+/*
+  :checked + label → Selecciona el label que sigue al radio checked.
+*/
 .radio-group input[type="radio"]:checked + label {
   color: var(--vibranium-light);
 }
 
+/* Focus: outline lavanda */
 .radio-group input[type="radio"]:focus {
   outline: 2px solid var(--vibranium-light);
-  outline-offset: 2px;
+  outline-offset: 2px; /* Espacio entre outline y radio */
 }
 
-/* --- BOTÓN --- */
+/* Botón de envío */
 button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  background: var(--vibranium-gradient);
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
+  width: 100%; /* Todo el ancho */
+  padding: 15px; /* Espacio interno */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Esquinas redondeadas */
+  background: var(--vibranium-gradient); /* Degradado púrpura */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Negrita */
+  font-size: 16px; /* Tamaño normal */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1px; /* Espacio entre letras */
+  cursor: pointer; /* Cursor de mano */
+  /* Animación de hover y active */
   transition:
-    transform 0.2s,
-    box-shadow 0.3s;
+    transform 0.2s, /* Movimiento */
+    box-shadow 0.3s; /* Sombra */
 }
 
+/* Hover: sube 2px y sombra neón */
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(192, 0, 255, 0.6);
+  transform: translateY(-2px); /* Sube */
+  box-shadow: 0 5px 20px rgba(192, 0, 255, 0.6); /* Sombra púrpura */
 }
 
+/* Active: vuelve a la posición original */
 button:active {
-  transform: translateY(0);
+  transform: translateY(0); /* Baja */
 }
 
+/* Disabled: gris */
 button:disabled {
-  background-color: grey;
-  cursor: not-allowed;
+  background-color: grey; /* Gris */
+  cursor: not-allowed; /* Cursor de prohibido */
 }
 
+/* Placeholder: texto claro */
 input::placeholder,
 textarea::placeholder {
   color: var(--text-primary);

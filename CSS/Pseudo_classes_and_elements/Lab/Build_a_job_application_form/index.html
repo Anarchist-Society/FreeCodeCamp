@@ -2,19 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Registration form</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <main>
+      <!-- Contenedor del formulario con tema púrpura neón -->
       <div class="container">
         <h1>Galaxy Panthers registration form</h1>
         <p>Complete this form to access the entrance exams</p>
 
         <form id="futsal-team-form">
-          <!-- Player name -->
+          <!-- Nombre del jugador -->
           <label for="player-name">Player Name:</label>
           <input
             type="text"
@@ -24,7 +29,7 @@
             required
           />
 
-          <!-- Age -->
+          <!-- Edad: mín 18, máx 50 -->
           <label for="age">Age: </label>
           <input
             type="number"
@@ -46,10 +51,10 @@
             required
           />
 
-          <!-- Position -->
+          <!-- Posición: menú desplegable -->
           <label for="position">Position</label>
           <select id="position" name="position" required>
-            <option value="">Select a position</option>
+            <option value="">Select a position</option> <!-- Opción por defecto -->
             <option value="goalkeeper">Goalkeeper</option>
             <option value="fixo">Fixo (Defender)</option>
             <option value="ala-left">Left Wing</option>
@@ -57,9 +62,10 @@
             <option value="pivot">Pivot (Forward)</option>
           </select>
 
-          <!-- Availability -->
+          <!-- Disponibilidad: radio buttons -->
           <fieldset class="radio-group">
             <legend>Availability</legend>
+            <!-- fullTime seleccionado por defecto -->
             <input
               type="radio"
               id="fullTime"
@@ -78,7 +84,7 @@
             <label for="partTime">Part-Time</label>
           </fieldset>
 
-          <!-- Motivation/Comments -->
+          <!-- Comentarios/motivación -->
           <label for="comments">Why do you want to join the team?</label>
           <textarea
             id="comments"
@@ -88,6 +94,7 @@
             required
           ></textarea>
 
+          <!-- Botón de envío -->
           <button type="submit">Submit Application</button>
         </form>
       </div>
