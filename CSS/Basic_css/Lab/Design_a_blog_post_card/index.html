@@ -2,18 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- viewport: Permite que la página se adapte al tamaño de pantalla en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Blog Post Card</title>
+    <!-- <link>: Vincula el archivo CSS externo -->
     <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
+    <!--
+      <main>: Contenedor principal semántico.
+      No necesita estilos especiales porque la tarjeta se centra sola con margin.
+    -->
     <main>
+      <!--
+        <div class="blog-post-card">: Tarjeta del post.
+        CSS le da: width: 350px, max-width: 100%, height: 400px,
+        margin: 25vh auto (centrado con espacio arriba),
+        fondo blanco, bordes redondeados, sombra, overflow hidden.
+      -->
       <div class="blog-post-card">
-        <img class="post-img" src="Vim.jpg" alt="Image of Vim" />
+        <!--
+          <img class="post-img">: Imagen del post.
+          CSS le da: width: 100% (ocupa todo el ancho de la tarjeta),
+          height: auto (mantiene proporción), borde inferior negro.
+          overflow: hidden en el padre recorta la imagen si es necesaria.
+        -->
+        <img class="post-img" src="./vim.jpg" alt="Image of Vim" />
+
+        <!--
+          <div class="post-content">: Contenido de texto del post.
+          CSS le da: padding: 20px (espacio interno).
+        -->
         <div class="post-content">
+          <!-- <h2>: Título del post -->
           <h2 class="post-title">Learning the Vim Editors</h2>
+
+          <!-- <p>: Extracto/descripción del post -->
           <p class="post-excerpt">Power and Agility Beyond Just Text Editing</p>
+
+          <!--
+            <a class="read-more">: Botón de enlace "Read More".
+            CSS le da: display: inline-block, padding, fondo oscuro,
+            texto blanco, sin subrayado, bordes redondeados.
+            Hover cambia ligeramente el color de fondo.
+          -->
           <a class="read-more" href="https://www.vim.org/">Read More</a>
         </div>
       </div>
