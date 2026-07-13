@@ -2,16 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Anarchist-Society" />
     <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Shopping cart</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!-- Contenedor del carrito: posición fija arriba a la derecha -->
     <div class="shopping-cart">
+      <!--
+        Botón del carrito con SVG inline.
+        aria-label: Texto para lectores de pantalla.
+        El SVG es un ícono de carrito de Feather Icons.
+      -->
       <button id="cart-btn" aria-label="Shopping cart">
+        <!-- SVG del ícono del carrito -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -23,15 +32,18 @@
           stroke-linejoin="round"
           class="feather feather-shopping-cart"
           viewBox="0 0 24 24"
-          aria-hidden="true"
-          focusable="false"
+          aria-hidden="true" /* Oculto para lectores de pantalla */
+          focusable="false" /* No focusable por teclado */
         >
+          <!-- Ruedas del carrito -->
           <circle cx="9" cy="21" r="1"></circle>
           <circle cx="20" cy="21" r="1"></circle>
+          <!-- Cuerpo del carrito -->
           <path
             d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
           ></path>
         </svg>
+        <!-- Badge con el número de artículos -->
         <span id="item-count">2</span>
       </button>
     </div>

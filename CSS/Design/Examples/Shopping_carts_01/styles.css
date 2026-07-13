@@ -1,59 +1,65 @@
+/* Contenedor del carrito: posición fija */
 .shopping-cart {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-family: sans-serif;
+  position: fixed; /* Fijo en la pantalla al hacer scroll */
+  top: 20px; /* 20px desde arriba */
+  right: 20px; /* 20px desde la derecha */
+  font-family: sans-serif; /* Tipografía */
 }
 
+/* Botón del carrito */
 #cart-btn {
-  background: none;
-  border: none;
-  cursor: default;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  color: #333;
-  font-size: 24px;
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: default; /* Cursor por defecto (no de mano) */
+  position: relative; /* Para posicionar el badge encima */
+  display: flex; /* Flexbox para alinear ícono y badge */
+  align-items: center; /* Centra verticalmente */
+  padding: 4px; /* Espacio interno */
+  color: #333; /* Color del ícono SVG */
+  font-size: 24px; /* Tamaño del ícono */
 }
 
+/* Badge rojo con el número de artículos */
 #item-count {
-  background: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 13px;
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  min-width: 18px;
-  height: 18px;
-  line-height: 14px;
-  text-align: center;
-  font-weight: 700;
-  user-select: none;
-  box-sizing: border-box;
+  background: red; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  border-radius: 50%; /* Círculo perfecto */
+  padding: 2px 6px; /* Espacio interno */
+  font-size: 13px; /* Tamaño pequeño */
+  position: absolute; /* Se posiciona sobre el ícono */
+  top: -6px; /* 6px arriba del botón */
+  right: -6px; /* 6px a la derecha del botón */
+  min-width: 18px; /* Ancho mínimo */
+  height: 18px; /* Altura fija */
+  line-height: 14px; /* Centra el número verticalmente */
+  text-align: center; /* Centra horizontalmente */
+  font-weight: 700; /* Negrita */
+  user-select: none; /* No se puede seleccionar */
+  box-sizing: border-box; /* Padding incluido en el width */
 }
 
+/* Dropdown del carrito (se muestra con JS) */
 #cart-details {
-  background: white;
-  border: 1px solid #ccc;
-  max-height: 300px;
-  overflow-y: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
-  padding: 10px;
-  position: relative;
-  z-index: 1000;
+  background: white; /* Fondo blanco */
+  border: 1px solid #ccc; /* Borde gris claro */
+  max-height: 300px; /* Altura máxima con scroll */
+  overflow-y: auto; /* Scroll vertical si hay muchos items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 10px; /* Espacio debajo del botón */
+  padding: 10px; /* Espacio interno */
+  position: relative; /* Para z-index */
+  z-index: 1000; /* Se muestra encima de otros elementos */
 }
 
+/* Lista de artículos del carrito */
 #cart-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Sin puntos */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
 }
 
+/* Cada artículo de la lista */
 #cart-items li {
-  padding: 5px 0;
-  border-bottom: 1px solid #eee;
+  padding: 5px 0; /* Espacio vertical */
+  border-bottom: 1px solid #eee; /* Línea separadora */
 }
