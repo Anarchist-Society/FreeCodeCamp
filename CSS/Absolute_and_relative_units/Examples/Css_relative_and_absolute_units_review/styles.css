@@ -1,100 +1,118 @@
+/* Fila de unidades absolutas */
 .units {
-  margin-bottom: 30px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  margin-bottom: 30px; /* Espacio debajo */
+  display: flex; /* Layout flexbox */
+  gap: 12px; /* Espacio entre cuadros */
+  flex-wrap: wrap; /* Salta de línea si no caben */
+  align-items: flex-end; /* Alinea abajo */
 }
 
+/* Estilo base de cada cuadro de unidad */
 .unit {
-  background-color: steelblue;
-  color: white;
-  text-align: center;
-  padding: 4px;
+  background-color: steelblue; /* Azul acero */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 4px; /* Espacio interno */
 }
 
+/* px: Píxeles (unidad absoluta más común) */
 .px {
   width: 40px;
   height: 40px;
 }
 
+/* in: Pulgadas (1in = 96px) */
 .inch {
-  width: 0.5in;
+  width: 0.5in; /* 0.5 pulgadas = 48px */
   height: 0.5in;
 }
 
+/* cm: Centímetros (1cm ≈ 37.8px) */
 .cm {
   width: 1cm;
   height: 1cm;
 }
 
+/* mm: Milímetros (10mm = 1cm) */
 .mm {
   width: 10mm;
   height: 10mm;
 }
 
+/* Q: Quarter-millimeters (40Q = 1cm) */
 .q {
   width: 40Q;
   height: 40Q;
 }
 
+/* pc: Picas (1pc = 12pt ≈ 16px) */
 .pc {
   width: 6pc;
   height: 6pc;
 }
 
+/* pt: Points (1pt = 1/72in ≈ 1.33px) */
 .pt {
   width: 36pt;
   height: 36pt;
 }
 
+/* Font-size raíz: base para rem */
 html {
-  font-size: 16px;
+  font-size: 16px; /* 1rem = 16px */
 }
 
+/* Contenedor de unidades relativas */
 .parent {
-  margin-bottom: 30px;
-  width: 200px;
-  font-size: 20px;
-  border: 2px dashed #555;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  margin-bottom: 30px; /* Espacio debajo */
+  width: 200px; /* Ancho fijo del padre */
+  font-size: 20px; /* Base para em en hijos */
+  border: 2px dashed #555; /* Borde punteado */
+  padding: 10px; /* Espacio interno */
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Apilado verticalmente */
+  gap: 12px; /* Espacio entre cajas */
 }
 
+/* Estilo base de cada caja relativa */
 .box {
-  background-color: seagreen;
-  color: white;
-  text-align: center;
-  padding: 6px;
+  background-color: seagreen; /* Verde mar */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 6px; /* Espacio interno */
 }
 
+/* %: Porcentaje del padre */
 .percent {
-  width: 50%;
+  width: 50%; /* 50% del ancho de .parent (200px) = 100px */
 }
 
+/* em: Relativo al font-size del elemento actual */
 .em {
-  font-size: 2em;
+  font-size: 2em; /* 2 × 20px (font-size de .parent) = 40px */
 }
 
+/* rem: Relativo al font-size raíz (html) */
 .rem {
-  font-size: 2rem;
+  font-size: 2rem; /* 2 × 16px (font-size de html) = 32px */
 }
 
+/* vh: 1% del alto del viewport */
 .vh {
-  height: 10vh;
+  height: 10vh; /* 10% del alto de la ventana */
 }
 
+/* vw: 1% del ancho del viewport */
 .vw {
-  width: 10vw;
+  width: 10vw; /* 10% del ancho de la ventana */
 }
 
+/* calc(): Combina unidades en una operación matemática */
 .calc-box {
-  width: calc(100% - 40px);
-  padding: 10px;
-  background-color: steelblue;
-  color: white;
-  text-align: center;
-  border: 2px solid black;
+  width: calc(100% - 40px); /* 100% del padre menos 40px */
+  padding: 10px; /* Espacio interno */
+  background-color: steelblue; /* Azul acero */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  border: 2px solid black; /* Borde negro */
 }

@@ -2,30 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>CSS Relative and Absolute Units Review</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!-- Unidades absolutas: tamaño fijo, no cambian -->
     <div class="units">
-      <div class="unit px">px</div>
-      <div class="unit inch">in</div>
-      <div class="unit cm">cm</div>
-      <div class="unit mm">mm</div>
-      <div class="unit q">q</div>
-      <div class="unit pc">pc</div>
-      <div class="unit pt">pt</div>
+      <div class="unit px">px</div> <!-- Píxeles -->
+      <div class="unit inch">in</div> <!-- Pulgadas -->
+      <div class="unit cm">cm</div> <!-- Centímetros -->
+      <div class="unit mm">mm</div> <!-- Milímetros -->
+      <div class="unit q">q</div> <!-- Quarter-millimeters -->
+      <div class="unit pc">pc</div> <!-- Picas -->
+      <div class="unit pt">pt</div> <!-- Points -->
     </div>
 
+    <!-- Unidades relativas: cambian según contexto -->
     <div class="parent">
-      <div class="box percent">50%</div>
-      <div class="box em">2em</div>
-      <div class="box rem">2rem</div>
-      <div class="box vh">10vh</div>
-      <div class="box vw">10vw</div>
+      <div class="box percent">50%</div> <!-- 50% del padre -->
+      <div class="box em">2em</div> <!-- 2× font-size del elemento -->
+      <div class="box rem">2rem</div> <!-- 2× font-size raíz (html) -->
+      <div class="box vh">10vh</div> <!-- 10% del alto del viewport -->
+      <div class="box vw">10vw</div> <!-- 10% del ancho del viewport -->
     </div>
 
+    <!-- calc(): Combina unidades diferentes en una operación -->
     <div class="calc-box">calc()</div>
   </body>
 </html>
