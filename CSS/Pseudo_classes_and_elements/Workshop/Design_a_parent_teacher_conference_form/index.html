@@ -2,22 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Design Parent Teacher Conference Form</title>
+    <!-- CSS externo -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Contenedor principal del formulario -->
     <main class="container">
+      <!-- Título centrado -->
       <h1 class="title center">Parent Teacher Conference Form</h1>
+      <!-- Descripción -->
       <p class="description center">
         Please fill out the form below to help schedule your parent-teacher
         conference.
       </p>
 
       <form>
+        <!-- Campo 1: Información del estudiante -->
         <fieldset>
           <legend>Student Information</legend>
           <label for="student-name">Full Name: </label>
+          <!-- type="text": Input de texto, required: obligatorio -->
           <input
             type="text"
             name="student-name"
@@ -27,6 +36,7 @@
           />
 
           <label for="grade">Student Grade: </label>
+          <!-- type="number": Solo acepta números -->
           <input
             type="number"
             name="grade"
@@ -36,6 +46,7 @@
           />
         </fieldset>
 
+        <!-- Campo 2: Información del padre/tutor -->
         <fieldset>
           <legend>Parent/Guardian Information</legend>
           <label for="parent-name">Parent/Guardian Name: </label>
@@ -48,8 +59,14 @@
           />
         </fieldset>
 
+        <!-- Campo 3: Método de contacto preferido -->
         <fieldset>
           <legend>Preferred Contact Method</legend>
+          <!--
+            Radio buttons: Solo uno seleccionable por nombre.
+            Ambos tienen name="contact-method" → solo uno puede estar checked.
+            checked: Email seleccionado por defecto.
+          -->
           <label class="contact-method" for="email">Email: </label>
           <input
             id="email"
@@ -70,14 +87,17 @@
           />
         </fieldset>
 
+        <!-- Campo 4: Notas adicionales -->
         <fieldset>
           <legend>Additional Notes</legend>
           <label for="notes"
             >Any specific concerns or topics you'd like to discuss?</label
           >
+          <!-- textarea: Área de texto multilínea -->
           <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
         </fieldset>
 
+        <!-- Botón de envío -->
         <button class="submit-btn" type="submit">Submit Form</button>
       </form>
     </main>

@@ -1,99 +1,136 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: MidnightBlue;
-  color: whitesmoke;
+  font-family: Arial, sans-serif; /* Tipografía */
+  background-color: MidnightBlue; /* Azul oscuro */
+  color: whitesmoke; /* Texto claro */
 }
 
+/* Contenedor del formulario */
 .container {
-  background-color: #ffffff1a;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 10px 20px;
-  box-shadow: 0 5px 15px black;
+  background-color: #ffffff1a; /* Blanco al 10% de opacidad */
+  width: 80%; /* 80% del viewport */
+  max-width: 600px; /* Ancho máximo */
+  border-radius: 10px; /* Esquinas redondeadas */
+  margin: 20px auto; /* Centra horizontalmente */
+  padding: 10px 20px; /* Espacio interno */
+  box-shadow: 0 5px 15px black; /* Sombra negra */
 }
 
+/* Texto centrado */
 .center {
   text-align: center;
 }
 
+/* Descripción del formulario */
 .description {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Tamaño mediano-grande */
 }
 
+/* Cada fieldset */
 fieldset {
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin: 20px 0;
-  padding: 20px;
+  border: 1px solid gray; /* Borde gris */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin: 20px 0; /* Espacio arriba/abajo */
+  padding: 20px; /* Espacio interno */
 }
 
+/* Título de cada fieldset */
 fieldset legend {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.3rem; /* Tamaño mediano-grande */
+  font-weight: 600; /* Semi-bold */
 }
 
+/* Labels generales */
 label {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Tamaño mediano-grande */
 }
 
+/* Labels que NO son de radio buttons */
+/*
+  :not(.contact-method) → Excluye los labels de radio.
+  display: block → Ocupa toda la línea.
+  margin: 10px 0 → Espacio arriba/abajo.
+*/
 label:not(.contact-method) {
   display: block;
   margin: 10px 0;
 }
 
+/* Inputs normales y textarea (excluye radio buttons) */
 input:not(.contact-method-radio-btn),
 textarea {
-  background-color: #ffffff1a;
-  width: 95%;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #ffffff1a; /* Blanco al 10% de opacidad */
+  width: 95%; /* Casi todo el ancho */
+  border: 1px solid gray; /* Borde gris */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px; /* Espacio interno */
 }
 
+/* Inputs y placeholder: texto claro */
 input,
 input::placeholder,
 textarea {
-  color: whitesmoke;
+  color: whitesmoke; /* Texto blanco */
 }
 
+/* Radio buttons personalizados */
+/*
+  appearance: none → Quita el estilo por defecto del navegador.
+  width/height: 20px → Tamaño del círculo exterior.
+  border-radius: 50% → Círculo perfecto.
+  border: 2px solid gray → Borde gris.
+*/
 .contact-method-radio-btn {
   appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 2px solid gray;
-  vertical-align: bottom;
+  vertical-align: bottom; /* Alinea con el label */
 }
 
+/* Punto interior del radio button (oculto por defecto) */
+/*
+  ::before → Pseudo-elemento que crea el punto interior.
+  width/height: 10px → Tamaño del punto.
+  border-radius: 50% → Círculo.
+  transform: scale(0) → Oculto (escala 0).
+  transition: all 0.3s ease-in → Animación suave.
+*/
 .contact-method-radio-btn::before {
   display: block;
-  content: "";
+  content: ""; /* Necesario para que el pseudo-elemento exista */
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  transform: translate(3px, 3px) scale(0);
-  transition: all 0.3s ease-in;
+  transform: translate(3px, 3px) scale(0); /* Oculto */
+  transition: all 0.3s ease-in; /* Animación */
 }
 
+/* Radio button seleccionado: punto verde */
+/*
+  :checked → Cuando el radio button está seleccionado.
+  transform: scale(1) → Muestra el punto (escala 1).
+  background-color: lightgreen → Verde claro.
+*/
 .contact-method-radio-btn:checked::before {
-  transform: translate(3px, 3px) scale(1);
-  background-color: lightgreen;
+  transform: translate(3px, 3px) scale(1); /* Visible */
+  background-color: lightgreen; /* Verde */
 }
 
+/* Botón de envío */
 .submit-btn {
-  cursor: pointer;
-  background-color: royalblue;
-  color: whitesmoke;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  display: block;
-  margin: auto;
+  cursor: pointer; /* Cursor de mano */
+  background-color: royalblue; /* Azul real */
+  color: whitesmoke; /* Texto claro */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Esquinas redondeadas */
+  padding: 12px 20px; /* Espacio interno */
+  font-size: 1.1rem; /* Tamaño mediano */
+  display: block; /* Ocupa toda la línea */
+  margin: auto; /* Centra horizontalmente */
 }
 
+/* Hover: azul más oscuro */
 .submit-btn:hover {
-  background-color: midnightblue;
+  background-color: midnightblue; /* Azul oscuro */
 }
