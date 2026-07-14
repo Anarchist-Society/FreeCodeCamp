@@ -1,12 +1,17 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin rellenos */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 main {
-  height: 100vh;
-  background-color: black;
-  display: grid;
-  place-items: center;
+  height: 100dvh; /* Dynamic Viewport Height: ajusta al área visible real (sin barra del navegador) */
+  background-color: black; /* Fondo negro */
+  display: grid; /* Grid para centrar */
+  place-items: center; /* Centra horizontal y verticalmente */
+}
+
+svg {
+  max-width: 100%; /* No desborda el contenedor en móvil */
+  height: auto; /* Mantiene la proporción del SVG */
 }
