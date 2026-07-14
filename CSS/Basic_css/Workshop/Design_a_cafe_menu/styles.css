@@ -25,12 +25,9 @@ body {
   font-family: sans-serif;
 
   /*
-    min-height: 92vh → Altura mínima del 92% del viewport.
-    Se usa min-height (no height) para que el body pueda crecer
-    si el contenido es más largo que la pantalla.
-    
-    Se usa 92vh en lugar de 100vh para evitar scroll en móviles,
-    donde la barra de direcciones del navegador reduce el espacio visible.
+    height: 100dvh → Dynamic Viewport Height.
+    Se ajusta al área visible real del navegador (sin contar la barra URL).
+    A diferencia de 100vh, evita scroll en móviles donde la barra del navegador reduce el espacio visible.
     
     display: grid → Convierte el body en un contenedor Grid.
     place-items: center → Centra el contenido tanto horizontal como verticalmente.
@@ -38,7 +35,7 @@ body {
     NOTA: Antes se usaba margin: auto en .menu para centrar,
     pero grid + place-items es más simple y potente.
   */
-  min-height: 92vh;
+  height: 100dvh;
   display: grid;
   place-items: center;
 }
