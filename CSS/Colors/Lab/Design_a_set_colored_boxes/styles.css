@@ -1,26 +1,29 @@
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; /* Fuente sans-serif */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Apilado vertical */
+  align-items: center; /* Centrado horizontal */
+  margin: 0; /* Sin margen */
+  padding: 20px; /* Espacio alrededor */
+  background-color: #f4f4f4; /* Fondo gris claro */
 }
 
+/* Título con espacio abajo */
 h1 {
   margin-bottom: 20px;
   text-align: center;
 }
 
+/* Grid responsivo: columnas de mínimo 150px, máximo 1fr */
 .color-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-  width: 100%;
-  max-width: 800px;
+  gap: 10px; /* Espacio entre cajas */
+  width: 100%; /* Ancho completo */
+  max-width: 800px; /* Tope máximo */
 }
 
+/* Caja base: 100×100px, centrada, redondeada */
 .color-box {
   display: flex;
   justify-content: center;
@@ -32,22 +35,27 @@ h1 {
   font-weight: bold;
 }
 
+/* Verde: formato hex */
 .color1 {
   background-color: #019733;
 }
 
+/* Azul: formato rgb */
 .color2 {
   background-color: rgb(0, 89, 156);
 }
 
+/* Azul claro: nombre CSS */
 .color3 {
   background-color: deepskyblue;
 }
 
+/* Amarillo: formato hsl */
 .color4 {
   background-color: hsl(50, 93%, 53%);
 }
 
+/* Verde claro: formato hex */
 .color5 {
   background-color: #00c853;
 }
