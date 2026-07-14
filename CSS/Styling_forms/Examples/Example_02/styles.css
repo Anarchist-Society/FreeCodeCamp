@@ -1,38 +1,43 @@
+/* Checkbox personalizado: oculta el nativo, crea uno nuevo */
 .checkbox {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
+  appearance: none; /* Oculta el checkbox nativo del navegador */
+  width: 18px; /* Ancho del cuadrado */
+  height: 18px; /* Alto del cuadrado */
+  border: 2px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Esquinas redondeadas */
   display: inline-block;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  vertical-align: middle;
+  position: relative; /* Para posicionar el pseudo-elemento ::after */
+  cursor: pointer; /* Mano al pasar */
+  transition: all 0.25s ease; /* Transición suave */
+  vertical-align: middle; /* Alineado con el texto */
 }
 
+/* Hover: borde más oscuro */
 .checkbox:hover {
   border-color: #888;
 }
 
+/* Checked: fondo y borde verdes */
 .checkbox:checked {
-  background-color: #4caf50;
+  background-color: #4caf50; /* Verde */
   border-color: #4caf50;
 }
 
+/* Checked + ::after: palomita blanca con CSS puro */
 .checkbox:checked::after {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  content: ""; /* Contenido vacío */
+  position: absolute; /* Posicionado relativo al checkbox */
+  left: 4px; /* Distancia desde la izquierda */
+  top: 0px; /* Distancia desde arriba */
+  width: 5px; /* Ancho de la palomita */
+  height: 10px; /* Alto de la palomita */
+  border: solid white; /* Borde blanco */
+  border-width: 0 2px 2px 0; /* Solo borde derecho e inferior (media palomita) */
+  transform: rotate(45deg); /* Rotar 45° para formar la palomita */
 }
 
+/* Focus: outline azul con espacio */
 .checkbox:focus {
-  outline: 2px solid #90caf9;
-  outline-offset: 2px;
+  outline: 2px solid #90caf9; /* Outline azul claro */
+  outline-offset: 2px; /* Espacio entre outline y checkbox */
 }
