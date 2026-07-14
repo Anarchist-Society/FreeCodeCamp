@@ -71,18 +71,22 @@
 
         <!--
           Sección de redes sociales.
+          - <div class="social-media">: Contenedor padre.
           - <h2>: Título de la sección.
+          - <div class="social-links">: Wrapper con flexbox para los enlaces.
+            display: flex + gap: 15px → Enlaces en fila con espacio entre ellos.
           - <a>: Enlaces a Twitter, LinkedIn y GitHub.
-          - <a> hereda text-decoration: none de CSS (sin subrayado).
         -->
         <div class="social-media">
           <h2>Connect with me</h2>
-          <a
-            href="https://web.archive.org/web/20160729094124/https://twitter.com/TempleOS"
-            >Twitter</a
-          >
-          <a href="https://es.linkedin.com/">LinkedIn</a>
-          <a href="https://github.com/cia-foundation">GitHub</a>
+          <div class="social-links">
+            <a
+              href="https://web.archive.org/web/20160729094124/https://twitter.com/TempleOS"
+              >Twitter</a
+            >
+            <a href="https://es.linkedin.com/">LinkedIn</a>
+            <a href="https://github.com/cia-foundation">GitHub</a>
+          </div>
         </div>
       </div>
     </main>

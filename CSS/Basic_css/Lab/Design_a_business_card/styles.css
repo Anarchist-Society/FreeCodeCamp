@@ -20,14 +20,15 @@
    MAIN: Centrado de la tarjeta
    ======================================== */
 /*
+  height: 100dvh → Dynamic Viewport Height.
+  Se ajusta al área visible real del navegador (sin contar la barra URL).
+  Evita scroll en móviles donde la barra del navegador reduce el espacio visible.
+  
   display: grid + place-items: center → Centra el contenido
   tanto vertical como horizontalmente.
-  
-  NOTA: En móvil puede causar scroll si la tarjeta es más
-  alta que el viewport (mismo problema que el cafe menu).
 */
 main {
-  min-height: 100vh;
+  height: 100dvh;
   display: grid;
   place-items: center;
 }
@@ -106,4 +107,19 @@ a {
 */
 hr {
   margin: 5px;
+}
+
+/* ========================================
+   REDES SOCIALES: Flexbox con Gap
+   ======================================== */
+/*
+  .social-links → Wrapper solo para los enlaces (no incluye el <h2>).
+  display: flex → Los enlaces se colocan en fila horizontal.
+  gap: 15px → Espacio SOLO entre enlaces (no al inicio/final).
+  justify-content: center → Centra los enlaces horizontalmente.
+*/
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
