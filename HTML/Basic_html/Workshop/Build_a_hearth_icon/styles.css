@@ -10,8 +10,3 @@ main {
   display: grid; /* Grid para centrar */
   place-items: center; /* Centra horizontal y verticalmente */
 }
-
-svg {
-  max-width: 100%; /* No desborda el contenedor en móvil */
-  height: auto; /* Mantiene la proporción del SVG */
-}
