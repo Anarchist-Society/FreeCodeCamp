@@ -29,7 +29,7 @@ body {
 
 /* Hover: efecto de escala */
 .alignment:hover {
-  transform: scale(1.2); /* Aumenta 2% el tamaño */
+  transform: scale(1.1); /* Aumenta 1% el tamaño */
 }
 
 /* Título de cada sección */
