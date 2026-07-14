@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Styling Text Inputs</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <main>
+      <!-- Formulario accesible con label + input en cada campo -->
       <form class="accessible-form">
+        <!-- Input text: label vinculado con for/id -->
         <label for="username">Username</label>
         <input
           type="text"
@@ -19,6 +23,7 @@
         />
         <button type="submit">Submit</button>
 
+        <!-- Input email: aria-describedby para mensaje de error -->
         <label for="email">Email address</label>
         <input
           type="email"
@@ -32,6 +37,7 @@
         </p>
         <button type="submit">Submit</button>
 
+        <!-- Textarea para mensaje largo -->
         <label for="message">You message</label>
         <textarea
           id="message"

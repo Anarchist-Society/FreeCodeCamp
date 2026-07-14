@@ -1,16 +1,18 @@
 body {
-  background-color: #f9fafb;
-  color: #222;
-  padding: 2rem;
-  line-height: 1.5;
-  font-family: system-ui, sans-serif;
+  background-color: #f9fafb; /* Fondo gris claro */
+  color: #222; /* Texto oscuro */
+  padding: 2rem; /* Espacio alrededor */
+  line-height: 1.5; /* Interlineado */
+  font-family: system-ui, sans-serif; /* Fuente del sistema */
 }
 
+/* Formulario centrado, máximo 480px */
 .accessible-form {
   max-width: 480px;
   margin: 0 auto;
 }
 
+/* Labels: bloque, bold, espacio arriba y abajo */
 label {
   display: block;
   font-weight: 600;
@@ -18,21 +20,24 @@ label {
   margin-bottom: 0.5rem;
 }
 
+/* Input text: ancho completo, borde gris, redondeado */
 input[type="text"] {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  border: 2px solid #555;
-  border-radius: 4px;
-  background-color: #fff;
-  color: #111;
+  width: 100%; /* Ancho completo */
+  padding: 0.6rem 0.8rem; /* Espacio interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 2px solid #555; /* Borde gris */
+  border-radius: 4px; /* Esquinas redondeadas */
+  background-color: #fff; /* Fondo blanco */
+  color: #111; /* Texto oscuro */
 }
 
+/* Input text:focus: borde y outline azul */
 input[type="text"]:focus {
-  outline: 3px solid #1e90ff;
-  border-color: #1e90ff;
+  outline: 3px solid #1e90ff; /* Outline azul */
+  border-color: #1e90ff; /* Borde azul */
 }
 
+/* Input email: mismo estilo + transición suave */
 input[type="email"] {
   width: 100%;
   padding: 0.6rem 0.8rem;
@@ -41,73 +46,83 @@ input[type="email"] {
   border-radius: 4px;
   background-color: #fff;
   color: #111;
-  transition:
+  transition: /* Transición suave */
     border-color 0.2s,
     box-shadow 0.2s;
 }
 
+/* Placeholder del email: italic, opaco */
 input[type="email"]::placeholder {
-  color: #555;
-  opacity: 1;
-  font-style: italic;
+  color: #555; /* Color gris */
+  opacity: 1; /* Opaco (no translúcido) */
+  font-style: italic; /* Cursiva */
 }
 
+/* Email:focus: borde azul + sombra azul (sin outline) */
 input[type="email"]:focus {
   border-color: #1e90ff;
-  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4);
-  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4); /* Sombra azul semitransparente */
+  outline: none; /* Sin outline */
 }
 
+/* Estado de error: borde rojo + fondo rosado */
 input.error {
-  border-color: #d93025;
-  background-color: #fff5fb;
+  border-color: #d93025; /* Borde rojo */
+  background-color: #fff5fb; /* Fondo rosa claro */
 }
 
+/* Error:focus: sombra roja */
 input.error:focus {
   border-color: #d93025;
   box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.4);
 }
 
+/* Mensaje de error: rojo, tamaño menor */
 .error-message {
-  color: #d93025;
-  font-size: 0.95rem;
-  margin-top: 0.4rem;
+  color: #d93025; /* Texto rojo */
+  font-size: 0.95rem; /* Tamaño ligeramente menor */
+  margin-top: 0.4rem; /* Espacio arriba */
 }
 
+/* Textarea: ancho completo, alto mínimo, redimensionable */
 textarea {
   width: 100%;
-  min-height: 120px;
+  min-height: 120px; /* Alto mínimo */
   padding: 0.8rem;
   font-size: 1rem;
   border: 2px solid #555;
   border-radius: 4px;
   background-color: #fff;
   color: #111;
-  resize: both;
-  box-sizing: border-box;
+  resize: both; /* Redimensionable horizontal y vertical */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
+/* Placeholder del textarea: gris, opaco */
 textarea::placeholder {
   color: #555;
   opacity: 1;
 }
 
+/* Textarea:focus: outline y borde azul */
 textarea:focus {
   outline: 3px solid #1e90ff;
   border-color: #1e90ff;
 }
 
+/* Botón: fondo azul, texto blanco, sin borde */
 button {
   margin-top: 1rem;
   padding: 0.6rem 1rem;
   font-size: 1rem;
-  background-color: #1e90ff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #1e90ff; /* Azul */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Esquinas redondeadas */
+  cursor: pointer; /* Mano al pasar */
 }
 
+/* Botón hover/focus: azul más oscuro */
 button:hover,
 button:focus {
   background-color: #187bcd;
