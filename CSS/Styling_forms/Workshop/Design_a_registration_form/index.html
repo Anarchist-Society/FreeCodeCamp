@@ -2,14 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anarchist-Society" />
+    <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Registration Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
+    <!-- method="post": Envía datos al servidor (no visible en URL) -->
+    <!-- action: URL donde se envían los datos -->
     <form method="post" action="https://register-demo.freecodecamp.org">
+
+      <!-- Fieldset 1: Datos personales -->
       <fieldset>
+        <!-- for/id: Vincula label con input (accesibilidad) -->
         <label for="first-name"
           >Enter Your First Name:
           <input id="first-name" name="first-name" type="text" required
@@ -24,6 +33,7 @@
         /></label>
         <label for="new-password"
           >Create a New Password:
+          <!-- pattern="[a-z0-5]{8,}": Solo acepta minúsculas a-z y dígitos 0-5, mínimo 8 caracteres -->
           <input
             id="new-password"
             name="new-password"
@@ -32,8 +42,13 @@
             required
         /></label>
       </fieldset>
+
+      <!-- Fieldset 2: Tipo de cuenta -->
       <fieldset>
+        <!-- <legend>: Título del fieldset (accesibilidad para lectores de pantalla) -->
         <legend>Account type (required)</legend>
+        <!-- name="account-type": Agrupa los radios (solo uno seleccionable) -->
+        <!-- class="inline": Estilo inline para radio buttons -->
         <label for="personal-account"
           ><input
             id="personal-account"
@@ -56,17 +71,22 @@
           Business</label
         >
       </fieldset>
+
+      <!-- Fieldset 3: Información adicional -->
       <fieldset>
         <label for="profile-picture"
           >Upload a profile picture:
+          <!-- type="file": Selector de archivo -->
           <input id="profile-picture" type="file" name="file"
         /></label>
         <label for="age"
           >Input your age (years):
+          <!-- type="number" min/max: Número con rango válido -->
           <input id="age" type="number" name="age" min="13" max="120"
         /></label>
         <label for="referrer"
           >How did you hear about us?
+          <!-- <select>: Lista desplegable con opciones -->
           <select id="referrer" name="referrer">
             <option value="">(select one)</option>
             <option value="1">freeCodeCamp News</option>
@@ -77,6 +97,7 @@
         </label>
         <label for="bio"
           >Provide a bio:
+          <!-- <textarea>: Área de texto multilinea -->
           <textarea
             id="bio"
             name="bio"
@@ -86,9 +107,13 @@
           ></textarea>
         </label>
       </fieldset>
+
+      <!-- Link a términos y condiciones -->
       <a href="https://www.freecodecamp.org/news/terms-of-service"
         >Read our terms and conditions</a
       >
+
+      <!-- Checkbox de aceptación -->
       <label for="terms-and-conditions">
         <input
           class="inline"
@@ -99,6 +124,8 @@
         />
         I accept the terms and conditions
       </label>
+
+      <!-- Botón de envío -->
       <input type="submit" value="Submit" />
     </form>
   </body>
