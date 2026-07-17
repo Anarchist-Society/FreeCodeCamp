@@ -1,53 +1,59 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  background: linear-gradient(45deg, #1793d1, #33aadd);
-  font-family: Arial, sans-serif;
+  display: flex; /* Flexbox para centrar */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  height: 100dvh; /* Dynamic Viewport Height */
+  margin: 0; /* Sin margen */
+  background: linear-gradient(45deg, #1793d1, #33aadd); /* Gradiente azul */
+  font-family: Arial, sans-serif; /* Fuente */
 }
 
+/* Contenedor del formulario */
 .form-container {
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  text-align: center;
+  width: 300px; /* Ancho fijo */
+  padding: 20px; /* Espacio interno */
+  background-color: white; /* Fondo blanco */
+  border-radius: 10px; /* Esquinas redondeadas */
+  text-align: center; /* Texto centrado */
 }
 
+/* Título */
 h2 {
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 20px; /* Espacio abajo */
+  color: #333; /* Color oscuro */
 }
 
+/* Labels: bloque, margen, gris */
 label {
-  display: block;
-  margin: 10px 0 5px;
-  color: #555;
+  display: block; /* Bloque para ocupar todo el ancho */
+  margin: 10px 0 5px; /* Espacio arriba, abajo */
+  color: #555; /* Color gris */
 }
 
+/* Inputs y textarea: ancho completo, padding, borde */
 input,
 textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  resize: vertical;
+  width: 100%; /* Ancho completo */
+  margin-bottom: 10px; /* Espacio abajo */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
+  resize: vertical; /* Redimensionable solo vertical */
 }
 
+/* Botón: verde, sin borde, texto blanco */
 button {
-  padding: 10px 15px;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
+  padding: 10px 15px; /* Espacio interno */
+  background-color: #4caf50; /* Verde */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  color: white; /* Texto blanco */
+  font-size: 1em; /* Tamaño de fuente */
+  cursor: pointer; /* Mano al pasar */
 }
 
+/* Botón hover: verde más oscuro */
 button:hover {
   background-color: #45a049;
 }
