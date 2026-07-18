@@ -1,46 +1,83 @@
+* {
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin rellenos */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
+}
+
 body {
-  display: grid;
-  place-items: center;
-  background-color: #0d1117;
+  height: 100dvh; /* Dynamic Viewport Height */
+  display: grid; /* Grid para centrar */
+  place-items: center; /* Centra horizontal y verticalmente */
+  background-color: #0d1117; /* Fondo muy oscuro */
 }
 
+/* Correo: caja oscura con borde y sombra roja */
 #email {
-  width: 500px;
-  margin: 50px auto;
-  padding: 50px;
-  box-sizing: border-box;
-
-  background-color: #161b22;
-  color: #c9d1d9;
-
-  border: 2px solid #30363d;
-  box-shadow: 0 0 15px rgba(248, 81, 73, 0.15);
+  width: 500px; /* Ancho fijo */
+  margin: 50px auto; /* Centrado horizontal */
+  padding: 50px; /* Espacio interno */
+  background-color: #161b22; /* Fondo oscuro */
+  color: #c9d1d9; /* Texto gris claro */
+  border: 2px solid #30363d; /* Borde gris oscuro */
+  box-shadow: 0 0 15px rgba(248, 81, 73, 0.15); /* Sombra roja sutil */
 }
 
+/* Sellos rojos: CONFIDENTIAL y TOP SECRET */
 #confidential,
 #top-secret {
-  display: inline-block;
-  padding: 10px;
-
-  text-align: center;
-  font-weight: bold;
-
-  color: #f85149;
-  border: 5px solid #f85149;
+  display: inline-block; /* En línea pero con ancho/alto */
+  padding: 10px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+  font-weight: bold; /* Texto en negrita */
+  color: #f85149; /* Rojo */
+  border: 5px solid #f85149; /* Borde rojo grueso */
 }
 
+/* Sello CONFIDENTIAL: grande, rotado a la izquierda */
 #confidential {
-  margin-left: 100px;
-  font-size: 30px;
-  transform: rotate(-20deg);
+  margin-left: 100px; /* Margen izquierdo */
+  font-size: 30px; /* Tamaño grande */
+  transform: rotate(-20deg); /* Rotado -20° */
 }
 
+/* Sello TOP SECRET: pequeño, rotado a la derecha */
 #top-secret {
-  margin-left: 200px;
-  font-size: 20px;
-  transform: rotate(15deg);
+  margin-left: 200px; /* Margen izquierdo */
+  font-size: 20px; /* Tamaño pequeño */
+  transform: rotate(15deg); /* Rotado 15° */
 }
 
+/* Texto sensible: difuminado */
 .blurred {
-  filter: blur(3px);
+  filter: blur(3px); /* Efecto borroso */
+}
+
+/* Párrafos: interlineado */
+p {
+  line-height: 30px; /* Espacio entre líneas */
+}
+
+/* ========================================
+   MEDIA QUERY: Móviles (≤ 480px)
+   ======================================== */
+/*
+  En móviles:
+  - #email se adapta al 30% del viewport
+  - Sellos se reducen de tamaño y margen
+*/
+@media (max-width: 480px) {
+  #email {
+    width: 30%; /* Ancho responsive */
+    padding: 20px; /* Reduce padding */
+  }
+
+  #confidential {
+    margin-left: 20px; /* Reduce margen */
+    font-size: 24px; /* Reduce tamaño */
+  }
+
+  #top-secret {
+    margin-left: 40px; /* Reduce margen */
+    font-size: 16px; /* Reduce tamaño */
+  }
 }

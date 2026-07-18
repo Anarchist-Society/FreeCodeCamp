@@ -1,0 +1,86 @@
+/* ========================================
+   EJEMPLO 1: Colapso entre hermanos
+   ======================================== */
+/*
+  box1 margin-bottom: 20px
+  box2 margin-top: 30px
+  
+  Resultado: Solo se aplica el mayor (30px).
+  Los márgenes colapsan: 20px vs 30px → 30px
+*/
+
+.box1 {
+  margin-bottom: 20px; /* Margen inferior */
+  background-color: lightblue;
+}
+
+.box2 {
+  margin-top: 30px; /* Margen superior (colapsa con el de box1) */
+  background-color: lightgreen;
+  margin-bottom: 10px;
+}
+
+/* ========================================
+   EJEMPLO 2: Colapso padre-hijo
+   ======================================== */
+/*
+  parent margin-bottom: 40px
+  child margin-top: 30px
+  
+  Resultado: Solo se aplica el mayor (40px).
+  El margen del hijo colapsa con el del padre.
+*/
+
+.parent {
+  margin-bottom: 40px;
+  background-color: lightyellow;
+}
+
+.child {
+  margin-top: 30px; /* Colapsa con el margin-bottom del padre */
+  background-color: lightpink;
+}
+
+/* ========================================
+   EJEMPLO 3: Colapso en bloque vacío
+   ======================================== */
+/*
+  empty-block: margin-top: 20px, margin-bottom: 10px, height: 0
+  Sin contenido, padding o border → los márgenes colapsan
+  
+  Resultado: Solo se aplica el mayor (20px).
+*/
+
+.empty-block {
+  margin-top: 20px;
+  margin-bottom: 10px; /* Colapsa con margin-top */
+  height: 0; /* Sin contenido */
+}
+
+.next-block {
+  background-color: lightgray;
+}
+
+/* ========================================
+   EJEMPLO 4: Prevención del colapso
+   ======================================== */
+/*
+  parent2: margin-top: 40px, padding-top: 1px
+  child2: margin-top: 30px
+  
+  El padding-top: 1px CREA UN BORDE DE COLISIÓN.
+  Esto evita que los márgenes colapsen.
+  
+  Resultado: 40px (padre) + 1px (padding) + 30px (hijo) = 71px total
+*/
+
+.parent2 {
+  margin-top: 40px;
+  padding-top: 1px; /* Evita el colapso */
+  background-color: lightyellow;
+}
+
+.child2 {
+  margin-top: 30px;
+  background-color: lightpink;
+}
