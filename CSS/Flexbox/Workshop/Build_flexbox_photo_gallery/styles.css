@@ -1,43 +1,54 @@
 * {
-  box-sizing: border-box;
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin rellenos */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #f5f6f7;
+  font-family: sans-serif; /* Fuente sans-serif */
+  background-color: #f5f6f7; /* Fondo gris claro */
 }
 
+/* Cabecera: fondo oscuro, texto blanco, borde naranja */
 .header {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 32px;
-  background-color: #0a0a23;
-  color: #fff;
-  border-bottom: 4px solid #fdb347;
+  text-align: center; /* Texto centrado */
+  text-transform: uppercase; /* Todo en mayúsculas */
+  padding: 32px; /* Espacio interno */
+  background-color: #0a0a23; /* Fondo muy oscuro */
+  color: #fff; /* Texto blanco */
+  border-bottom: 4px solid #fdb347; /* Borde naranja abajo */
 }
 
+/* Galería: flexbox con wrap */
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px 10px;
-  gap: 16px;
+  display: flex; /* Activa flexbox */
+  flex-direction: row; /* Elementos en fila */
+  flex-wrap: wrap; /* Permite saltos de línea */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  max-width: 1400px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px 10px; /* Espacio interno */
+  gap: 16px; /* Espacio entre imágenes */
 }
 
+/* Imágenes: responsive, altura fija, recorte cover */
 .gallery img {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 100%; /* Ancho completo del contenedor flex */
+  max-width: 350px; /* Tope máximo */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Recorta sin deformar */
+  border-radius: 10px; /* Esquinas redondeadas */
 }
 
+/* Pseudo-elemento: centra la última fila */
+/*
+  Cuando la última fila no está llena, las imágenes
+  se alinean a la izquierda. Este pseudo-elemento
+  ocupa el espacio de una imagen más, forzando
+  el centrado de la última fila.
+*/
 .gallery::after {
-  content: "";
-  width: 350px;
+  content: ""; /* Contenido vacío */
+  width: 350px; /* Mismo ancho que una imagen */
 }
