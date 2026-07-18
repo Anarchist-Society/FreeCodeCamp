@@ -1,166 +1,194 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  box-sizing: border-box; /* Padding y border dentro del ancho total */
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #0b1210;
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Apila vertical */
+  min-height: 100vh; /* Altura completa del viewport */
 }
 
+header {
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centra horizontal */
+  align-items: center; /* Centra vertical */
+  min-height: 20vh; /* 20% del viewport */
+  background-color: #0b1210; /* Fondo muy oscuro */
+}
+
+/* Título principal */
 h1 {
-  margin-bottom: 20px;
-  font-size: 3rem;
-  text-align: center;
-  color: #22c55e;
+  font-size: 3rem; /* Tamaño grande */
+  text-align: center; /* Texto centrado */
+  color: #22c55e; /* Verde brillante */
 }
 
+main {
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Elementos apilados verticalmente */
+  justify-content: center; /* Centra verticalmente en el eje principal */
+  align-items: center; /* Centra horizontalmente en el eje transversal */
+  flex: 1; /* Ocupa el espacio restante después del header */
+  background-color: #0b1210; /* Fondo muy oscuro */
+}
+
+/* Subtítulos de tarjetas */
 h2 {
-  color: #22c55e;
+  color: #22c55e; /* Verde brillante */
 }
 
+/* Contenedor de tarjetas de precios */
 .pricing-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  gap: 20px;
-
-  width: 100%;
-  max-width: 900px;
-  height: 70vh;
-  padding: 0 20px;
-
-  background-color: #111c17;
-  border: 2px solid #163d2e;
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
-  border-radius: 10px;
+  display: flex; /* Activa flexbox */
+  flex-wrap: wrap; /* Permite saltos de línea */
+  justify-content: center; /* Centra tarjetas en eje principal */
+  align-content: center; /* Centra filas en eje transversal */
+  gap: 20px; /* Espacio entre tarjetas */
+  width: 100%; /* Ancho completo del padre */
+  max-width: 1000px; /* Tope máximo de ancho */
+  height: 70vh; /* 70% del alto del viewport */
+  background-color: #111c17; /* Fondo oscuro verde */
+  border: 2px solid #163d2e; /* Borde verde oscuro */
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); /* Sombra verde suave */
+  border-radius: 10px; /* Esquinas redondeadas */
 }
 
+/* Tarjeta de precio: flexbox columna */
 .pricing-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  /* 
-   flex-grow -> El elemento no crecerá aunque haya espacio extra en el contenedor flex
-   flex-shrink -> El elemento no se encongerá aunque el contenedor sea más pequeño que la suma de los hijos
-   flex-basis -> Es el tamaño base incial del elemento en el eje principal
-   */
-  flex: 0 0 200px; /* Cada .pricing-card tiene siempre 200px de width */
-  padding: 20px;
-  text-align: center;
-
-  background-color: #161b22;
-  color: #c9d1d9;
-  border: 2px solid #163d2e;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
-  border-radius: 10px;
-
-  transition: transform 0.3s ease;
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Elementos apilados verticalmente */
+  justify-content: space-between; /* Distribuye espacio entre elementos */
+  flex: 0 0 300px; /* grow: 0, shrink: 0, basis: 200px (ancho fijo) */
+  padding: 20px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+  background-color: #161b22; /* Fondo oscuro */
+  color: #c9d1d9; /* Texto gris claro */
+  border: 2px solid #163d2e; /* Borde verde oscuro */
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); /* Sombra verde suave */
+  border-radius: 10px; /* Esquinas redondeadas */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
 }
 
+/* Hover: escala + sombra más fuerte */
 .pricing-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+  transform: scale(1.05); /* Aumenta 5% el tamaño */
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); /* Sombra más intensa */
 }
 
+/* Precio: verde, grande, con borde abajo */
 .price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 10px;
-  border-bottom: 1px solid #433d28;
-  color: #22c55e;
+  font-size: 1.5rem; /* Tamaño grande */
+  font-weight: bold; /* Texto en negrita */
+  margin: 10px; /* Espacio alrededor */
+  border-bottom: 1px solid #433d28; /* Línea separadora */
+  color: #22c55e; /* Verde brillante */
 }
 
+/* Lista de features: sin viñetas */
 .features {
-  list-style: none;
-  padding: 0;
-  text-align: left;
+  list-style: none; /* Sin puntos o números */
+  padding: 0; /* Sin relleno */
+  text-align: left; /* Alineado a la izquierda */
 }
 
+/* Items de la lista */
 .features li {
-  padding: 5px 0;
-  font-size: 0.95rem;
+  padding: 5px 0; /* Espacio arriba y abajo */
+  font-size: 0.95rem; /* Tamaño ligeramente menor */
 }
 
+/* Check: verde, bold */
 .check {
-  color: #21c55e;
-  font-weight: bold;
-  margin-right: 8px;
+  color: #21c55e; /* Verde */
+  font-weight: bold; /* Negrita */
+  margin-right: 8px; /* Espacio a la derecha */
 }
 
+/* Cross: rojo, bold */
 .cross {
-  color: #f85149;
-  font-weight: bold;
-  margin-right: 8px;
+  color: #f85149; /* Rojo */
+  font-weight: bold; /* Negrita */
+  margin-right: 8px; /* Espacio a la derecha */
 }
 
+/* Botón CTA: verde, sin subrayado */
 a {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-
-  background-color: #22c55e;
-  color: #0b1210;
-  border: 3px solid #16a34a;
-  border-radius: 6px;
-  transition:
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* En bloque pero en línea */
+  margin-top: 15px; /* Espacio arriba */
+  padding: 10px; /* Espacio interno */
+  font-weight: bold; /* Negrita */
+  font-size: 1rem; /* Tamaño base */
+  text-align: center; /* Texto centrado */
+  background-color: #22c55e; /* Verde */
+  color: #0b1210; /* Texto oscuro */
+  border: 3px solid #16a34a; /* Borde verde más oscuro */
+  border-radius: 6px; /* Esquinas redondeadas */
+  transition: /* Transición suave */
     background 0.3s,
     transform 0.2s;
 }
 
+/* Botón hover: verde más oscuro + escala */
 a:hover {
-  background-color: #16a34a;
-  transform: scale(1.05);
+  background-color: #16a34a; /* Verde más oscuro */
+  transform: scale(1.05); /* Aumenta 5% */
 }
 
+/* Orden de las tarjetas */
 .basic-plan {
-  order: 0;
+  order: 0; /* Primero */
 }
 
 .pro-plan {
-  order: 1;
+  order: 1; /* Segundo */
 }
 
 .premium-plan {
-  order: 2;
+  order: 2; /* Tercero */
 }
 
+/* ========================================
+   MEDIA QUERY: Tablets (≤ 1000px)
+   ======================================== */
 @media screen and (max-width: 1000px) {
   .pricing-container {
-    height: auto;
-    padding: 20px;
+    height: auto; /* Alto automático según contenido */
+    padding: 20px; /* Espacio interno */
   }
 
   h1 {
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
+    display: block; /* Elemento de bloque */
+    font-size: 1.5rem; /* Reduce tamaño */
+    text-align: center; /* Centrado */
   }
 
   .pricing-card {
-    flex: 0 0 175px;
+    flex: 0 0 175px; /* Reduce ancho de 200px a 175px */
   }
 }
 
+/* ========================================
+   MEDIA QUERY: Móviles (≤ 650px)
+   ======================================== */
 @media screen and (max-width: 650px) {
+  header {
+    min-height: 10vh; /* Reduce de 20vh a 10vh */
+  }
+
+  h1 {
+    font-size: 2rem; /* Reduce tamaño del título */
+  }
+
   .pricing-container {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column; /* Apila verticalmente */
+    height: auto; /* Alto automático */
   }
 
   .pricing-card {
-    flex: 1 1 auto;
-    width: 100%;
+    flex: 1 1 auto; /* Crece y encoge automáticamente */
+    width: 100%; /* Ancho completo */
   }
 }
