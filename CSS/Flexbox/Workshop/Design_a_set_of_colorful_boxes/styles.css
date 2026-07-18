@@ -1,62 +1,71 @@
+/* Título centrado */
 h1 {
   text-align: center;
   margin-bottom: 10px;
 }
 
+/* Caja base: flexbox columna, ancho fijo, orden por defecto */
 .box {
-  max-height: 120px;
-  color: #000;
-  border: 1px solid #000;
-  display: flex;
-  flex: 0 0 150px;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  font-weight: bold;
-  font-size: 1.125rem;
-  border-radius: 5px;
-  order: 0;
+  max-height: 120px; /* Alto máximo */
+  color: #000; /* Texto negro */
+  border: 1px solid #000; /* Borde negro */
+  display: flex; /* Flexbox columna */
+  flex: 0 0 150px; /* No crece, no encoge, ancho fijo 150px */
+  flex-direction: column; /* Apilado vertical */
+  align-items: center; /* Contenido centrado */
+  margin: 10px; /* Espacio alrededor */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1.125rem; /* Tamaño de fuente */
+  border-radius: 5px; /* Esquinas redondeadas */
+  order: 0; /* Orden por defecto */
 }
 
+/* Contenedor flex: wrap, 70% ancho, 600px alto */
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 70%;
-  height: 600px;
-  padding: 10px;
-  margin: 20px auto;
-  align-content: space-evenly;
+  display: flex; /* Activa flexbox */
+  flex-wrap: wrap; /* Permite saltos de línea */
+  width: 70%; /* Ancho relativo */
+  height: 600px; /* Alto fijo */
+  padding: 10px; /* Espacio interno */
+  margin: 20px auto; /* Centrado horizontal */
+  align-content: space-evenly; /* Distribuye filas uniformemente */
 }
 
+/* Box 1: Rojo, orden 1, crece para llenar espacio */
 .box1 {
   background: #f16e79;
-  order: 1;
-  flex-grow: 1;
+  order: 1; /* Posición 1 */
+  flex-grow: 1; /* Crece para llenar espacio disponible */
 }
 
+/* Box 2: Naranja, orden 0 (primero) */
 .box2 {
   background: #f4a261;
-  order: 0;
+  order: 0; /* Posición 0 (primero) */
 }
 
+/* Box 3: Amarillo, orden 2, se encoge más que las demás */
 .box3 {
   background: #ffd166;
-  order: 2;
-  flex-shrink: 3;
+  order: 2; /* Posición 2 */
+  flex-shrink: 3; /* Se encoge 3x más que las demás */
 }
 
+/* Box 4: Verde, orden 3 */
 .box4 {
   background: #4caf50;
-  order: 3;
+  order: 3; /* Posición 3 */
 }
 
+/* Box 5: Azul, orden 4 */
 .box5 {
   background: #457b9d;
-  order: 4;
+  order: 4; /* Posición 4 */
 }
 
+/* Box 6: Índigo, orden 5, crece para llenar espacio */
 .box6 {
   background: #3f51b5;
-  order: 5;
-  flex-grow: 1;
+  order: 5; /* Posición 5 */
+  flex-grow: 1; /* Crece para llenar espacio disponible */
 }
