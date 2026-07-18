@@ -56,28 +56,3 @@ body {
 p {
   line-height: 30px; /* Espacio entre líneas */
 }
-
-/* ========================================
-   MEDIA QUERY: Móviles (≤ 480px)
-   ======================================== */
-/*
-  En móviles:
-  - #email se adapta al 30% del viewport
-  - Sellos se reducen de tamaño y margen
-*/
-@media (max-width: 480px) {
-  #email {
-    width: 30%; /* Ancho responsive */
-    padding: 20px; /* Reduce padding */
-  }
-
-  #confidential {
-    margin-left: 20px; /* Reduce margen */
-    font-size: 24px; /* Reduce tamaño */
-  }
-
-  #top-secret {
-    margin-left: 40px; /* Reduce margen */
-    font-size: 16px; /* Reduce tamaño */
-  }
-}
