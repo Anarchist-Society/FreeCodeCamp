@@ -1,61 +1,53 @@
+/* Base: todos los divs tienen el mismo tamaño */
 div {
-  width: 80px;
-  height: 50px;
+  width: 80px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
 }
 
+/* Ejemplo 1: Flex normal — sin wrap */
+/*
+  3 hijos × 80px = 240px > 200px (padre)
+  Los hijos se reducen proporcionalmente para caber
+*/
 .box1 {
-  width: 200px;
-  display: flex;
-  border: 2px solid red;
+  width: 200px; /* Ancho del contenedor */
+  display: flex; /* Activa flexbox */
+  border: 2px solid red; /* Borde rojo para visualizar */
 }
 
+/* Ejemplo 2: flex-wrap: wrap — saltos de línea */
+/*
+  3 hijos × 80px = 240px > 200px (padre)
+  Con wrap, los hijos mantienen su tamaño y saltan a nueva fila
+*/
 .box2 {
   width: 200px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite saltos de línea */
   border: 2px solid red;
-  margin-bottom: 70px;
+  margin-bottom: 70px; /* Espacio para el wrap */
 }
 
+/* Ejemplo 3: flex-flow — shorthand de direction + wrap */
+/*
+  flex-flow: column wrap-reverse
+  - column: apila verticalmente
+  - wrap-reverse: el wrap va de abajo hacia arriba
+*/
 .box3 {
   width: 200px;
   display: flex;
-  flex-flow: column wrap-reverse;
+  flex-flow: column wrap-reverse; /* Direction + wrap */
   border: 2px solid red;
 }
 
-#div1 {
-  background-color: #4d70b2;
-}
-
-#div2 {
-  background-color: #5c4db2;
-}
-
-#div3 {
-  background-color: #4da3b2;
-}
-
-#div4 {
-  background-color: #4d70b2;
-}
-
-#div5 {
-  background-color: #5c4db2;
-}
-
-#div6 {
-  background-color: #4da3b2;
-}
-
-#div7 {
-  background-color: #4d70b2;
-}
-
-#div8 {
-  background-color: #5c4db2;
-}
-
-#div9 {
-  background-color: #4da3b2;
-}
+/* Colores de los hijos */
+#div1 { background-color: #4d70b2; } /* Azul */
+#div2 { background-color: #5c4db2; } /* Púrpura */
+#div3 { background-color: #4da3b2; } /* Cian */
+#div4 { background-color: #4d70b2; }
+#div5 { background-color: #5c4db2; }
+#div6 { background-color: #4da3b2; }
+#div7 { background-color: #4d70b2; }
+#div8 { background-color: #5c4db2; }
+#div9 { background-color: #4da3b2; }
