@@ -1,34 +1,38 @@
+/* Ejemplo 1: translate — Mueve el elemento sin afectar el flujo del documento */
 .box1 {
   width: 200px;
   height: 200px;
   background-color: red;
-  /* Esta regla CSS moverá el elemento 50px hacia la derecha y 100px hacia abajo desde su posición original */
-  transform: translate(50px, 100px);
+  transform: translate(50px, 100px); /* 50px a la derecha, 100px hacia abajo */
   margin-bottom: 200px;
 }
 
+/* Ejemplo 2: rotate — Gira el elemento */
 .box2 {
-  margin: 100px;
   width: 200px;
   height: 200px;
   background-color: red;
-  /* Esto girará el elemento 45 grados en el sentido de las agujas del reloj  */
-  transform: rotate(45deg);
+  margin: 100px;
+  transform: rotate(45deg); /* 45 grados en sentido horario */
 }
 
+/* Ejemplo 3: scale — Cambia el tamaño del elemento */
 .box3 {
-  margin: 100px;
+  margin: 200px;
   width: 200px;
   height: 200px;
   background-color: red;
-  /* Esto hará que el elemento sea 1.5 más ancho y 2 más alto */
-  transform: scale(1.5, 2);
+  transform: scale(1.5, 2); /* 1.5x ancho, 2x alto */
 }
 
+/* Ejemplo 4: Combinación — Se aplican en orden: translate → rotate → scale */
 .box4 {
   margin: 100px;
   width: 200px;
   height: 200px;
   background-color: red;
   transform: translate(50px, 50px) rotate(45deg) scale(1.5);
+  /* translate: mueve 50px derecha, 50px abajo */
+  /* rotate: gira 45° */
+  /* scale: escala 1.5x */
 }
