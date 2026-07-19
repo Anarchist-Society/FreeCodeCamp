@@ -11,17 +11,8 @@
 
   <body>
     <!--
-      Página de receta.
-      Estructura típica de una receta:
-      1. Título (h1)
-      2. Descripción (p)
-      3. Imagen del plato (img)
-      4. Ingredientes (h2 + ul) - Lista desordenada porque el orden no importa
-      5. Instrucciones (h2 + ol) - Lista ordenada porque el orden SÍ importa
-      
-      Diferencia clave:
-      - ul (unordered list): Para ingredientes, características, etc.
-      - ol (ordered list): Para pasos, instrucciones, rankings, etc.
+      Estructura de receta: h1 → p → img → h2 + ul (ingredientes) → h2 + ol (pasos)
+      ul: orden no importa. ol: orden SÍ importa.
     -->
     <main>
       <h1>Chocolate Chip Cookies</h1>
@@ -33,25 +24,14 @@
         that everyone will love.
       </p>
 
-      <!--
-        <img>: Imagen del plato terminado.
-        alt descriptivo: Describe qué hay en la imagen (no solo "cookies").
-        Un buen alt ayuda a:
-        - Personas ciegas (lectores de pantalla).
-        - Si la imagen no carga.
-        - SEO (los buscadores "leen" el alt).
-      -->
+      <!-- <img>: Imagen del plato. alt descriptivo para accesibilidad y SEO -->
       <img
         src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg"
         alt="Ingredients for baking: three eggs, a bowl of flour, a glass of milk, and a whisk arranged on a wooden table."
       />
 
       <h2>Ingredients</h2>
-      <!--
-        <ul>: Lista desordenada (viñetas).
-        Se usa aquí porque el orden de los ingredientes NO importa.
-        Podrías agregarlos en cualquier orden y la receta funcionaría igual.
-      -->
+      <!-- <ul>: Lista desordenada (viñetas). Orden no importa aquí -->
       <ul>
         <li>1 cup all-purpose flour</li>
         <li>1/2 teaspoon baking soda</li>
@@ -62,12 +42,7 @@
       </ul>
 
       <h2>Instructions</h2>
-      <!--
-        <ol>: Lista ordenada (numerada).
-        Se usa aquí porque el orden SÍ importa.
-        El paso 1 debe ir antes que el paso 2, etc.
-        El navegador numera automáticamente (1, 2, 3...).
-      -->
+      <!-- <ol>: Lista ordenada (numerada). El orden SÍ importa aquí -->
       <ol>
         <li>
           Preheat your oven to 350°F (175°C) and line a baking sheet with
