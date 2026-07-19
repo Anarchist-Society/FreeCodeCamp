@@ -1,6 +1,6 @@
 img {
-  max-width: 100%; /* No desborda el contenedor */
-  height: auto; /* Mantiene proporción */
+  max-width: 100%; /* Evita desbordar el contenedor */
+  height: auto; /* Mantiene proporción al ajustar ancho */
   padding: 5px; /* Espacio interno */
   border: 1px solid #ddd; /* Borde gris claro */
   border-radius: 8px; /* Esquinas redondeadas */
@@ -8,5 +8,6 @@ img {
 }
 
 img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); /* Sombra azul al pasar */
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); /* Sombra azul al pasar el cursor */
 }
+
