@@ -16,7 +16,11 @@
   --iron-grey: #2f2f2f; /* Gris metálico */
 
   /* --- EFECTOS ESPECIALES --- */
-  --vibranium-gradient: linear-gradient(135deg, #4b0082 0%, #bf00ff 100%); /* Degradado púrpura */
+  --vibranium-gradient: linear-gradient(
+    135deg,
+    #4b0082 0%,
+    #bf00ff 100%
+  ); /* Degradado púrpura */
   --glow-shadow: 0 0 15px rgba(191, 0, 255, 0.4); /* Sombra neón */
 }
 
@@ -189,8 +193,8 @@ button {
   cursor: pointer; /* Cursor de mano */
   /* Animación de hover y active */
   transition:
-    transform 0.2s, /* Movimiento */
-    box-shadow 0.3s; /* Sombra */
+    transform 0.2s,
+    /* Movimiento */ box-shadow 0.3s; /* Sombra */
 }
 
 /* Hover: sube 2px y sombra neón */

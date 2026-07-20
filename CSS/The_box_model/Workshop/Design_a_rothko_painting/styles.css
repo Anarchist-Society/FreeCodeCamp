@@ -1,6 +1,7 @@
 * {
-  margin: 0; /* Sin márgenes */
-  padding: 0; /* Sin rellenos */
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 body {

@@ -1,15 +1,18 @@
+/* Smooth scroll para navegación */
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
   }
 }
+
 body {
-  background: #f5f6f7;
-  color: #1b1b32;
+  background: #f5f6f7; /* Gris claro */
+  color: #1b1b32; /* Azul oscuro */
   font-family: Helvetica;
   margin: 0;
 }
 
+/* Header: flex space-between, fondo oscuro */
 header {
   width: 100%;
   height: 50px;
@@ -19,6 +22,7 @@ header {
   align-items: center;
 }
 
+/* Logo: tamaño responsive con max() */
 #logo {
   width: max(10rem, 18vw);
   background-color: #0a0a23;
@@ -27,11 +31,12 @@ header {
 }
 
 h1 {
-  color: #f1be32;
+  color: #f1be32; /* Amarillo */
   font-size: min(5vw, 1.2em);
   text-align: center;
 }
 
+/* Navegación */
 nav {
   width: 50%;
   max-width: 300px;
@@ -49,12 +54,13 @@ nav > ul {
 }
 
 nav > ul > li {
-  color: #dfdfe2;
+  color: #dfdfe2; /* Gris claro */
   margin: 0 0.2rem;
   padding: 0.2rem;
   display: block;
 }
 
+/* Hover: fondo claro, texto oscuro */
 nav > ul > li:hover {
   background-color: #dfdfe2;
   color: #1b1b32;
@@ -62,14 +68,16 @@ nav > ul > li:hover {
 }
 
 li > a {
-  color: inherit;
+  color: inherit; /* Hereda color del padre */
   text-decoration: none;
 }
 
+/* Main: espacio para header fijo */
 main {
   padding-top: 50px;
 }
 
+/* Secciones del quiz: centradas, máximo 600px */
 section {
   width: 80%;
   margin: 0 auto 10px auto;
@@ -100,6 +108,7 @@ input {
   font-size: 1rem;
 }
 
+/* Labels e inputs en fila */
 .info > label,
 .info > input {
   display: inline-block;
@@ -116,6 +125,7 @@ input {
   text-align: right;
 }
 
+/* Bloque de pregunta */
 .question-block {
   text-align: left;
   display: block;
@@ -130,20 +140,24 @@ h3 {
   font-size: 1.375rem;
 }
 
+/* Agrega "Question #" antes del número */
 h3::before {
   content: "Question #";
 }
 
+/* Fieldset sin borde */
 .question {
   border: none;
   padding-bottom: 0;
 }
 
+/* Lista de respuestas: sin viñetas */
 .answers-list {
   list-style: none;
   padding: 0;
 }
 
+/* Botón de envío */
 button {
   display: block;
   margin: 40px auto;
@@ -154,6 +168,7 @@ button {
   border: 3px solid #3b3b4f;
 }
 
+/* Footer */
 footer {
   background-color: #2a2a40;
   display: flex;
@@ -170,6 +185,7 @@ address {
   padding: 0.3rem;
 }
 
+/* Clase para texto accesible solo para lectores de pantalla */
 .sr-only {
   position: absolute;
   width: 1px;

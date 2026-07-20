@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid Example 4 Repeat Track Listings in a Grid Layout</title>
     <style>
+      /* repeat(4, 1fr): 4 columnas iguales */
       .grid-container-1 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -17,6 +18,7 @@
         background-color: darkblue;
       }
 
+      /* repeat(2, 20px 1fr): patrón alternado fijo/variable */
       .grid-container-2 {
         display: grid;
         grid-template-columns: repeat(2, 20px 1fr);

@@ -10,9 +10,10 @@ main {
   place-items: center;
 }
 
+/* Rueda: círculo con borde, tamaño responsive */
 .wheel {
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 50%; /* Círculo perfecto */
   margin-left: 50px;
   position: absolute;
   height: 55vw;
@@ -20,11 +21,12 @@ main {
   max-width: 500px;
   max-height: 500px;
   animation-name: wheel;
-  animation-duration: 10s;
+  animation-duration: 10s; /* Una vuelta completa en 10s */
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; /* Velocidad constante */
 }
 
+/* Radio (spoke): línea desde el centro */
 .line {
   background-color: black;
   width: 50%;
@@ -32,60 +34,36 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 0% 0%;
+  transform-origin: 0% 0%; /* Gira desde el centro de la rueda */
 }
 
-.line:nth-of-type(2) {
-  transform: rotate(60deg);
-}
-.line:nth-of-type(3) {
-  transform: rotate(120deg);
-}
-.line:nth-of-type(4) {
-  transform: rotate(180deg);
-}
-.line:nth-of-type(5) {
-  transform: rotate(240deg);
-}
-.line:nth-of-type(6) {
-  transform: rotate(300deg);
-}
+/* Cada radio rota 60° más que el anterior */
+.line:nth-of-type(2) { transform: rotate(60deg); }
+.line:nth-of-type(3) { transform: rotate(120deg); }
+.line:nth-of-type(4) { transform: rotate(180deg); }
+.line:nth-of-type(5) { transform: rotate(240deg); }
+.line:nth-of-type(6) { transform: rotate(300deg); }
 
+/* Cabina: cuadrado posicionado alrededor de la rueda */
 .cabin {
   background-color: red;
   width: 20%;
   height: 20%;
   position: absolute;
   border: 2px solid;
-  transform-origin: 50% 0%;
-  animation: cabins 10s ease-in-out infinite;
+  transform-origin: 50% 0%; /* Gira desde arriba */
+  animation: cabins 10s ease-in-out infinite; /* Contrarota para mantenerse vertical */
 }
 
-.cabin:nth-of-type(1) {
-  right: -8.5%;
-  top: 50%;
-}
-.cabin:nth-of-type(2) {
-  right: 17%;
-  top: 93.5%;
-}
-.cabin:nth-of-type(3) {
-  right: 67%;
-  top: 93.5%;
-}
-.cabin:nth-of-type(4) {
-  left: -8.5%;
-  top: 50%;
-}
-.cabin:nth-of-type(5) {
-  left: 17%;
-  top: 7%;
-}
-.cabin:nth-of-type(6) {
-  right: 17%;
-  top: 7%;
-}
+/* Posiciones de las 6 cabinas (en el borde de la rueda) */
+.cabin:nth-of-type(1) { right: -8.5%; top: 50%; }
+.cabin:nth-of-type(2) { right: 17%; top: 93.5%; }
+.cabin:nth-of-type(3) { right: 67%; top: 93.5%; }
+.cabin:nth-of-type(4) { left: -8.5%; top: 50%; }
+.cabin:nth-of-type(5) { left: 17%; top: 7%; }
+.cabin:nth-of-type(6) { right: 17%; top: 7%; }
 
+/* @keyframes: la rueda gira de 0 a 360° */
 @keyframes wheel {
   0% {
     transform: rotate(0deg);
@@ -95,6 +73,7 @@ main {
   }
 }
 
+/* @keyframes: cabinas contrarrotan y cambian de color */
 @keyframes cabins {
   0% {
     transform: rotate(0deg);
@@ -109,6 +88,6 @@ main {
     background-color: yellow;
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-360deg); /* Gira en dirección opuesta */
   }
 }

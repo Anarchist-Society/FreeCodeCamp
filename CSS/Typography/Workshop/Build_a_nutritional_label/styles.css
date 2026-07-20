@@ -1,15 +1,16 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 html {
-  font-size: 16px;
+  font-size: 16px; /* Base para rem */
 }
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* Etiqueta nutricional: borde negro, centrada */
 .label {
   border: 2px solid black;
   width: 270px;
@@ -17,45 +18,54 @@ body {
   padding: 0 7px;
 }
 
+/* Título centrado */
 header h1 {
   text-align: center;
   margin: -4px 0;
   letter-spacing: 0.15px;
 }
 
+/* Párrafos: flex para space-between (nutriente + %) */
 p {
   margin: 0;
   display: flex;
   justify-content: space-between;
 }
 
+/* Línea divisora fina */
 .divider {
   border-bottom: 1px solid #888989;
   margin: 2px 0;
 }
 
+/* Texto en negrita (800) */
 .bold {
   font-weight: 800;
 }
 
+/* Línea divisora gruesa */
 .large {
   height: 10px;
 }
 
+/* Líneas gruesa y mediana: fondo negro */
 .large,
 .medium {
   background-color: black;
   border: 0;
 }
 
+/* Línea mediana */
 .medium {
   height: 5px;
 }
 
+/* Texto pequeño */
 .small-text {
   font-size: 0.85rem;
 }
 
+/* Sección de calorías: flex space-between */
 .calories-info {
   display: flex;
   justify-content: space-between;
@@ -66,34 +76,41 @@ p {
   margin: 0;
 }
 
+/* "Calories" en grande */
 .left-container p {
   margin: -5px -2px;
   font-size: 2em;
   font-weight: 700;
 }
 
+/* Número de calorías: grande y bold */
 .calories-info span {
   margin: -7px -2px;
   font-size: 2.4em;
   font-weight: 700;
 }
 
+/* Alineación derecha */
 .right {
   justify-content: flex-end;
 }
 
+/* Sangría simple */
 .indent {
   margin-left: 1em;
 }
 
+/* Sangría doble */
 .double-indent {
   margin-left: 2em;
 }
 
+/* Párrafos con borde inferior (excepto los marcados .no-divider) */
 .daily-value p:not(.no-divider) {
   border-bottom: 1px solid #888989;
 }
 
+/* Nota al pie: texto microscópico */
 .note {
   font-size: 0.6rem;
   margin: 5px 0;

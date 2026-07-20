@@ -1,125 +1,53 @@
-/* ========================================
-   RESET: Eliminar márgenes, rellenos por defecto
-   ======================================== */
-/*
-  * → Selecciona todos los elementos.
-  margin: 0 → Sin márgenes externos.
-  padding: 0 → Sin rellenos internos.
-  box-sizing: border-box → El width/height incluye padding y border.
-  
-  Ejemplo sin box-sizing: div de width: 300px + padding: 20px
-  = 340px total (desborda). Con border-box = 300px total (correcto).
-*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  box-sizing: border-box; /* Width/height incluye padding y border */
 }
 
-/* ========================================
-   MAIN: Centrado de la tarjeta
-   ======================================== */
-/*
-  height: 100dvh → Dynamic Viewport Height.
-  Se ajusta al área visible real del navegador (sin contar la barra URL).
-  Evita scroll en móviles donde la barra del navegador reduce el espacio visible.
-  
-  display: grid + place-items: center → Centra el contenido
-  tanto vertical como horizontalmente.
-*/
 main {
-  height: 100dvh;
+  height: 100dvh; /* Altura dinámica del viewport */
   display: grid;
-  place-items: center;
+  place-items: center; /* Centra la tarjeta */
 }
 
-/* ========================================
-   BODY: Fondo y tipografía general
-   ======================================== */
 body {
   background-color: #0000a6; /* Azul oscuro */
   font-family: Arial, sans-serif;
 }
 
-/* ========================================
-   TARJETA DE PRESENTACIÓN
-   ======================================== */
-/*
-  width: 300px → Ancho fijo (tamaño de tarjeta de visita).
-  padding: 20px → Espacio interno entre borde y contenido.
-  border: 5px solid #ffd600 → Borde amarillo grueso.
-  background-color: #56ffff → Fondo cyan.
-  text-align: center → Centra todo el texto horizontalmente.
-  font-size: 16px → Tamaño de fuente base.
-*/
+/* Tarjeta de presentación */
 .business-card {
   width: 300px;
   padding: 20px;
-  border: 5px solid #ffd600;
-  background-color: #56ffff;
-
-  /* Typography */
+  border: 5px solid #ffd600; /* Borde amarillo */
+  background-color: #56ffff; /* Fondo cyan */
   text-align: center;
   font-size: 16px;
 }
 
-/* ========================================
-   IMAGEN DE PERFIL
-   ======================================== */
-/*
-  max-width: 100% → La imagen no puede ser más ancha que su contenedor.
-  Esto la hace responsive: se adapta al ancho de la tarjeta.
-  
-  NOTA: No tiene max-height, así que en móvil la imagen
-  puede hacer la tarjeta muy alta (causa scroll vertical).
-*/
+/* Foto de perfil: responsive */
 .profile-image {
   max-width: 100%;
 }
 
-/* ========================================
-   PÁRRAFOS
-   ======================================== */
-/*
-  margin: 10px 0 → 10px arriba y abajo, 0 a los lados.
-  Separa los párrafos entre sí (nombre, cargo, empresa, contacto).
-*/
+/* Párrafos: 10px arriba/abajo, 0 lados */
 p {
   margin: 10px 0;
 }
 
-/* ========================================
-   ENLACES
-   ======================================== */
-/*
-  text-decoration: none → Elimina el subrayado por defecto de los enlaces.
-*/
+/* Enlaces: sin subrayado */
 a {
   text-decoration: none;
 }
 
-/* ========================================
-   LÍNEAS HORIZONTALES
-   ======================================== */
-/*
-  margin: 5px → Espacio alrededor de las líneas separadoras.
-  Separa visualmente: info personal | contacto | redes sociales.
-*/
+/* Líneas horizontales: espacio alrededor */
 hr {
   margin: 5px;
 }
 
-/* ========================================
-   REDES SOCIALES: Flexbox con Gap
-   ======================================== */
-/*
-  .social-links → Wrapper solo para los enlaces (no incluye el <h2>).
-  display: flex → Los enlaces se colocan en fila horizontal.
-  gap: 15px → Espacio SOLO entre enlaces (no al inicio/final).
-  justify-content: center → Centra los enlaces horizontalmente.
-*/
+/* Redes sociales: flexbox horizontal con gap */
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Espacio solo entre enlaces */
   justify-content: center;
 }

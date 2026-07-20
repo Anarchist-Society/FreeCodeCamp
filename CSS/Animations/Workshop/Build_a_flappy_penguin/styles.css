@@ -1,6 +1,7 @@
+/* Variables CSS: colores del pingüino */
 :root {
   --penguin-face: white;
-  --penguin-picorna: orange;
+  --penguin-picorna: orange; /* Pico y pies */
   --penguin-skin: gray;
 }
 
@@ -13,6 +14,7 @@ body {
   overflow: hidden;
 }
 
+/* Montaña izquierda: forma con skew */
 .left-mountain {
   width: 300px;
   height: 300px;
@@ -23,6 +25,7 @@ body {
   margin-top: 100px;
 }
 
+/* Montaña trasera: forma con rotate */
 .back-mountain {
   width: 300px;
   height: 300px;
@@ -34,6 +37,7 @@ body {
   top: 225px;
 }
 
+/* Sol: círculo amarillo */
 .sun {
   width: 200px;
   height: 200px;
@@ -44,6 +48,7 @@ body {
   right: -75px;
 }
 
+/* Pingüino: contenedor principal */
 .penguin {
   width: 300px;
   height: 300px;
@@ -58,11 +63,13 @@ body {
   position: absolute;
 }
 
+/* Efecto de click: agranda el pingüino */
 .penguin:active {
   transform: scale(1.5);
   cursor: not-allowed;
 }
 
+/* Cabeza: gradiente gris-blanco */
 .penguin-head {
   width: 50%;
   height: 45%;
@@ -73,6 +80,7 @@ body {
   z-index: 1;
 }
 
+/* Cara: oval blanco */
 .face {
   width: 60%;
   height: 70%;
@@ -81,14 +89,10 @@ body {
   top: 15%;
 }
 
-.face.left {
-  left: 5%;
-}
+.face.left { left: 5%; }
+.face.right { right: 5%; }
 
-.face.right {
-  right: 5%;
-}
-
+/* Barbilla */
 .chin {
   width: 90%;
   height: 70%;
@@ -98,6 +102,7 @@ body {
   border-radius: 70% 70% 100% 100%;
 }
 
+/* Ojos: círculos negros */
 .eye {
   width: 15%;
   height: 17%;
@@ -106,14 +111,10 @@ body {
   border-radius: 50%;
 }
 
-.eye.left {
-  left: 25%;
-}
+.eye.left { left: 25%; }
+.eye.right { right: 25%; }
 
-.eye.right {
-  right: 25%;
-}
-
+/* Párpado: cubre parcialmente el ojo */
 .eye-lid {
   width: 150%;
   height: 100%;
@@ -123,6 +124,7 @@ body {
   border-radius: 50%;
 }
 
+/* Mejillas: rosa */
 .blush {
   width: 15%;
   height: 10%;
@@ -131,36 +133,22 @@ body {
   border-radius: 50%;
 }
 
-.blush.left {
-  left: 15%;
-}
+.blush.left { left: 15%; }
+.blush.right { right: 15%; }
 
-.blush.right {
-  right: 15%;
-}
-
+/* Pico */
 .beak {
   height: 10%;
   background-color: var(--penguin-picorna);
   border-radius: 50%;
 }
 
-.beak.top {
-  width: 20%;
-  top: 60%;
-  left: 40%;
-}
+.beak.top { width: 20%; top: 60%; left: 40%; }
+.beak.bottom { width: 16%; top: 65%; left: 42%; }
 
-.beak.bottom {
-  width: 16%;
-  top: 65%;
-  left: 42%;
-}
-
+/* Camiseta con texto */
 .shirt {
-  font:
-    bold 25px Helvetica,
-    sans-serif;
+  font: bold 25px Helvetica, sans-serif;
   top: 165px;
   left: 127.5px;
   z-index: 1;
@@ -173,11 +161,12 @@ body {
   left: 12px;
 }
 
+/* Cuerpo: gradiente de gris a blanco */
 .penguin-body {
   width: 53%;
   height: 45%;
   background: linear-gradient(
-    45deg,
+    180deg,
     rgb(134, 133, 133) 0%,
     rgb(234, 231, 231) 25%,
     white 67%
@@ -187,6 +176,7 @@ body {
   left: 23.5%;
 }
 
+/* Parche semitransparente en el cuerpo */
 .penguin-body::before {
   content: "";
   position: absolute;
@@ -199,6 +189,7 @@ body {
   opacity: 70%;
 }
 
+/* Brazos */
 .arm {
   width: 30%;
   height: 60%;
@@ -207,6 +198,7 @@ body {
   z-index: -1;
 }
 
+/* Brazo izquierdo: animación de saludar */
 .arm.left {
   top: 35%;
   left: 5%;
@@ -221,6 +213,7 @@ body {
   transform: rotate(-45deg);
 }
 
+/* @keyframes: animación de saludar con el brazo */
 @keyframes wave {
   10% {
     transform: rotate(110deg) scaleX(-1);
@@ -236,6 +229,7 @@ body {
   }
 }
 
+/* Pies: ovalaran naranjas */
 .foot {
   width: 15%;
   height: 30%;
@@ -255,12 +249,12 @@ body {
   transform: rotate(-80deg);
 }
 
+/* Suelo: gradiente de cielo */
 .ground {
   width: 100vw;
-  height: 400px;
+  height: calc(100vh - 300px);
   background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
   z-index: 3;
   position: absolute;
   margin-top: -58px;
-  height: calc(100vh - 300px);
 }

@@ -4,22 +4,14 @@ div {
   height: 50px; /* Alto fijo */
 }
 
-/* Ejemplo 1: Flex normal — sin wrap */
-/*
-  3 hijos × 80px = 240px > 200px (padre)
-  Los hijos se reducen proporcionalmente para caber
-*/
+/* Ejemplo 1: Flex normal — los hijos se reducen para caber */
 .box1 {
   width: 200px; /* Ancho del contenedor */
   display: flex; /* Activa flexbox */
   border: 2px solid red; /* Borde rojo para visualizar */
 }
 
-/* Ejemplo 2: flex-wrap: wrap — saltos de línea */
-/*
-  3 hijos × 80px = 240px > 200px (padre)
-  Con wrap, los hijos mantienen su tamaño y saltan a nueva fila
-*/
+/* Ejemplo 2: flex-wrap: wrap — los hijos saltan a nueva fila */
 .box2 {
   width: 200px;
   display: flex;
@@ -29,15 +21,10 @@ div {
 }
 
 /* Ejemplo 3: flex-flow — shorthand de direction + wrap */
-/*
-  flex-flow: column wrap-reverse
-  - column: apila verticalmente
-  - wrap-reverse: el wrap va de abajo hacia arriba
-*/
 .box3 {
   width: 200px;
   display: flex;
-  flex-flow: column wrap-reverse; /* Direction + wrap */
+  flex-flow: column wrap-reverse; /* Columna + wrap reverso */
   border: 2px solid red;
 }
 

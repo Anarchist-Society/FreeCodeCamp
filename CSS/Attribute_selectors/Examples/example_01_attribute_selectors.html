@@ -5,60 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attribute Selector</title>
     <style>
+      /* Todos los enlaces: bloque */
       a {
         display: block;
       }
 
+      /* [href]: Selector por presencia de atributo href */
       a[href] {
         color: blue;
         text-decoration: underline;
       }
 
+      /* [title]: Solo enlaces con atributo title */
       a[title] {
         font-weight: bold;
         text-decoration: none;
       }
 
+      /* [href][title]: Combinación de dos atributos */
       a[href][title] {
         display: block;
         color: green;
       }
 
+      /* [class~="primary"]: Selector de valor (contiene "primary" como palabra) */
       a[class~="primary"] {
         color: red;
         font-weight: bold;
       }
 
-      /* a[href^="https://"] {
-            color: green;
-            text-decoration: underline;
-        } */
+      /* [href^="https://"]: Empieza con "https://" */
+      /* a[href^="https://"] { color: green; } */
 
-      /* a[href$=".com"] {
-            color: darkgreen;
-            text-decoration: underline dotted;
-        } */
+      /* [href$=".com"]: Termina con ".com" */
+      /* a[href$=".com"] { color: darkgreen; } */
     </style>
   </head>
 
   <body>
     <a href="https://example.com">Example link with an href attribute</a>
     <a>Example link without an href attribute</a>
-
     <a href="https://example.com" title="Example link with a title attribute"
       >Example link with a title attribute</a
     >
     <a>Example link without a title or href attribute</a>
-
     <a href="https://example.com" title="Example link with a title attribute"
       >Example link with a title attribute</a
     >
     <a>Example link without a title or href attribute</a>
-
     <a href="https://example.com" class="btn primary large"
       >Visit Example Site</a
     >
-
     <a href="https://example.com" class="btn primary large"
       >Visit Example Site</a
     >

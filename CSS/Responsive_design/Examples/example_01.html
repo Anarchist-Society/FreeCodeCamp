@@ -6,8 +6,8 @@
     <title>Responsive Web Design with Grid</title>
     <style>
       .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: grid; /* Grid para layout responsive */
+        grid-template-columns: 1fr; /* 1 columna en móvil */
         gap: 20px;
       }
 
@@ -16,12 +16,14 @@
         color: white;
       }
 
+      /* Tablet: 2 columnas */
       @media (min-width: 768px) {
         .grid-container {
           grid-template-columns: 1fr 1fr;
         }
       }
 
+      /* Desktop: 3 columnas */
       @media (min-width: 1024px) {
         .grid-container {
           grid-template-columns: 1fr 1fr 1fr;

@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What Are CSS Animations, and How Do They Work?</title>
     <style>
+      /* @keyframes: define una animación llamada "slide-in" */
       @keyframes slide-in {
         0% {
-          transform: translateX(-100%);
+          transform: translateX(-100%); /* Inicia fuera a la izquierda */
         }
         100% {
-          transform: translateX(0);
+          transform: translateX(0); /* Termina en su posición original */
         }
       }
 
       .sliding-element {
+        /* shorthand: nombre duración timing delay iteración dirección */
         animation: slide-in 2s ease-out infinite;
       }
 
+      /* Animación compleja: propiedad por propiedad */
       .complex-animation {
         animation-name: color-change;
         animation-duration: 3s;
         animation-timing-function: linear;
-        animation-delay: 1s;
+        animation-delay: 1s;              /* Empieza después de 1s */
         animation-iteration-count: infinite;
-        animation-direction: alternate;
+        animation-direction: alternate;    /* Invertir dirección cada ciclo */
       }
 
+      /* @keyframes: cambio de color de rojo a azul a verde */
       @keyframes color-change {
         0% {
           background-color: red;
@@ -39,9 +43,10 @@
         }
       }
 
+      /* Transición: cambio suave al hacer hover */
       .button {
         background-color: blue;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s; /* Transición de 0.3s */
       }
 
       .button:hover {

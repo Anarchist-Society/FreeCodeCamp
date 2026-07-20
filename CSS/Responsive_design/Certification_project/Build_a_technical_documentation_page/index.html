@@ -7,66 +7,32 @@
   </head>
 
   <body>
+    <!-- Sidebar fijo con navegación -->
     <nav id="navbar">
       <header>Bash Documentation</header>
 
       <ul>
         <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-
-        <li>
-          <a href="#What_you_should_already_know" class="nav-link"
-            >What you should already know</a
-          >
-        </li>
-
-        <li>
-          <a href="#Bash_and_Shell" class="nav-link">Bash and Shell</a>
-        </li>
-
+        <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+        <li><a href="#Bash_and_Shell" class="nav-link">Bash and Shell</a></li>
         <li><a href="#Hello_world" class="nav-link">Hello World</a></li>
-
         <li><a href="#Variables" class="nav-link">Variables</a></li>
-
-        <li>
-          <a href="#Declaring_variables" class="nav-link"
-            >Declaring Variables</a
-          >
-        </li>
-
+        <li><a href="#Declaring_variables" class="nav-link">Declaring Variables</a></li>
         <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
-
-        <li>
-          <a href="#Environment_variables" class="nav-link"
-            >Environment variables</a
-          >
-        </li>
-
+        <li><a href="#Environment_variables" class="nav-link">Environment variables</a></li>
         <li><a href="#Constants" class="nav-link">Constants</a></li>
-
         <li><a href="#Data_types" class="nav-link">Data Types</a></li>
-
-        <li>
-          <a href="#if...else_statement" class="nav-link"
-            >if...else statement</a
-          >
-        </li>
-
+        <li><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
         <li><a href="#while_statement" class="nav-link">while statement</a></li>
-
-        <li>
-          <a href="#Function_declarations" class="nav-link"
-            >Function declarations</a
-          >
-        </li>
-
+        <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
         <li><a href="#Reference" class="nav-link">Reference</a></li>
       </ul>
     </nav>
 
+    <!-- Contenido principal -->
     <main id="main-doc">
       <section class="main-section" id="Introduction">
         <header>Introduction</header>
-
         <article>
           <p>
             Bash (Bourne Again SHell) is a command language interpreter for the
@@ -89,7 +55,6 @@
               the operating system, allowing you to run programs, manage files,
               and control processes directly from the terminal.
             </li>
-
             <li>
               Shell scripting: Bash scripts automate repetitive tasks, system
               administration, file processing, and complex workflows by
@@ -101,18 +66,14 @@
 
       <section class="main-section" id="What_you_should_already_know">
         <header>What you should already know</header>
-
         <article>
           <p>This guide assumes you have the following basic background:</p>
-
           <ul>
             <li>
               A general understanding of operating systems and the concept of a
               file system with directories and files.
             </li>
-
             <li>Basic familiarity with using a terminal or command prompt.</li>
-
             <li>
               Some experience with any programming language is helpful but not
               required. If you are new to programming, Bash is a great place to
@@ -124,7 +85,6 @@
 
       <section class="main-section" id="Bash_and_Shell">
         <header>Bash and Shell</header>
-
         <article>
           <p>
             Bash is one of many available Unix shells. While the original Bourne
@@ -133,7 +93,6 @@
             constructs. Other popular shells include Zsh, Fish, and Ksh, each
             with their own syntax and features.
           </p>
-
           <p>
             Unlike compiled languages, Bash scripts are interpreted at runtime,
             meaning the shell reads and executes each line sequentially. Bash is
@@ -141,7 +100,6 @@
             are treated as strings by default. Arithmetic operations require
             special syntax to be evaluated numerically.
           </p>
-
           <p>
             Bash is a very flexible language compared to compiled alternatives.
             You do not need to declare variable types, import libraries for
@@ -154,14 +112,11 @@
 
       <section class="main-section" id="Hello_world">
         <header>Hello world</header>
-
         <article>
           To get started with writing Bash, open a terminal or create a new file
           with a <code>.sh</code> extension and write your first "Hello world"
           Bash script:
-
           <code>#!/bin/bash echo "Hello, World!"</code>
-
           Save the file as <code>hello.sh</code>, make it executable with
           <code>chmod +x hello.sh</code>, and run it with
           <code>./hello.sh</code> to see the output in your terminal!
@@ -170,21 +125,18 @@
 
       <section class="main-section" id="Variables">
         <header>Variables</header>
-
         <p>
           Variables in Bash are used to store data that can be referenced and
           manipulated throughout a script. Variable names are case-sensitive and
           can contain letters, numbers, and underscores, but must begin with a
           letter or underscore.
         </p>
-
         <p>
           By convention, environment and shell variables are written in
           uppercase (e.g., <code>PATH</code>, <code>HOME</code>), while local
           script variables are written in lowercase. There must be no spaces
           around the <code>=</code> sign when assigning a value.
         </p>
-
         <p>
           To reference the value of a variable, prefix its name with a dollar
           sign (<code>$</code>). It is good practice to enclose variable
@@ -195,23 +147,19 @@
 
       <section class="main-section" id="Declaring_variables">
         <header>Declaring variables</header>
-
         <article>
           You can declare and assign variables in several ways:
-
           <p>
             By direct assignment. For example,
             <code>name="Alice"</code>. This creates a local shell variable
             available within the current script or session.
           </p>
-
           <p>
             Using the <code>declare</code> built-in. For example,
             <code>declare -i count=10</code>. This allows you to specify
             attributes such as integer (<code>-i</code>), read-only
             (<code>-r</code>), or array (<code>-a</code>).
           </p>
-
           <p>
             Using command substitution. For example,
             <code>today=$(date +%F)</code>. This assigns the output of a command
@@ -222,24 +170,17 @@
 
       <section class="main-section" id="Variable_scope">
         <header>Variable scope</header>
-
         <article>
           <p>
             In Bash, variables are global to the script by default. A variable
             defined in the main body of a script is accessible inside functions
             unless explicitly declared as local.
           </p>
-
           <p>
             To limit a variable's scope to a function, use the
             <code>local</code> keyword inside the function body:
           </p>
-
-          <code
-            >my_function() { local local_var="I am local" echo "$local_var" }
-            my_function echo "$local_var" # prints nothing — out of scope</code
-          >
-
+          <code>my_function() { local local_var="I am local" echo "$local_var" } my_function echo "$local_var" # prints nothing — out of scope</code>
           <p>
             Variables exported with the <code>export</code> command become
             environment variables and are inherited by child processes spawned
@@ -250,25 +191,19 @@
 
       <section class="main-section" id="Environment_variables">
         <header>Environment variables</header>
-
         <article>
           <p>
             Environment variables are special variables that are available to
             all processes running in the current shell session and its children.
             Common built-in environment variables include:
           </p>
-
           <ul>
             <li><code>$HOME</code> — the current user's home directory.</li>
-            <li>
-              <code>$PATH</code> — a colon-separated list of directories
-              searched for commands.
-            </li>
+            <li><code>$PATH</code> — a colon-separated list of directories searched for commands.</li>
             <li><code>$USER</code> — the name of the current user.</li>
             <li><code>$PWD</code> — the present working directory.</li>
             <li><code>$SHELL</code> — the path to the current shell.</li>
           </ul>
-
           <p>
             You can view all environment variables with the
             <code>env</code> or <code>printenv</code> commands, and set new ones
@@ -279,7 +214,6 @@
 
       <section class="main-section" id="Constants">
         <header>Constants</header>
-
         <article>
           <p>
             Bash does not have true constants in the way compiled languages do,
@@ -287,73 +221,36 @@
             <code>declare -r</code> or the <code>readonly</code> built-in. Once
             set, these cannot be modified or unset.
           </p>
-
-          <p>
-            You cannot redeclare a read-only variable in the same shell session.
-            For example:
-          </p>
-
-          <code
-            >readonly MAX_RETRIES=5 MAX_RETRIES=10 # This will cause an error:
-            readonly variable</code
-          >
-
+          <p>You cannot redeclare a read-only variable in the same shell session. For example:</p>
+          <code>readonly MAX_RETRIES=5 MAX_RETRIES=10 # This will cause an error: readonly variable</code>
           However, read-only only applies to the current shell process. Child
           processes and subshells do not inherit the read-only attribute, only
           the value (if exported).
-
           <code>declare -r PI=3.14159 echo "The value of PI is $PI"</code>
         </article>
       </section>
 
       <section class="main-section" id="Data_types">
         <header>Data types</header>
-
         <article>
           <p>
             Bash is an untyped language by default — all variables store
             strings. However, Bash supports several special variable types that
             can be declared with <code>declare</code>:
           </p>
-
           <ul>
             <li>
               <p>Common variable types:</p>
-
               <ul>
-                <li>
-                  String (default). All variables are strings unless specified
-                  otherwise.
-                </li>
-
-                <li>
-                  Integer. Declared with <code>declare -i</code>; arithmetic is
-                  automatically evaluated.
-                </li>
-
-                <li>
-                  Array. Declared with <code>declare -a</code>; stores an
-                  indexed list of values.
-                </li>
-
-                <li>
-                  Associative Array. Declared with <code>declare -A</code>;
-                  stores key-value pairs (requires Bash 4+).
-                </li>
-
-                <li>
-                  Read-only. Declared with <code>declare -r</code> or
-                  <code>readonly</code>; the value cannot be changed.
-                </li>
+                <li>String (default). All variables are strings unless specified otherwise.</li>
+                <li>Integer. Declared with <code>declare -i</code>; arithmetic is automatically evaluated.</li>
+                <li>Array. Declared with <code>declare -a</code>; stores an indexed list of values.</li>
+                <li>Associative Array. Declared with <code>declare -A</code>; stores key-value pairs (requires Bash 4+).</li>
+                <li>Read-only. Declared with <code>declare -r</code> or <code>readonly</code>; the value cannot be changed.</li>
               </ul>
             </li>
-
-            <li>
-              and Boolean (simulated with strings "true"/"false" or exit codes
-              0/1)
-            </li>
+            <li>and Boolean (simulated with strings "true"/"false" or exit codes 0/1)</li>
           </ul>
-
           Although Bash's type system is minimal, these constructs allow you to
           write robust scripts. Arrays are especially powerful for handling
           lists of files, arguments, or configuration values.
@@ -362,35 +259,21 @@
 
       <section class="main-section" id="if...else_statement">
         <header>if...else statement</header>
-
         <article>
           Use the <code>if</code> statement to execute commands when a condition
-          is true. Use the optional <code>else</code> clause to handle the false
-          case. An if statement looks as follows:
-
+          is true. Use the optional <code>else</code> clause to handle the false case.
+          An if statement looks as follows:
           <code>if [ condition ]; then statement_1 else statement_2 fi</code>
-
           <p>
             You may also chain conditions using <code>elif</code> to test
             multiple cases in sequence, as follows:
           </p>
-
-          <code
-            >if [ condition_1 ]; then statement_1 elif [ condition_2 ]; then
-            statement_2 elif [ condition_n ]; then statement_n else
-            statement_last fi</code
-          >
-
+          <code>if [ condition_1 ]; then statement_1 elif [ condition_2 ]; then statement_2 elif [ condition_n ]; then statement_n else statement_last fi</code>
           Only the first condition that evaluates to true will have its block
           executed. Always ensure there is a space inside the brackets of a test
           expression, as <code>[ condition ]</code>
           is actually a command in Bash.
-
-          <code
-            >if [ "$score" -ge 90 ]; then echo "Grade: A" elif [ "$score" -ge 75
-            ]; then echo "Grade: B" else echo "Grade: C or below" fi</code
-          >
-
+          <code>if [ "$score" -ge 90 ]; then echo "Grade: A" elif [ "$score" -ge 75 ]; then echo "Grade: B" else echo "Grade: C or below" fi</code>
           It is advisable to always quote variable references inside test
           brackets to avoid errors from empty or multi-word values. For example,
           prefer <code>[ "$name" = "Alice" ]</code> over
@@ -400,40 +283,28 @@
 
       <section class="main-section" id="while_statement">
         <header>while statement</header>
-
         <article>
           A <code>while</code> statement executes its commands as long as a
           specified condition evaluates to true. A while loop looks as follows:
-
           <code>while [ condition ]; do statement done</code>
-
           If the condition becomes false, the loop stops executing and control
           passes to the statement following <code>done</code>.
-
           <p>
             The condition is tested before each iteration. If it is true, the
             body executes and the condition is tested again. If it is false from
             the start, the body never executes.
           </p>
-
           <p>
             Use <code>break</code> to exit a loop early and
             <code>continue</code> to skip to the next iteration.
           </p>
-
           Example:
-
           <p>The following while loop counts from 0 to 2:</p>
-
-          <code
-            >n=0 x=0 while [ $n -lt 3 ]; do n=$((n + 1)) x=$((x + n)) done</code
-          >
-
+          <code>n=0 x=0 while [ $n -lt 3 ]; do n=$((n + 1)) x=$((x + n)) done</code>
           <p>
             With each iteration, the loop increments n and adds it to x.
             Therefore, x and n take on the following values:
           </p>
-
           <ul>
             <li>After the first pass: n = 1 and x = 1</li>
             <li>After the second pass: n = 2 and x = 3</li>
@@ -444,42 +315,27 @@
 
       <section class="main-section" id="Function_declarations">
         <header>Function declarations</header>
-
         <article>
           A function definition in Bash consists of a name followed by
           parentheses and a block of commands enclosed in curly braces.
           Functions help organize scripts into reusable units. A function
           declaration looks like:
-
           <ul>
             <li>The name of the function.</li>
-
-            <li>
-              Empty parentheses <code>()</code> after the name (Bash functions
-              do not list parameters here).
-            </li>
-
-            <li>
-              The commands that define the function body, enclosed in curly
-              brackets <code>{ }</code>.
-            </li>
+            <li>Empty parentheses <code>()</code> after the name (Bash functions do not list parameters here).</li>
+            <li>The commands that define the function body, enclosed in curly brackets <code>{ }</code>.</li>
           </ul>
-
           <p>
             For example, the following code defines a simple function named
             <code>greet</code>:
           </p>
-
           <code>greet() { local name="$1" echo "Hello, $name!" }</code>
-
           <p>
             Arguments are passed to functions positionally and accessed inside
             the function as <code>$1</code>, <code>$2</code>, etc. The function
             is called by name, followed by any arguments:
           </p>
-
           <code>greet "Alice"</code>
-
           <p>
             Functions can return an exit status (0–255) using the
             <code>return</code> statement. To return a string value, use
@@ -491,15 +347,10 @@
 
       <section class="main-section" id="Reference">
         <header>Reference</header>
-
         <article>
           <ul>
             <li>All the documentation in this page is taken from</li>
-            <a
-              href="https://www.gnu.org/software/bash/manual/bash.html"
-              target="_blank"
-              >GNU Bash Manual</a
-            >
+            <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank">GNU Bash Manual</a>
           </ul>
         </article>
       </section>

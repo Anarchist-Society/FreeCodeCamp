@@ -1,3 +1,4 @@
+/* [class~="sr-only"]: Texto accesible solo para lectores de pantalla */
 span[class~="sr-only"] {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -12,7 +13,7 @@ span[class~="sr-only"] {
 }
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   color: #0a0a23;
 }
 
+/* Título: flex columna reversa */
 h1 {
   max-width: 37.25rem;
   margin: 0 auto;
@@ -40,12 +42,14 @@ h1 .flex span:last-of-type {
   font-size: 1.2em;
 }
 
+/* Sección: centrada, borde */
 section {
   max-width: 40rem;
   margin: 0 auto;
   border: 2px solid #d0d0d5;
 }
 
+/* Años: sticky header */
 #years {
   display: flex;
   justify-content: flex-end;
@@ -68,6 +72,7 @@ section {
   padding: 0 0.75rem 1.5rem 0.75rem;
 }
 
+/* Tablas */
 table {
   border-collapse: collapse;
   border: 0;
@@ -85,6 +90,7 @@ table caption {
   left: 0.5rem;
 }
 
+/* Columnas de datos */
 tbody td {
   width: 100vw;
   min-width: 4rem;
@@ -95,6 +101,7 @@ tbody th {
   width: calc(100% - 12rem);
 }
 
+/* Fila de totales: borde doble */
 tr[class="total"] {
   border-bottom: 4px double #0a0a23;
   font-weight: bold;
@@ -114,14 +121,17 @@ tr.total td:nth-of-type(3) {
   padding-right: 0.5rem;
 }
 
+/* Hover en totales: fondo azul claro */
 tr.total:hover {
   background-color: #99c9ff;
 }
 
+/* Año actual: cursiva */
 td.current {
   font-style: italic;
 }
 
+/* Filas de datos: gradiente de rayas */
 tr.data {
   background-image: linear-gradient(
     to bottom,
@@ -136,6 +146,7 @@ tr.data th {
   padding-left: 0.5rem;
 }
 
+/* Descripción del concepto: italic, sangría negativa */
 tr.data th .description {
   display: block;
   font-weight: normal;

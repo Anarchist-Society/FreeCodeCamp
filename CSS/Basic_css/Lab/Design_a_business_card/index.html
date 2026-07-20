@@ -6,59 +6,29 @@
     <meta name="author" content="Anarchist-Society" />
     <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Business Card</title>
-    <!--
-      <link>: Vincula el archivo CSS externo.
-      - href="styles.css": Ruta al archivo CSS (mismo directorio).
-      - rel="stylesheet": Indica que es una hoja de estilos.
-    -->
     <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!--
-      <main>: Contenedor principal semántico.
-      CSS le da: min-height: 100vh, display: grid, place-items: center.
-      Centra la tarjeta vertical y horizontalmente en la pantalla.
-    -->
+    <!-- main: Centrado con grid + place-items:center -->
     <main>
-      <!--
-        <div class="business-card">: La tarjeta de presentación.
-        CSS le da: width: 300px, padding: 20px, border amarillo,
-        background-color cyan, text-align: center.
-      -->
+      <!-- Tarjeta de presentación -->
       <div class="business-card">
-        <!--
-          <img class="profile-image">: Foto de perfil.
-          CSS le da: max-width: 100% para que no desborde la tarjeta.
-          src="terry-a-davis.jpg": Imagen local (mismo directorio).
-          alt: Texto alternativo por si la imagen no carga.
-        -->
+        <!-- Foto de perfil: max-width:100% para que no desborde -->
         <img
           class="profile-image"
           src="terry-a-davis.jpg"
           alt="A picture of Terrence Andrew Davis"
         />
 
-        <!--
-          Nombre completo, cargo y empresa.
-          CSS aplica margin: 10px 0 a todos los <p> para separarlos.
-        -->
+        <!-- Info personal -->
         <p class="full-name">Terrence Andrew Davis</p>
         <p class="designation">Computer programmer</p>
         <p class="company">Ticketmaster</p>
 
-        <!--
-          <hr>: Línea horizontal que separa la info personal del contacto.
-          CSS le da: margin: 5px para darle espacio.
-        -->
         <hr />
 
-        <!--
-          Información de contacto.
-          - Email y Phone: Texto plano con los datos.
-          - <a class="portfolio-link">: Enlace al portafolio (Wikipedia).
-            target="_blank" abre el enlace en nueva pestaña.
-        -->
+        <!-- Contacto -->
         <p>Email: tdavis@templeos.org</p>
         <p>Phone: (123) 456-7890</p>
         <a
@@ -69,14 +39,7 @@
 
         <hr />
 
-        <!--
-          Sección de redes sociales.
-          - <div class="social-media">: Contenedor padre.
-          - <h2>: Título de la sección.
-          - <div class="social-links">: Wrapper con flexbox para los enlaces.
-            display: flex + gap: 15px → Enlaces en fila con espacio entre ellos.
-          - <a>: Enlaces a Twitter, LinkedIn y GitHub.
-        -->
+        <!-- Redes sociales: flexbox con gap para los enlaces -->
         <div class="social-media">
           <h2>Connect with me</h2>
           <div class="social-links">

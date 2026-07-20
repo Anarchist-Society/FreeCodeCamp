@@ -1,129 +1,63 @@
-/* ========================================
-   RESET: Eliminar márgenes, rellenos por defecto
-   ======================================== */
-/*
-  * → Selecciona todos los elementos.
-  margin: 0 → Sin márgenes externos.
-  padding: 0 → Sin rellenos internos.
-  box-sizing: border-box → El width/height incluye padding y border.
-*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  box-sizing: border-box; /* Width/height incluye padding y border */
 }
 
-/* ========================================
-   BODY: Fondo y tipografía general
-   ======================================== */
 body {
   background-color: #f0f0f0; /* Gris claro */
   font-family: Arial, sans-serif;
 }
 
-/* ========================================
-   TARJETA DEL POST
-   ======================================== */
-/*
-  width: 350px → Ancho fijo de la tarjeta.
-  max-width: 100% → En pantallas pequeñas (< 350px), se adapta al ancho disponible.
-  height: 400px → Altura fija de la tarjeta.
-  margin: 25vh auto → 25vh de espacio arriba + centrado horizontal (auto).
-  
-  NOTA: 25vh = 25% del alto del viewport. Empuja la tarjeta hacia abajo
-  para que no quede pegada al borde superior de la pantalla.
-  
-  background-color: white → Fondo blanco.
-  border-radius: 15px → Esquinas redondeadas.
-  box-shadow: Sombra sutil.
-    - 0 4px 8px → 0 de desplazamiento X, 4px hacia abajo, 8px de desenfoque.
-    - rgba(0, 0, 0, 0.1) → Negro al 10% de opacidad.
-  overflow: hidden → Recorta la imagen si se desborda de la tarjeta.
-  text-align: center → Centra el texto del contenido.
-*/
+/* Tarjeta del post */
 .blog-post-card {
-  max-width: 100%;
+  max-width: 100%; /* Adaptativa en móvil */
   width: 350px;
   height: 400px;
-  margin: 25vh auto;
+  margin: 25vh auto; /* 25vh arriba + centrado horizontal */
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  border-radius: 15px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  overflow: hidden; /* Recorta imagen si desborda */
   text-align: center;
 }
 
-/* ========================================
-   IMAGEN DEL POST
-   ======================================== */
-/*
-  width: 100% → Ocupa todo el ancho de la tarjeta.
-  height: auto → Mantiene la proporción original de la imagen.
-  border-bottom: 5px solid black → Línea negra debajo de la imagen.
-  
-  NOTA: overflow: hidden en .blog-post-card recorta la imagen
-  si esta es más alta que el espacio disponible.
-*/
+/* Imagen del post */
 .post-img {
   width: 100%;
-  height: auto;
+  height: auto; /* Mantiene proporción */
   border-bottom: 5px solid black;
 }
 
-/* ========================================
-   CONTENIDO DEL POST
-   ======================================== */
+/* Contenido del post */
 .post-content {
-  padding: 20px; /* Espacio interno del contenido de texto */
+  padding: 20px;
 }
 
-/* ========================================
-   TÍTULO DEL POST
-   ======================================== */
-/*
-  color: #11273d → Azul oscuro.
-  margin: 0 0 10px → 0 arriba, 0 lados, 10px abajo (separa del excerpt).
-*/
+/* Título */
 .post-title {
-  color: #11273d;
+  color: #11273d; /* Azul oscuro */
   margin: 0 0 10px;
 }
 
-/* ========================================
-   EXTRACTO DEL POST
-   ======================================== */
-/*
-  color: #1c3c3a → Verde oscuro.
-  margin: 10px 0 → 10px arriba y abajo.
-*/
+/* Extracto */
 .post-excerpt {
-  color: #1c3c3a;
+  color: #1c3c3a; /* Verde oscuro */
   margin: 10px 0;
 }
 
-/* ========================================
-   BOTÓN "READ MORE"
-   ======================================== */
-/*
-  display: inline-block → Permite padding/margin y queda en línea.
-  margin-top: 10px → Espacio arriba del botón.
-  padding: 10px 15px → Espacio interno (10px arriba/abajo, 15px lados).
-  background-color: #11263f → Fondo azul oscuro.
-  color: white → Texto blanco.
-  text-decoration: none → Sin subrayado.
-  border-radius: 5px → Esquinas ligeramente redondeadas.
-*/
+/* Botón "Read More" */
 .read-more {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
-  background-color: #11263f;
+  background-color: #11263f; /* Azul oscuro */
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
-/* Hover: Cambio sutil de color al pasar el mouse */
+/* Hover: cambio sutil de color */
 .read-more:hover {
   background-color: #1c3c3a;
 }

@@ -6,26 +6,14 @@
     <meta name="author" content="Anarchist-Society" />
     <meta name="description" content="Ejercicios de FreeCodeCamp" />
     <title>Design a Cafe Menu</title>
-    <!--
-      <link>: Vincula el archivo CSS externo.
-      - href="styles.css": Ruta al archivo CSS (mismo directorio).
-      - rel="stylesheet": Indica que es una hoja de estilos.
-      
-      Si no está este link, el CSS no se aplica.
-    -->
+    <!-- <link>: Vincula el archivo CSS externo -->
     <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!--
-      <div class="menu">: Contenedor principal del menú.
-      CSS le da: width: 80%, background-color, padding, max-width: 500px.
-      El body usa display: grid + place-items: center para centrarlo
-      tanto horizontal como verticalmente.
-    -->
+    <!-- Contenedor principal del menú (centrado con grid en body) -->
     <div class="menu">
       <main>
-        <!-- Título principal del café -->
         <h1>CAMPER CAFE</h1>
 
         <!-- "Est. 2020" en cursiva -->
@@ -33,19 +21,7 @@
 
         <hr />
 
-        <!--
-          Sección de café.
-          Cada artículo (article) tiene:
-          - p.flavor: Nombre del café (izquierda, 70%)
-          - p.price: Precio (derecha, 20%)
-          
-          CSS hace que ambos párrafos estén en la misma línea
-          usando display: inline-block.
-          
-          NOTA: Se usa 70%+20% (en lugar de 75%+25%) porque
-          inline-block agrega ~4px de espacio entre elementos,
-          y 75%+25%+4px = overflow. Con 70%+20% = 90% hay margen.
-        -->
+        <!-- Sección de café: p.flavor (izq, 70%) + p.price (der, 20%) -->
         <section>
           <h2>Coffee</h2>
 
@@ -80,11 +56,7 @@
           </article>
         </section>
 
-        <!--
-          Sección de postres.
-          Misma estructura que la sección de café.
-          Usa .dessert en lugar de .flavor para el nombre.
-        -->
+        <!-- Sección de postres: misma estructura que café -->
         <section>
           <h2>Desserts</h2>
 
@@ -115,20 +87,9 @@
         </section>
       </main>
 
-      <!--
-        Línea horizontal inferior con clase "bottom-line".
-        CSS le da: margin-top: 25px (separa del menú)
-        y margin-bottom: 25px (separa del footer).
-      -->
       <hr class="bottom-line" />
 
-      <!--
-        Pie de página con información de contacto.
-        - <address>: Semánticamente indica información de contacto.
-        - a target="_blank": Abre el enlace en nueva pestaña.
-        - address p:first-child: Espacio de 15px entre el enlace y la dirección.
-        - .address: Clase para estilizar la dirección física.
-      -->
+      <!-- <address>: Información de contacto (semántico) -->
       <footer>
         <address>
           <p>

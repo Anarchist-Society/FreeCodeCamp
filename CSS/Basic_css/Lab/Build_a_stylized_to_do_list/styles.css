@@ -1,24 +1,9 @@
-/* ========================================
-   BODY: Estilos generales de la página
-   ======================================== */
 body {
   font-family: Arial, sans-serif;
   background-color: #002944; /* Azul oscuro */
 }
 
-/* ========================================
-   MAIN: Contenedor principal centrado
-   ======================================== */
-/*
-  width: 80% → Ocupa el 80% del ancho del viewport.
-  max-width: 540px → En pantallas grandes, no crece más de 540px.
-  margin: 0 auto → Centra horizontalmente (0 arriba/abajo, auto izq/der).
-  padding: 50px 20px → 50px arriba/abajo, 20px a los lados.
-  
-  NOTA: No se usa display: grid ni place-items: center porque
-  en móvil causan scroll vertical cuando el contenido desborda.
-  Con margin: 0 auto solo centramos horizontalmente, sin riesgo de scroll.
-*/
+/* Centrado horizontal con margin, sin grid */
 main {
   width: 80%;
   max-width: 540px;
@@ -26,123 +11,71 @@ main {
   padding: 50px 20px;
 }
 
-/* ========================================
-   CONTENEDOR DE LA LISTA
-   ======================================== */
-/*
-  background-color: Mismo color que el body (la sombra es lo que se ve).
-  padding: 20px → Espacio interno.
-  border-radius: 10px → Esquinas redondeadas.
-  box-shadow: Sombra negra completely opaca.
-    - 0 0 10px → Sin desplazamiento X/Y, 10px de desenfoque.
-    - rgba(0, 0, 0, 1) → Negro completely opaco (alpha = 1).
-*/
+/* Contenedor de la lista */
 .container {
   background-color: #002944;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Sombra negra opaca */
 }
 
-/* ========================================
-   TÍTULO
-   ======================================== */
 h1 {
   text-align: center;
   color: white;
 }
 
-/* ========================================
-   SPAN: "To-Do" en azul
-   ======================================== */
-/*
-  Solo la palabra "To-Do" dentro del h1 se estiliza en azul.
-  El resto del h1 queda blanco.
-*/
+/* Solo "To-Do" en azul */
 span {
   color: #1d92d0;
 }
 
-/* ========================================
-   LISTA DE TAREAS
-   ======================================== */
-/*
-  list-style-type: none → Elimina los puntos por defecto de <ul>.
-  padding: 0 → Elimina la sangría izquierda.
-*/
+/* Lista de tareas: sin puntos ni sangría */
 .todo-list {
   list-style-type: none;
   padding: 0;
 }
 
-/* ========================================
-   CADA TAREA (<li>)
-   ======================================== */
-/*
-  margin-bottom: 15px → Espacio entre tareas.
-  line-height: 1.6 → Interlineado más amplio (legibilidad).
-  padding: 10px → Espacio interno de la tarjeta.
-  background-color: #0a3d5e → Azul más claro que el fondo.
-  border-radius: 10px → Esquinas redondeadas.
-  position: relative → Permite posicionamiento absoluto interno si se necesita.
-  color: #e0f0ff → Texto azul claro (casi blanco).
-*/
+/* Cada tarea */
 .todo-list li {
   margin-bottom: 15px;
-  line-height: 1.6;
+  line-height: 1.6; /* Interlineado amplio */
   padding: 10px;
-  background-color: #0a3d5e;
+  background-color: #0a3d5e; /* Azul más claro */
   border-radius: 10px;
   position: relative;
-  color: #e0f0ff;
+  color: #e0f0ff; /* Texto azul claro */
 }
 
-/* ========================================
-   ENLACES DE SUBLISTAS
-   ======================================== */
+/* Enlaces de sublistas */
 a.sub-item-link {
-  text-decoration: none; /* Sin subrayado */
+  text-decoration: none;
 }
 
-/* :link → Color cuando el enlace NO ha sido visitado */
 .sub-item-link:link {
   color: #a5d8ff;
 }
 
-/* :visited → Color DESPUÉS de haber visitado el enlace */
 .sub-item-link:visited {
   color: #b3daff;
-  font-weight: bold; /* Se pone en negrita al haberlo visitado */
+  font-weight: bold; /* Negrita al visitar */
 }
 
-/* :hover → Color al pasar el mouse por encima */
 .sub-item-link:hover {
   color: #ffffff;
   background-color: rgba(29, 146, 208, 0.2); /* Fondo azul semitransparente */
 }
 
-/* :focus → Estilo cuando el enlace tiene el foco (tab o clic) */
-/*
-  outline: 2px solid #4da8ff → Borde azul alrededor del enlace.
-  outline-offset: 2px → Espacio entre el borde y el outline.
-  Importante para accesibilidad: permite ver qué elemento está seleccionado.
-*/
+/* Focus: Borde azul para accesibilidad */
 .sub-item-link:focus {
   outline: 2px solid #4da8ff;
   outline-offset: 2px;
 }
 
-/* :active → Color al hacer clic (momento del click) */
 .sub-item-link:active {
   color: white;
 }
 
-/* ========================================
-   SUBLISTAS
-   ======================================== */
-/*
-  list-style: square → Cuadros en lugar de puntos por defecto.
-*/
+/* Sublistas: cuadros en lugar de puntos */
 .sub-item {
   list-style: square;
 }

@@ -6,6 +6,7 @@ body {
   line-height: 1.5;
 }
 
+/* Sidebar fijo a la izquierda */
 #navbar {
   position: fixed;
   min-width: 290px;
@@ -29,6 +30,7 @@ header {
   margin: 0;
 }
 
+/* Scroll vertical en la lista de navegación */
 #navbar ul {
   height: 88%;
   padding: 0;
@@ -52,6 +54,7 @@ header {
   cursor: pointer;
 }
 
+/* Contenido principal desplazado a la derecha del sidebar */
 #main-doc {
   position: absolute;
   margin-left: 310px;
@@ -69,6 +72,7 @@ section li {
   margin: 15px 0px 0px 20px;
 }
 
+/* Bloques de código: fondo gris, pre-line para saltos de línea */
 code {
   display: block;
   text-align: left;
@@ -83,8 +87,8 @@ code {
   border-radius: 5px;
 }
 
+/* Mobile: sidebar se vuelve horizontal arriba */
 @media only screen and (max-width: 815px) {
-  /* For mobile phones */
   #navbar ul {
     border: 1px solid;
     height: 207px;
@@ -110,6 +114,7 @@ code {
   }
 }
 
+/* Pantallas muy pequeñas */
 @media only screen and (max-width: 400px) {
   #main-doc {
     margin-left: -10px;

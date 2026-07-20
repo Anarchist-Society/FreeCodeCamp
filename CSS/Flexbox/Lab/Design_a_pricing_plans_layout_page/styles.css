@@ -18,7 +18,6 @@ header {
   background-color: #0b1210; /* Fondo muy oscuro */
 }
 
-/* Título principal */
 h1 {
   font-size: 3rem; /* Tamaño grande */
   text-align: center; /* Texto centrado */
@@ -28,13 +27,12 @@ h1 {
 main {
   display: flex; /* Activa flexbox */
   flex-direction: column; /* Elementos apilados verticalmente */
-  justify-content: center; /* Centra verticalmente en el eje principal */
-  align-items: center; /* Centra horizontalmente en el eje transversal */
-  flex: 1; /* Ocupa el espacio restante después del header */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  flex: 1; /* Ocupa el espacio restante */
   background-color: #0b1210; /* Fondo muy oscuro */
 }
 
-/* Subtítulos de tarjetas */
 h2 {
   color: #22c55e; /* Verde brillante */
 }
@@ -43,8 +41,8 @@ h2 {
 .pricing-container {
   display: flex; /* Activa flexbox */
   flex-wrap: wrap; /* Permite saltos de línea */
-  justify-content: center; /* Centra tarjetas en eje principal */
-  align-content: center; /* Centra filas en eje transversal */
+  justify-content: center; /* Centra tarjetas */
+  align-content: center; /* Centra filas */
   gap: 20px; /* Espacio entre tarjetas */
   width: 100%; /* Ancho completo del padre */
   max-width: 1000px; /* Tope máximo de ancho */
@@ -60,7 +58,7 @@ h2 {
   display: flex; /* Activa flexbox */
   flex-direction: column; /* Elementos apilados verticalmente */
   justify-content: space-between; /* Distribuye espacio entre elementos */
-  flex: 0 0 300px; /* grow: 0, shrink: 0, basis: 200px (ancho fijo) */
+  flex: 0 0 300px; /* Ancho fijo 300px */
   padding: 20px; /* Espacio interno */
   text-align: center; /* Texto centrado */
   background-color: #161b22; /* Fondo oscuro */
@@ -68,7 +66,7 @@ h2 {
   border: 2px solid #163d2e; /* Borde verde oscuro */
   box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); /* Sombra verde suave */
   border-radius: 10px; /* Esquinas redondeadas */
-  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  transition: transform 0.3s ease; /* Transición suave al hover */
 }
 
 /* Hover: escala + sombra más fuerte */
@@ -126,9 +124,7 @@ a {
   color: #0b1210; /* Texto oscuro */
   border: 3px solid #16a34a; /* Borde verde más oscuro */
   border-radius: 6px; /* Esquinas redondeadas */
-  transition: /* Transición suave */
-    background 0.3s,
-    transform 0.2s;
+  transition: background 0.3s, transform 0.2s; /* Transición suave */
 }
 
 /* Botón hover: verde más oscuro + escala */
@@ -138,21 +134,11 @@ a:hover {
 }
 
 /* Orden de las tarjetas */
-.basic-plan {
-  order: 0; /* Primero */
-}
+.basic-plan { order: 0; } /* Primero */
+.pro-plan { order: 1; } /* Segundo */
+.premium-plan { order: 2; } /* Tercero */
 
-.pro-plan {
-  order: 1; /* Segundo */
-}
-
-.premium-plan {
-  order: 2; /* Tercero */
-}
-
-/* ========================================
-   MEDIA QUERY: Tablets (≤ 1000px)
-   ======================================== */
+/* Tablets: ≤ 1000px */
 @media screen and (max-width: 1000px) {
   .pricing-container {
     height: auto; /* Alto automático según contenido */
@@ -166,13 +152,11 @@ a:hover {
   }
 
   .pricing-card {
-    flex: 0 0 175px; /* Reduce ancho de 200px a 175px */
+    flex: 0 0 175px; /* Reduce ancho */
   }
 }
 
-/* ========================================
-   MEDIA QUERY: Móviles (≤ 650px)
-   ======================================== */
+/* Móviles: ≤ 650px */
 @media screen and (max-width: 650px) {
   header {
     min-height: 10vh; /* Reduce de 20vh a 10vh */

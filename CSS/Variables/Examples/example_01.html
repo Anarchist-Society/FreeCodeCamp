@@ -11,14 +11,15 @@
         box-sizing: border-box;
       }
 
+      /* Variables CSS definidas en :root (nivel global) */
       :root {
-        --card-width: 90%;
-        --card-bg: #f0f0f0;
-        --card-padding: 1rem;
-        --text-color: #333;
+        --card-width: 90%;     /* Ancho de la tarjeta */
+        --card-bg: #f0f0f0;    /* Color de fondo */
+        --card-padding: 1rem;  /* Relleno interno */
+        --text-color: #333;    /* Color del texto */
       }
 
-      /* Tablet screens and up */
+      /* Tablets: cambia el ancho, fondo y padding */
       @media (min-width: 600px) {
         :root {
           --card-width: 70%;
@@ -27,7 +28,7 @@
         }
       }
 
-      /* Desktop screens and up */
+      /* Desktop: aún más angosto y diferente fondo */
       @media (min-width: 1024px) {
         :root {
           --card-width: 50%;
@@ -39,20 +40,20 @@
       body {
         font-family: system-ui, sans-serif;
         display: grid;
-        place-items: center;
+        place-items: center; /* Centra la tarjeta */
         min-height: 100vh;
         background-color: #fafafa;
       }
 
       .card {
         border: 1px solid black;
-        width: var(--card-width);
+        width: var(--card-width);       /* Usa la variable */
         background-color: var(--card-bg);
         padding: var(--card-padding);
         color: var(--text-color);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease;      /* Transición suave al cambiar */
       }
     </style>
   </head>

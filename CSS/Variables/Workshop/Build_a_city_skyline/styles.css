@@ -1,12 +1,13 @@
+/* Variables CSS: colores de edificios y ventanas */
 :root {
-  --building-color1: #aa80ff;
-  --building-color2: #66cc99;
-  --building-color3: #cc6699;
-  --building-color4: #538cc6;
-  --window-color1: #bb99ff;
-  --window-color2: #8cd9b3;
-  --window-color3: #d98cb3;
-  --window-color4: #8cb3d9;
+  --building-color1: #aa80ff; /* Morado */
+  --building-color2: #66cc99; /* Verde */
+  --building-color3: #cc6699; /* Rosa */
+  --building-color4: #538cc6; /* Azul */
+  --window-color1: #bb99ff;   /* Morado claro */
+  --window-color2: #8cd9b3;   /* Verde claro */
+  --window-color3: #d98cb3;   /* Rosa claro */
+  --window-color4: #8cb3d9;   /* Azul claro */
 }
 
 * {
@@ -19,12 +20,13 @@ body {
   overflow: hidden;
 }
 
+/* Ambos contenedores: fondo y primer plano */
 .background-buildings,
 .foreground-buildings {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end;     /* Edificios anclados abajo */
   justify-content: space-evenly;
   position: absolute;
   top: 0;
@@ -42,6 +44,7 @@ body {
   justify-content: space-evenly;
 }
 
+/* Cielo: gradiente radial con sol en esquina */
 .sky {
   background: radial-gradient(
     closest-corner circle at 15% 15%,
@@ -52,7 +55,8 @@ body {
   );
 }
 
-/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+/* ==================== EDIFICIOS DE FONDO ("bb") ==================== */
+
 .bb1 {
   width: 10%;
   height: 70%;
@@ -70,6 +74,7 @@ body {
   width: 90%;
 }
 
+/* Base del edificio: gradiente de color a ventana */
 .bb1d {
   width: 100%;
   height: 70%;
@@ -86,12 +91,14 @@ body {
   height: 50%;
 }
 
+/* Triángulo con bordes transparentes */
 .bb2a {
   border-bottom: 5vh solid var(--building-color2);
   border-left: 5vw solid transparent;
   border-right: 5vw solid transparent;
 }
 
+/* Ventanas repetidas con repeating-linear-gradient */
 .bb2b {
   width: 100%;
   height: 100%;
@@ -143,7 +150,8 @@ body {
   background-color: var(--window-color4);
 }
 
-/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
+/* ==================== EDIFICIOS DE PRIMER PLANO ("fb") ==================== */
+
 .fb1 {
   width: 10%;
   height: 60%;
@@ -161,6 +169,7 @@ body {
   background-color: var(--building-color4);
 }
 
+/* Patrón de ventanas con doble repeating-linear-gradient */
 .fb1c {
   width: 100%;
   height: 80%;
@@ -231,7 +240,7 @@ body {
   width: 8%;
   height: 45%;
   position: relative;
-  left: 10%;
+  left: 10%; /* Desplazado a la derecha */
 }
 
 .fb4a {
@@ -247,10 +256,11 @@ body {
   flex-wrap: wrap;
 }
 
+/* Ventanas circulares */
 .fb4-window {
   width: 30%;
   height: 10%;
-  border-radius: 50%;
+  border-radius: 50%; /* Redondo */
   background-color: var(--window-color1);
   margin: 10%;
 }
@@ -295,6 +305,7 @@ body {
     );
 }
 
+/* Mobile: edificios negros, ventanas grises, cielo oscuro */
 @media (max-width: 1000px) {
   :root {
     --building-color1: #000;

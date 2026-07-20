@@ -8,14 +8,18 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-areas: "header header header" "sidebar-left main sidebar-right" "footer footer footer";
+  /* Layout con grid-template-areas: nombre de áreas */
+  grid-template-areas:
+    "header header header"           /* Fila 1: header ocupa 3 columnas */
+    "sidebar-left main sidebar-right" /* Fila 2: 3 áreas distintas */
+    "footer footer footer";           /* Fila 3: footer ocupa 3 columnas */
   grid-gap: 10px;
   background-color: #2196f3;
   padding: 10px;
 }
 
 .header {
-  grid-area: header;
+  grid-area: header; /* Se posiciona en el área "header" */
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;

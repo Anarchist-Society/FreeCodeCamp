@@ -1,22 +1,21 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding y border dentro del ancho */
   font-family: Arial, sans-serif;
 }
 
 .table-container {
-  overflow-x: hidden;
+  overflow-x: hidden; /* Oculta scroll horizontal */
 }
 
+/* Tabla: colapsa bordes, ancho completo */
 table {
   border-collapse: collapse;
   width: 100vw;
 }
 
+/* Cabecera: gradiente cian */
 thead {
-  background-image: linear-gradient(
-    hsl(197, 92%, 77%, 0.6),
-    hsl(197, 92%, 50%, 0.6)
-  );
+  background-image: linear-gradient(hsl(197, 92%, 77%, 0.6), hsl(197, 92%, 50%, 0.6));
 }
 
 th {
@@ -28,35 +27,31 @@ td {
   padding: 0.3em;
 }
 
+/* [class="read"]: Verde claro */
 tr[class="read"] {
-  background-image: linear-gradient(
-    hsl(120, 100%, 85%, 0.6),
-    hsl(120, 100%, 65%, 0.6)
-  );
+  background-image: linear-gradient(hsl(120, 100%, 85%, 0.6), hsl(120, 100%, 65%, 0.6));
 }
 
+/* [class="to-read"]: Verde muy claro */
 tr[class="to-read"] {
-  background-image: linear-gradient(
-    hsl(120, 20%, 95%, 0.6),
-    hsl(120, 20%, 75%, 0.6)
-  );
+  background-image: linear-gradient(hsl(120, 20%, 95%, 0.6), hsl(120, 20%, 75%, 0.6));
 }
 
+/* [class="in-progress"]: Naranja claro */
 tr[class="in-progress"] {
-  background-image: linear-gradient(
-    hsl(40, 100%, 85%, 0.6),
-    hsl(40, 100%, 65%, 0.6)
-  );
+  background-image: linear-gradient(hsl(40, 100%, 85%, 0.6), hsl(40, 100%, 65%, 0.6));
 }
 
 span {
   display: inline-block;
 }
 
+/* Badge de estado: forma de pastilla (radio asimétrico) */
 span[class="status"] {
-  border-radius: 20% / 60%; /* Aquí se está definiendo dos radios distintos 20% horizontal y 60% vertical */
+  border-radius: 20% / 60%; /* 20% horizontal, 60% vertical */
 }
 
+/* Badge de rate y status: tamaño fijo */
 span[class="status"],
 span[class^="rate"] {
   height: 1.85em;
@@ -64,6 +59,7 @@ span[class^="rate"] {
   padding: 0.3em;
 }
 
+/* Badges según estado de la fila */
 tr[class="to-read"] span[class="status"] {
   border: 0.1em solid hsl(5, 100%, 45%);
   background-image: linear-gradient(hsl(5, 100%, 75%), hsl(5, 100%, 50%));
@@ -79,6 +75,7 @@ tr[class="in-progress"] span[class="status"] {
   background-image: linear-gradient(hsl(40, 90%, 75%), hsl(40, 90%, 50%));
 }
 
+/* Puntos del rate: círculos vacíos */
 span[class^="rate"] > span {
   border: 0.1em solid hsl(0, 0%, 50%);
   border-radius: 50%;
@@ -88,15 +85,18 @@ span[class^="rate"] > span {
   margin: 0.1em;
 }
 
+/* [class~="three"]: 3 puntos dorados */
 span[class~="three"] span {
   background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
 }
 
+/* [class~="two"]: 2 puntos dorados */
 span[class~="two"] :nth-child(1),
 span[class~="two"] :nth-child(2) {
   background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
 }
 
+/* [class~="one"]: 1 punto dorado */
 span[class~="one"] :first-child {
   background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
 }

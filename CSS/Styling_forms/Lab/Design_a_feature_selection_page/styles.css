@@ -1,14 +1,12 @@
 * {
   margin: 0; /* Sin márgenes */
   padding: 0; /* Sin rellenos */
-  /* IMPORTANTE: Hace que el padding y el border no sumen ancho extra a la caja */
-  /* Si pides 200px, la caja medirá 200px pase lo que pase */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
 body {
   background-color: #000000; /* Fondo negro */
-  padding: 50px; /* Espacio entre contenido y borde del navegador */
+  padding: 50px; /* Espacio entre contenido y borde */
 }
 
 h1 {
@@ -25,7 +23,7 @@ h1 {
   padding: 10px; /* Espacio interno */
   border: 3px solid #00ff41; /* Borde verde neón */
   border-radius: 20px; /* Esquinas redondeadas */
-  font-size: 0; /* TRUCO: Elimina el espacio en blanco entre inline-block */
+  font-size: 0; /* TRUCO: Elimina espacio en blanco entre inline-block */
   background-color: #0a0d0a; /* Fondo muy oscuro */
 }
 
@@ -44,7 +42,7 @@ h1 {
   border: 2px solid #133913; /* Borde verde oscuro */
   border-radius: 12px; /* Esquinas redondeadas */
   transition: 0.3s ease; /* Transición suave */
-  font-size: 16px; /* Restaura tamaño de fuente (contenedor padre tiene font-size: 0) */
+  font-size: 16px; /* Restaura tamaño de fuente */
   min-height: 150px; /* Altura mínima */
   cursor: pointer; /* Mano al pasar */
 }
@@ -101,14 +99,7 @@ h1 {
   line-height: 20px;
 }
 
-/* ========================================
-   MEDIA QUERY: Móviles (≤ 480px)
-   ======================================== */
-/*
-  En móviles:
-  - body padding se reduce de 50px a 20px
-  - Las tarjetas pasan de 2 columnas a 1 columna
-*/
+/* Móviles: ≤ 480px — 1 columna */
 @media (max-width: 480px) {
   body {
     padding: 20px; /* Reduce padding en móvil */

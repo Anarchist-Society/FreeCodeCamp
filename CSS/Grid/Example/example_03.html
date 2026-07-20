@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid Example 3 Gaps</title>
     <style>
+      /* Solo gap de columna */
       .grid-container-1 {
         display: grid;
         height: 100px;
@@ -13,6 +14,7 @@
         margin-bottom: 10px;
       }
 
+      /* Gap de columna y fila por separado */
       .grid-container-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -21,10 +23,11 @@
         margin-bottom: 10px;
       }
 
+      /* Shorthand: gap: fila columna */
       .grid-container-3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30px 10px;
+        gap: 30px 10px; /* 30px fila, 10px columna */
       }
 
       .grid-container-1 div {
