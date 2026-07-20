@@ -12,7 +12,7 @@
     <main>
       <h1>Checkout</h1>
 
-      <!-- Sección del carrito de compras -->
+      <!-- Sección del carrito -->
       <section>
         <h2>Your Cart</h2>
         <img
@@ -23,23 +23,11 @@
         <p>9.49€</p>
       </section>
 
-      <!-- Sección de información de pago -->
+      <!-- Sección de pago -->
       <section>
         <h2>Payment Information</h2>
         <form>
-          <!--
-            <span aria-hidden="true">*: asterisco decorativo.
-            aria-hidden="true": Oculta el elemento de los lectores de pantalla.
-            
-            ¿Por qué?
-            - El asterisco * es decorativo (indica campo obligatorio).
-            - Los lectores de pantalla no deberían leer "*".
-            - El atributo "required" ya indica que es obligatorio.
-            
-            Accesibilidad:
-            - El label + required ya informa al usuario.
-            - aria-hidden evita redundancia.
-          -->
+          <!-- aria-hidden="true": Oculta el asterisco decorativo de los lectores de pantalla -->
           <label for="card-name"
             >Cardholder name <span aria-hidden="true">*</span></label
           >
@@ -48,14 +36,7 @@
           <label for="card-number"
             >Card Number <span aria-hidden="true">*</span></label
           >
-          <!--
-            aria-describedby: Asocia el input con una descripción adicional.
-            - "card-number-help": Id del elemento p con la descripción.
-            - El lector de pantalla lee el label + la descripción.
-            
-            Ejemplo de lectura:
-            "Card Number, required, textbox. Please enter your 16-digit card number..."
-          -->
+          <!-- aria-describedby: Asocia el input con una descripción adicional -->
           <input
             type="text"
             id="card-number"
@@ -63,11 +44,7 @@
             aria-describedby="card-number-help"
             required
           />
-
-          <!--
-            <p id="card-number-help">: Descripción asocada con aria-describedby.
-            Proporciona instrucciones adicionales sobre cómo llenar el campo.
-          -->
+          <!-- Descripción asociada con aria-describedby -->
           <p id="card-number-help">
             Please enter your 16-digit card number without spaces or dashes.
           </p>
@@ -75,11 +52,7 @@
           <label for="expiry-date"
             >Expire Date <span aria-hidden="true">*</span></label
           >
-          <!--
-            placeholder="MM/YY": Texto de ejemplo que desaparece al escribir.
-            No sustituye al label (el label siempre debe estar).
-            Ayuda al usuario a entender el formato esperado.
-          -->
+          <!-- placeholder: Texto de ejemplo que desaparece al escribir -->
           <input
             type="text"
             id="expiry-date"
@@ -89,12 +62,7 @@
           />
 
           <label for="cvv">CVV <span aria-hidden="true">*</span></label>
-          <!--
-            aria-label: Proporciona un nombre accesible alternativo.
-            - "Card Verification Value": Nombre completo y descriptivo.
-            - Útil cuando el texto del label es corto ("CVV").
-            - El lector de pantalla lee "Card Verification Value" en lugar de "CVV".
-          -->
+          <!-- aria-label: Nombre accesible alternativo (cuando el label es corto) -->
           <input
             type="text"
             id="cvv"

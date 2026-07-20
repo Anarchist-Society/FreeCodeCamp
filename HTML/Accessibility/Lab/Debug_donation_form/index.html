@@ -11,63 +11,25 @@
   <body>
     <main>
       <h1>Donation Form</h1>
-      <!--
-        Formulario de donación simple.
-        Estructura: label + input para cada campo.
-        
-        Accesibilidad:
-        - Cada input tiene un <label> con for/id conectado.
-        - type="text", "email", "number" validan automáticamente.
-        - required: Campos obligatorios (validación del navegador).
-        
-        Lab de debugging: Este formulario probablemente tiene errores
-        que debes encontrar y corregir (errores comunes en formularios).
-      -->
+      <!-- Formulario de donación: label + input para cada campo -->
       <form>
-        <!--
-          Campo de nombre:
-          - for="name" conecta con id="name".
-          - type="text": Campo de texto normal.
-          - required: Obligatorio antes de enviar.
-        -->
+        <!-- for="name" conecta con id="name": Accesibilidad + clic en label = focus -->
         <label for="name">Full Name:</label>
         <input id="name" type="text" name="name" required />
 
-        <!--
-          Campo de email:
-          - type="email": Valida formato email@dominio.com.
-          - Si el formato es incorrecto, el navegador muestra error.
-        -->
+        <!-- type="email": Valida formato email automáticamente -->
         <label for="email">Email Address:</label>
         <input id="email" type="email" name="email" required />
 
-        <!--
-          Campo de cantidad:
-          - type="number": Solo acepta números.
-          - name="amount": El name difiere del id (esto es correcto).
-          - El name es lo que se envía al servidor.
-        -->
+        <!-- type="number": Solo acepta números -->
         <label for="donation">Donation Amount ($):</label>
         <input id="donation" type="number" name="amount" required />
 
-        <!--
-          Checkbox de suscripción:
-          - type="checkbox": Casilla de verificación.
-          - Opcional (no tiene required).
-          - El label está DESPUÉS del label normal, esto funciona.
-        -->
+        <!-- Checkbox opcional (sin required) -->
         <label for="subscription">Subscribe</label>
         <input id="subscription" type="checkbox" name="newsletter" />
 
-        <!--
-          Botón de envío:
-          - type="submit": Envía el formulario.
-          - value="Send": Texto que aparece en el botón.
-          
-          Diferencia con <button>:
-          - <input type="submit" value="Send">: Método antiguo.
-          - <button type="submit">Send</button>: Método moderno (más flexible).
-        -->
+        <!-- <input type="submit">: Método antiguo. <button> es más flexible -->
         <input type="submit" value="Send" />
       </form>
     </main>

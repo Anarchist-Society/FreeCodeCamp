@@ -12,30 +12,13 @@
     <main>
       <h1>Tech Conference 2025 Schedule</h1>
 
-      <!--
-      Tabla de horarios con enfoque en accesibilidad.
-      
-      Características de accesibilidad en tablas:
-      - <caption>: Describe el propósito de la tabla.
-      - scope="col": Indica que el th es una columna.
-      - scope="row": Indica que el th es una fila.
-      - <th> en tbody: Encabezados de fila (horarios).
-      
-      Estos atributos ayudan a los lectores de pantalla a:
-      - Entender la estructura de la tabla.
-      - Asociar celdas con sus encabezados.
-      - Navegar por filas y columnas.
-      -->
+      <!-- Tabla accesible: caption + scope="col"/"row" para lectores de pantalla -->
       <table>
         <caption>
           Schedule by Track and Time
         </caption>
 
-        <!--
-        Encabezados de columna con scope="col":
-        scope="col" indica que estos th son encabezados de COLUMNA.
-        Los lectores de pantalla lo usan para identificar la columna actual.
-        -->
+        <!-- scope="col": Estos th son encabezados de COLUMNA -->
         <thead>
           <tr>
             <th scope="col">Time</th>
@@ -46,14 +29,7 @@
         </thead>
 
         <tbody>
-          <!--
-          Encabezados de fila con scope="row":
-          scope="row" indica que este th es encabezado de FILA.
-          Los lectores de pantalla anuncian "9:00 AM" al estar en esta fila.
-          
-          Nota: <th> puede usarse en tbody (no solo en thead).
-          Es correcto usar th para la primera celda de cada fila.
-          -->
+          <!-- scope="row": Este th es encabezado de FILA -->
           <tr>
             <th scope="row">9:00 AM</th>
             <td>Keynote: Tech Future</td>
@@ -68,10 +44,7 @@
             <td>Inclusive Design Principles</td>
           </tr>
 
-          <!--
-          colspan="3": Une las 3 columnas para "Break".
-          Útil para filas que ocupan todo el ancho de la tabla.
-          -->
+          <!-- colspan="3": Une 3 columnas para "Break" -->
           <tr>
             <th scope="row">11:00 AM</th>
             <td colspan="3">Break</td>
