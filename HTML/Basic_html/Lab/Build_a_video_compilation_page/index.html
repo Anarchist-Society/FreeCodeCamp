@@ -10,16 +10,8 @@
 
   <body>
     <!--
-      Página de compilación de videos (compilación = recopilación).
-      Estructura: main > section > (h2 + p + iframe).
-      
-      Patrón: Cada sección contiene:
-      1. h2: Título del tema
-      2. p: Descripción del tema
-      3. iframe: Video explicativo de YouTube
-      
-      Ventaja de usar <section>: Agrupa semánticamente el contenido relacionado.
-      Cada sección es independiente pero sigue la misma estructura.
+      Compilación de videos: main > section > (h2 + p + iframe).
+      Cada <section> agrupa un tema con su video de YouTube.
     -->
     <main>
       <h1>Front-End Web Development</h1>
@@ -42,19 +34,10 @@
           content on a web page.
         </p>
         <!--
-          <iframe>: Para incrustar videos de YouTube.
-          
-          Atributos nuevos (comparado con el iframe anterior):
-          - frameborder="0": Elimina el borde del iframe.
-            (obsoleto, mejor usar CSS: border: none)
-          - title="YouTube video player": Título accesible.
-            Obligatorio para accesibilidad (lectores de pantalla).
-          - allow: Incluye picture-in-picture (modo ventana flotante).
-          
-          Estructura de la URL de YouTube:
-          - /embed/: Indica que es una versión para incrustar.
-          - ID del video: Identificador único del video.
-          - ?si=...: Parámetro de seguimiento (opcional).
+          <iframe> de YouTube:
+          - frameborder="0": Elimina borde (obsoleto, usar CSS).
+          - title: Obligatorio para accesibilidad.
+          - allow: Incluye picture-in-picture (ventana flotante).
         -->
         <iframe
           width="550"

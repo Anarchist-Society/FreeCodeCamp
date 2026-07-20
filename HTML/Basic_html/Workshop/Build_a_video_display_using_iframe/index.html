@@ -12,34 +12,11 @@
     <main>
       <h1>iframe Video Display</h1>
       <!--
-        <iframe>: Marco en línea (Inline Frame).
-        Permite incrustar contenido de otro sitio web dentro de tu página.
-        
-        Usos comunes:
-        - Videos de YouTube/Vimeo
-        - Mapas de Google Maps
-        - Contenido externo
-        
-        Atributos:
-        - width="560": Ancho del iframe en píxeles.
-        - height="315": Alto del iframe en píxeles.
+        <iframe>: Marco en línea para incrustar contenido externo (videos, mapas, etc.)
         - src: URL del contenido a incrustar.
-        
-        Atributos de permisos:
-        - allow: Lista de funcionalidades permitidas dentro del iframe.
-          Ejemplos: accelerometer (giroscopio), autoplay (reproducción automática),
-          clipboard-write (copiar al portapapeles), encrypted-media (DRM),
-          gyroscope (orientación), web-share (compartir).
-          
-        - referrerpolicy: Controla qué información de referencia se envía.
-          "strict-origin-when-cross-origin": Solo envía la origen cuando
-          es una petición cross-origin, nunca envía la ruta completa.
-          
-        - allowfullscreen: Permite que el iframe se muestre en pantalla completa.
-          (obsoleto, ahora se usa allow="fullscreen")
-          
-        IMPORTANTE: Los iframes son un riesgo de seguridad.
-        Nunca uses srcdoc o allow-scripts con fuentes no confiables.
+        - allow: Funcionalidades permitidas (autoplay, clipboard, gyroscope, etc.).
+        - referrerpolicy: Controla la información de referencia en peticiones cross-origin.
+        - allowfullscreen: Permite pantalla completa (obsoleto, usar allow="fullscreen").
       -->
       <iframe
         width="100%"
