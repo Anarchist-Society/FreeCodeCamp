@@ -1,12 +1,12 @@
 * {
-  margin: 0; /* Sin márgenes */
-  padding: 0; /* Sin rellenos */
-  box-sizing: border-box; /* Padding y border dentro del ancho */
+  margin: 0; /* Sin márgenes externos */
+  padding: 0; /* Sin rellenos internos */
+  box-sizing: border-box; /* Padding y border incluidos en el ancho total */
 }
 
 main {
-  height: 100dvh; /* Dynamic Viewport Height: ajusta al área visible real (sin barra del navegador) */
-  background-color: black; /* Fondo negro */
-  display: grid; /* Grid para centrar */
+  height: 100dvh; /* Altura dinámica del viewport (ajusta a la barra real del navegador) */
+  background-color: black;
+  display: grid; /* Grid para centrar contenido */
   place-items: center; /* Centra horizontal y verticalmente */
 }
