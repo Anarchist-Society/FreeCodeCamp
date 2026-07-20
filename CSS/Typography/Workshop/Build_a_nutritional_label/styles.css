@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; /* Padding y border dentro del ancho */
 }
 
@@ -8,6 +10,10 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  height: 100dvh;
+}
+
+main {
 }
 
 /* Etiqueta nutricional: borde negro, centrada */
@@ -21,7 +27,6 @@ body {
 /* Título centrado */
 header h1 {
   text-align: center;
-  margin: -4px 0;
   letter-spacing: 0.15px;
 }
 
@@ -117,3 +122,4 @@ p {
   padding: 0 8px;
   text-indent: -8px;
 }
+
