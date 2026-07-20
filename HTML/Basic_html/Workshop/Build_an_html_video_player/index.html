@@ -12,15 +12,11 @@
     <main>
       <h1>Working with the HTML Video Element</h1>
       <!--
-        <video>: Reproduce contenido de video en la página.
-        Similar a <audio> pero para video.
-        
-        Atributos usados:
-        - width: Ancho del video en píxeles (640px).
-        - loop: Reproduce en bucle infinito.
-        - controls: Muestra controles (play, pausa, volumen, pantalla completa).
-        - muted: Silenciado por defecto (necesario para autoplay en muchos navegadores).
-        - poster: Imagen que se muestra antes de reproducir el video.
+        <video>: Reproduce contenido de video.
+        - loop: Bucle infinito.
+        - controls: Controles de reproducción.
+        - muted: Silenciado por defecto (necesario para autoplay).
+        - poster: Imagen antes de reproducir.
       -->
       <video
         width="70%"
@@ -30,18 +26,8 @@
         poster="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"
       >
         <!--
-          <source>: Define las fuentes del video.
-          El navegador prueba cada source en orden hasta encontrar una compatible.
-          
-          Atributos:
-          - src: URL del archivo de video.
-          - type: Tipo MIME del formato (ayuda al navegador a decidir rápido).
-          
-          Formatos comunes:
-          - .mp4 (H.264): Soportado por todos los navegadores modernos.
-          - .webm (VP8/VP9): Bueno para web, tamaño menor.
-          - .ogg (Theora): Código abierto, compatibilidad variable.
-          - .mov (QuickTime): Formato Apple.
+          <source>: Define fuentes del video. El navegador prueba cada una en orden.
+          - type: Tipo MIME (.mp4, .webm, .ogg, .mov).
         -->
         <source
           src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
