@@ -13,7 +13,6 @@ body {
 /* Marco exterior: bordes negros gruesos */
 .frame {
   border: 50px solid black; /* Marco negro de 50px */
-  width: 500px; /* Ancho fijo */
   padding: 50px; /* Espacio entre marco y lienzo */
   margin: 20px auto; /* Centrado horizontal */
 }
@@ -66,3 +65,4 @@ body {
   border-radius: 30px 25px 60px 12px; /* Esquinas irregulares (estilo Rothko) */
   transform: rotate(-0.2deg); /* Casi imperceptible */
 }
+
