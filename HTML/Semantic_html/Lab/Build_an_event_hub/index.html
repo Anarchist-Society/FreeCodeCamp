@@ -10,21 +10,12 @@
 
   <body>
     <!--
-      Estructura semántica de un hub de eventos:
-      
-      <header>: Encabezado con navegación.
-      <main>: Contenido principal.
-        <section>: Cada sección agrupa eventos relacionados.
-          <article>: Cada evento es contenido independiente.
-            h3, p, img: Información del evento.
-      
-      Patrón de navegación interna:
-      - Enlaces en <header> con href="#id".
-      - Secciones en <main> con id="...".
-      - Al hacer clic, la página hace scroll a la sección.
+      Hub de eventos: header > nav + main > section > article.
+      Navegación interna con href="#id" → scroll a la sección.
     -->
     <header>
       <h1>Event Hub</h1>
+      <!-- <nav>: Navegación principal -->
       <nav>
         <ul>
           <li><a href="#upcoming-events">Upcoming Events</a></li>
@@ -34,18 +25,10 @@
     </header>
 
     <main>
-      <!-- Sección de eventos próximos -->
       <section id="upcoming-events">
         <h2>Upcoming Events</h2>
 
-        <!--
-          <article>: Cada evento es contenido independiente.
-          Estructura típical de un artículo/evento:
-          - h3: Título del evento.
-          - p: Descripción.
-          - p: Fecha (u otra info adicional).
-          - img: Imagen representativa.
-        -->
+        <!-- <article>: Cada evento es contenido independiente -->
         <article>
           <h3>Arch Linux Advanced Workshop 2024</h3>
           <p>
@@ -55,16 +38,7 @@
             rolling-release system.
           </p>
           <p>Date: August 10, 2024</p>
-          <!--
-            style="width: 50%": Estilo inline.
-            Aplica CSS directamente en el elemento.
-            
-            Nota: No es la mejor práctica (mejor usar clases CSS).
-            Pero es útil para:
-            - Prototipado rápido.
-            - Estilos únicos que no se reutilizan.
-            - Laboratorios y ejemplos.
-          -->
+          <!-- style="...": Estilo inline (mejor usar clases en producción) -->
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Pacman-4.1.0rc1-39-gf89f4.png"
             alt="Terminal and Archlinux"
@@ -89,7 +63,6 @@
         </article>
       </section>
 
-      <!-- Sección de eventos pasados -->
       <section id="past-events">
         <h2>Past Events</h2>
         <article>

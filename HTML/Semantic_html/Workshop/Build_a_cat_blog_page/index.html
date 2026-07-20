@@ -10,15 +10,7 @@
   </head>
 
   <body>
-    <!--
-      <header>: Encabezado semántico del documento o sección.
-      NO es lo mismo que <head>.
-      Contiene logo, título, navegación, etc.
-      
-      Puede usarse en:
-      - Toda la página (como aquí).
-      - Dentro de <article> o <section> (encabezado de esa sección).
-    -->
+    <!-- <header>: Encabezado semántico (logo, título, navegación) -->
     <header>
       <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
       <figure>
@@ -29,20 +21,9 @@
         <figcaption>Mr. Whiskers in the Garden</figcaption>
       </figure>
 
-      <!--
-        <nav>: Contenedor para enlaces de navegación principal.
-        Los navegadores y lectores de pantalla lo reconocen como navegación.
-        
-        No todos los enlaces necesitan <nav>.
-        Solo los principales (menú, navegación entre secciones).
-      -->
+      <!-- <nav>: Enlaces de navegación principal -->
       <nav>
-        <!--
-          Enlaces internos (anchor links):
-          href="#about" → Navega al elemento con id="about".
-          El # indica que es un ID dentro de la misma página.
-          El usuario hace clic y la página hace scroll a esa sección.
-        -->
+        <!-- href="#about": Enlace interno, scroll al elemento con id="about" -->
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#posts">Posts</a></li>
@@ -52,11 +33,7 @@
     </header>
 
     <main>
-      <!--
-        <section id="about">: Sección con ID para enlaces internos.
-        id="about" permite que <a href="#about"> funcione.
-        Cada sección tiene un tema claro (About, Posts, Contact).
-      -->
+      <!-- <section id="...">: Sección con ID para enlaces internos -->
       <section id="about">
         <h2>About</h2>
         <p>
@@ -72,21 +49,7 @@
       <section id="posts">
         <h2>Posts</h2>
 
-        <!--
-          <article>: Contenido independiente y autocontenido.
-          Puede ser distribuido, reutilizado, etc.
-          
-          Usos comunes:
-          - Entradas de blog.
-          - Noticias.
-          - Posts de foro.
-          - Comentarios de usuario.
-          
-          Un <article> generalmente tiene:
-          - h3 (título).
-          - p (contenido).
-          - Opcionalmente: autor, fecha, etc.
-        -->
+        <!-- <article>: Contenido independiente (blog, noticias, foro) -->
         <article>
           <h3>Mr. Whiskers' First Day Home</h3>
           <p>
@@ -137,26 +100,11 @@
       </section>
     </main>
 
-    <!--
-      <footer>: Pie de página semántico.
-      Contiene información de contacto, copyright, enlaces secundarios.
-      Puede usarse en toda la página o en secciones individuales.
-    -->
+    <!-- <footer>: Pie de página (contacto, copyright) -->
     <footer>
       <section id="contact">
         <h2>Contact</h2>
-        <!--
-          <address>: Información de contacto.
-          Semánticamente indica que el contenido es información de contacto.
-          
-          Tipos de enlaces especiales:
-          - href="tel:": Enlace telefónico. En móviles, abre el marcador.
-          - href="mailto:": Enlace de email. Abre el cliente de correo.
-          
-          Nota: El valor de href debe incluir el formato correcto:
-          - tel:5555555555 (sin espacios ni guiones).
-          - mailto:email@ejemplo.com
-        -->
+        <!-- <address>: Info de contacto. href="tel:" abre marcador, "mailto:" abre correo -->
         <address>
           <p>Phone: <a href="tel:5555555555">555-555-5555</a></p>
           <p>Email: <a href="mailto:fake@email.com">fake@email.com</a></p>
