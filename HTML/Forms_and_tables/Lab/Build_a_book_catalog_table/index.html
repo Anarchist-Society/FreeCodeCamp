@@ -12,14 +12,10 @@
     <main>
       <h1>Book Catalog</h1>
       <!--
-        Tabla de catálogo de libros.
-        Estructura: thead (columnas) → tbody (datos) → tfoot (resumen).
-        
-        Cada fila (tr) tiene 4 celdas (td) que corresponden a las 4 columnas.
-        El número de celdas en cada fila debe ser igual al número de th en thead.
+        Tabla: thead (columnas) → tbody (datos) → tfoot (resumen).
+        Cada tr debe tener el mismo número de td que th en thead.
       -->
       <table>
-        <!-- Encabezados de columna -->
         <thead>
           <tr>
             <th>Title</th>
@@ -29,7 +25,6 @@
           </tr>
         </thead>
 
-        <!-- Datos de los libros -->
         <tbody>
           <tr>
             <td>
@@ -70,14 +65,9 @@
           </tr>
         </tbody>
 
-        <!-- Pie de tabla con resumen -->
         <tfoot>
           <tr>
-            <!--
-              colspan="4": Une las 4 columnas en una sola celda.
-              Aquí se usa para mostrar "Total Books: 5" centrado.
-              Sin colspan, necesitarías 4 celdas vacías + 1 con el total.
-            -->
+            <!-- colspan="4": Une las 4 columnas en una celda -->
             <td colspan="4">Total Books: 5</td>
           </tr>
         </tfoot>
